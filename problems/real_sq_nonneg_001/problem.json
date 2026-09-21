@@ -1,0 +1,21 @@
+{
+  "id": "real_sq_nonneg_001",
+  "topic": "analysis",
+  "source": "self_authored",
+  "family_id": "real_sq_nonneg",
+  "split": "dev",
+  "imports": [
+    "Mathlib",
+    "LeanBench.Definitions.Common"
+  ],
+  "informal_statement": "El cuadrado de un real es no negativo.",
+  "statement_file": "statement.lean",
+  "reference_file": "references/real_sq_nonneg_001.proof.lean",
+  "formalization_reviewed": true,
+  "reviewer": "pineapple",
+  "license": "MIT (enunciado propio, redistribucion libre)",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 30
+  }
+}

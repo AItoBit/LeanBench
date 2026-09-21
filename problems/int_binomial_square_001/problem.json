@@ -1,0 +1,21 @@
+{
+  "id": "int_binomial_square_001",
+  "topic": "algebra",
+  "source": "self_authored",
+  "family_id": "int_binomial_square",
+  "split": "dev",
+  "imports": [
+    "Mathlib",
+    "LeanBench.Definitions.Common"
+  ],
+  "informal_statement": "Para enteros a y b, (a + b)^2 = a^2 + 2ab + b^2.",
+  "statement_file": "statement.lean",
+  "reference_file": "references/int_binomial_square_001.proof.lean",
+  "formalization_reviewed": true,
+  "reviewer": "pineapple",
+  "license": "MIT (enunciado propio, redistribucion libre)",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 30
+  }
+}

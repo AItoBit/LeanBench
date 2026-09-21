@@ -1,0 +1,62 @@
+name: LeanBench CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  # 1. Todo lo que no necesita Lean: rapido y siempre verde o rojo por si mismo.
+  evaluator:
+    name: Tests del evaluador y metadatos
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pytest
+      - name: Validar metadatos, identificadores y splits
+        run: python scripts/validate_metadata.py
+      - name: Tests del evaluador
+        run: pytest -q
+
+  # 2. Lean: compila definiciones y TODAS las referencias, y las audita.
+  lean:
+    name: Compilar y auditar referencias
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: leanprover/lean-action@v1
+        with:
+          # La version sale de lean-toolchain; no se actualizan dependencias aqui.
+          use-mathlib-cache: true
+          build: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pytest
+
+      # `lake build` NO garantiza que se haya comprobado un archivo que no es
+      # un objetivo del proyecto: las referencias se compilan explicitamente
+      # una a una, a traves de la misma plantilla que usa un agente.
+      - name: Compilar y auditar cada referencia
+        run: pytest -q tests/test_lean_integration.py
+
+      - name: Ejecucion de referencia + informe
+        run: |
+          python -m runner.run_eval --method reference --split dev --verification-seconds 120
+          python -m runner.report "$(ls -td runs/*/ | head -1)"
+
+      - name: Guardar artefactos de la ejecucion
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: leanbench-run
+          path: runs/
+
+# Las llamadas de pago a modelos NO se ejecutan aqui: se lanzan a mano con
+# `python -m runner.run_eval --method model`.

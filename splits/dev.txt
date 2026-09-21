@@ -1,0 +1,7 @@
+# v0.1: los cinco problemas son de desarrollo.
+# 'test' se congelara al ampliar la coleccion (ver README, paso 15).
+nat_add_zero_001
+nat_add_comm_001
+int_binomial_square_001
+real_sq_nonneg_001
+list_length_append_001

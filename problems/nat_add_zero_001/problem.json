@@ -1,0 +1,21 @@
+{
+  "id": "nat_add_zero_001",
+  "topic": "arithmetic",
+  "source": "self_authored",
+  "family_id": "nat_add_zero",
+  "split": "dev",
+  "imports": [
+    "Mathlib",
+    "LeanBench.Definitions.Common"
+  ],
+  "informal_statement": "Para todo natural n se cumple n + 0 = n.",
+  "statement_file": "statement.lean",
+  "reference_file": "references/nat_add_zero_001.proof.lean",
+  "formalization_reviewed": true,
+  "reviewer": "pineapple",
+  "license": "MIT (enunciado propio, redistribucion libre)",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 30
+  }
+}

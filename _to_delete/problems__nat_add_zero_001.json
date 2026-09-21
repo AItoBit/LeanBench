@@ -1,0 +1,11 @@
+{
+  "id": "nat_add_zero_001",
+  "topic": "arithmetic",
+  "source": "self_authored",
+  "family_id": "nat_add_zero",
+  "split": "dev",
+  "imports": ["Mathlib"],
+  "statement_file": "statement.txt",
+  "reference_file": "references/nat_add_zero_001.lean",
+  "formalization_reviewed": true
+}

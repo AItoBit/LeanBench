@@ -1,0 +1,21 @@
+{
+  "id": "list_length_append_001",
+  "topic": "data_structures",
+  "source": "self_authored",
+  "family_id": "list_length_append",
+  "split": "dev",
+  "imports": [
+    "Mathlib",
+    "LeanBench.Definitions.Common"
+  ],
+  "informal_statement": "La longitud de la concatenacion de dos listas es la suma de sus longitudes.",
+  "statement_file": "statement.lean",
+  "reference_file": "references/list_length_append_001.proof.lean",
+  "formalization_reviewed": true,
+  "reviewer": "pineapple",
+  "license": "MIT (enunciado propio, redistribucion libre)",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 30
+  }
+}

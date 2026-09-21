@@ -1,0 +1,10 @@
+name = "LeanBench"
+version = "0.1.0"
+defaultTargets = ["LeanBench"]
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+
+[[lean_lib]]
+name = "LeanBench"
