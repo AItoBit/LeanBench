@@ -1,0 +1,32 @@
+{
+  "id": "imo_1983_p6",
+  "topic": "geometry",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1983,
+    "problem": 6,
+    "file": "1983/P6.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1983_p6",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "# IMO 1984, Problem 6 (Excerpt)\n\nThis formalizes the metric space inequalities at the conclusion of the \nsolution presented in the reference text. The proof uses the triangle \ninequality to bound the distances between the key points along the paths.",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1983_p6/reference.proof.lean",
+  "target_decl": "candidate",
+  "epilogue": "",
+  "import_category": "A",
+  "import_flags": [],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "imo_1973_p5",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1973,
+    "problem": 5,
+    "file": "1973/p5.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1973_p5",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "**IMO 1973, Problem 5.**",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1973_p5/reference.proof.lean",
+  "target_decl": "Imo1973P5.candidate",
+  "epilogue": "end Imo1973P5",
+  "import_category": "A",
+  "import_flags": [],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

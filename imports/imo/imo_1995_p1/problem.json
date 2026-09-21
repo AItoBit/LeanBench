@@ -1,0 +1,36 @@
+{
+  "id": "imo_1995_p1",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1995,
+    "problem": 1,
+    "file": "1995/P1.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1995_p1",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+    "Mathlib.Tactic.FieldSimp",
+    "Mathlib.Tactic.Linarith",
+    "Mathlib.Tactic.LinearCombination",
+    "Mathlib.Tactic.Ring"
+  ],
+  "informal_statement": "Coordinate-normalized form of IMO 1995, Problem 1.\n\nThe four collinear points are\n`A = (0,0)`, `B = (b,0)`, `C = (1,0)`, and `D = (d,0)`, with\n`0 < b < 1 < d`.  The radical axis of the circles with diameters `AC` and\n`BD` is the vertical line `x = z`; its equation is\n`(b + d - 1) z = b d`.  We write `P = (z,t)`, where `t ≠ 0` expresses\n`P ≠ Z`.\n\nThe equations `hMline`, `hMcircle`, `hNline`, and `hNcircle` say respectively\nthat `C,P,M` are collinear, `M` is on the circle with diameter `AC`, `B,P,N`\nare collinear, and `N` is on the circle with diameter `BD`.  The two\ninequalities exclude the already known intersections `M = C` and `N = B`.\n\nThe conclusion constructs a real `q` such that `Q = (z,q)` lies on both\n`AM` and `DN`; since it also lies on `x = z = XY`, the three lines are\nconcurrent.",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1995_p1/reference.proof.lean",
+  "target_decl": "candidate",
+  "epilogue": "",
+  "import_category": "A",
+  "import_flags": [],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

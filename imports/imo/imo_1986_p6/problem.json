@@ -1,0 +1,34 @@
+{
+  "id": "imo_1986_p6",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1986,
+    "problem": 6,
+    "file": "1986/P6.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1986_p6",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "Given a finite grid of points colored with integers, if all rows sum to 0 \nexcept row `r₀` which sums to `t_h`, and all columns sum to 0 except \ncolumn `c₀` which sums to `t_v`, then `t_h = t_v`.",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1986_p6/reference.proof.lean",
+  "target_decl": "IMO1986P6.candidate",
+  "epilogue": "end IMO1986P6",
+  "import_category": "A",
+  "import_flags": [
+    "core_like"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

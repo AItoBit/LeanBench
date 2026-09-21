@@ -1,0 +1,34 @@
+{
+  "id": "imo_1987_p2",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1987,
+    "problem": 2,
+    "file": "1987/P2.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1987_p2",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "# IMO 1987, Problem 2 (Algebraic Core of Solution 4)\n \n\nFrom geometric similarities, the ratio of the side lengths is established as:\n  KM / BC = AL / AN\n\nThe area of the quadrilateral AKNM is given by:\n  Area(AKNM) = (1 / 2) * KM * AN\n\nThe area of the triangle ABC is given by:\n  Area(ABC) = (1 / 2) * BC * AL\n\nWe prove that the similarity ratio directly forces the equality of the two areas.",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1987_p2/reference.proof.lean",
+  "target_decl": "IMO1987P2.candidate",
+  "epilogue": "end IMO1987P2",
+  "import_category": "A",
+  "import_flags": [
+    "core_like"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

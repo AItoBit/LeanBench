@@ -1,0 +1,34 @@
+{
+  "id": "imo_1970_p5",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1970,
+    "problem": 5,
+    "file": "1970/P5.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1970_p5",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "Formalization of the algebraic core of the solution to IMO 1970 Problem 5.\nThe geometric arguments establish that AB^2 + BC^2 + CA^2 = 2(DA^2 + DB^2 + DC^2).\nThe final step uses Cauchy's inequality to conclude the main result. \nWe formalize this exact deductive sequence using a sum of squares identity \nto bypass explicit vector dot products.",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1970_p5/reference.proof.lean",
+  "target_decl": "candidate",
+  "epilogue": "",
+  "import_category": "A",
+  "import_flags": [
+    "core_like"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

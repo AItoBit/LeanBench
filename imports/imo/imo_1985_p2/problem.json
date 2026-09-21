@@ -1,0 +1,34 @@
+{
+  "id": "imo_1985_p2",
+  "topic": "number_theory",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1985,
+    "problem": 2,
+    "file": "1985/P2.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1985_p2",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "# IMO 1985, Problem 2 (Solution Formalization)\n\nThe problem asks to prove that a specific coloring of the set {1, 2, ..., n-1}\nmust be monochromatic. The provided solution extends the coloring to all \nresidues modulo n (i.e., a periodic function on ℤ), where the properties \ntranslate cleanly to modular arithmetic. \n\nWe formalize the algebraic core of this extended problem:\nGiven a periodic function `c : ℤ → α` with period `n`, satisfying the \nsymmetry condition `c(i) = c(-i)` and the shift condition \n`c(i) = c(i - k)` or `c(i) = c(k - i)`, we prove `c` is constant.",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1985_p2/reference.proof.lean",
+  "target_decl": "IMO1985P2.candidate",
+  "epilogue": "end IMO1985P2",
+  "import_category": "A",
+  "import_flags": [
+    "core_like"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

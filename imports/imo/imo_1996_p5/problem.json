@@ -1,0 +1,34 @@
+{
+  "id": "imo_1996_p5",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1996,
+    "problem": 5,
+    "file": "1996/P5.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1996_p5",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "**Metric core of IMO 1996 P5.**",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1996_p5/reference.proof.lean",
+  "target_decl": "Imo1996P5.candidate",
+  "epilogue": "end Imo1996P5",
+  "import_category": "A",
+  "import_flags": [
+    "core_like"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

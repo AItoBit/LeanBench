@@ -1,0 +1,34 @@
+{
+  "id": "imo_1996_p3",
+  "topic": "number_theory",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1996,
+    "problem": 3,
+    "file": "1996/P3.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1996_p3",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "# IMO 1996, Problem 3\n\nFind all `f : ℕ → ℕ` with `f (m + f n) = f (f m) + f n` for all `m, n`.\n\n## Answer\n\nEither `f = 0`, or there are `d > 0` and `a : ℕ → ℕ` with `a 0 = 0` such that\n\n  `f n = d * (a (n % d) + n / d)`.\n\n(Only the values `a r` for `r < d` matter.)\n\n## Proof of the forward direction\n\n* `m = n = 0` gives `f 0 = 0`, and then `m = 0` gives `f (f n) = f n`.\n* So the equation reads `f (m + f n) = f m + f n`; in particular for any fixed point `t` of `f`,\n  `f (m + t) = f m + t`.\n* If `f` has no positive fixed point then every `f n`, being a fixed point, is `0`.\n* Otherwise let `d` be the least positive fixed point. Iterating the previous step,\n  `f (m + q*d) = f m + q*d`, so `f n = f (n % d) + (n / d) * d`.\n* A fixed point `t` then satisfies `f (t % d) = t % d` with `t % d < d`, so `d ∣ t` by\n  minimality. Since every `f r` is a fixed point, `d ∣ f r`, and `a r := f r / d` works.",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1996_p3/reference.proof.lean",
+  "target_decl": "Imo1996P3.candidate",
+  "epilogue": "end Imo1996P3",
+  "import_category": "A",
+  "import_flags": [
+    "core_like"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

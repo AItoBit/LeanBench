@@ -1,0 +1,32 @@
+{
+  "id": "imo_1992_p2",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1992,
+    "problem": 2,
+    "file": "1992/P2.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1992_p2",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "# IMO 1992, Problem 2\n\nFind all `f : ℝ → ℝ` with `f (x² + f y) = y + (f x)²` for all real `x, y`.\n\nAnswer: `f = id`.\n\n## Proof\n\n* `f` is injective: `x = 0` gives `f (f u) = u + (f 0)²`, so `f u = f v` forces `u = v`.\n* `f` is surjective onto `0`: `t := f (-(f 0)²)` satisfies `f t = 0`.\n* Then `x = t, y = 0` gives `f (t² + f 0) = 0 = f t`, so `t² + f 0 = t`; and `x = 0, y = t`\n  gives `f 0 = t + (f 0)²`. Eliminating `t` yields `(f 0)²·((f 0 - 1)² + 1) = 0`, and the\n  second factor is positive, so `f 0 = 0`.\n* Hence `f (f y) = y`, and substituting `y ↦ f y` in the original equation gives\n  `f (x² + y) = f y + (f x)²`.\n* So `f` is monotone: for `v ≤ u`, take `s = √(u - v)` and get `f u = f v + (f s)² ≥ f v`.\n* Finally `f (f y) = y` with `f` monotone forces `f y = y`: `f y < y` would give `y ≤ f y`,\n  and `y < f y` would give `f y ≤ y`.",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1992_p2/reference.proof.lean",
+  "target_decl": "Imo1992P2.candidate",
+  "epilogue": "end Imo1992P2",
+  "import_category": "A",
+  "import_flags": [],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

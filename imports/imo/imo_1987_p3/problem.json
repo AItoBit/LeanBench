@@ -1,0 +1,34 @@
+{
+  "id": "imo_1987_p3",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1987,
+    "problem": 3,
+    "file": "1987/P3.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1987_p3",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "# IMO 1987, Problem 3 (Algebraic Core of Solution 2)\n\nThis formalizes the Cauchy-Schwarz bounding deduction \n\nGiven the abstracted sums:\n  S_a = Σ a_i^2\n  S_x = Σ x_i^2\n  S_ax = Σ a_i |x_i|\n\nBy Cauchy-Schwarz, S_ax^2 ≤ S_a * S_x.\nWe are given the condition S_x = 1, and the maximum absolute value\nof a_i is (k - 1), meaning S_a ≤ n * (k - 1)^2.\n\nWe prove algebraically that these conditions strictly force:\nS_ax ≤ √n * (k - 1).",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1987_p3/reference.proof.lean",
+  "target_decl": "IMO1987P3.candidate",
+  "epilogue": "end IMO1987P3",
+  "import_category": "A",
+  "import_flags": [
+    "core_like"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

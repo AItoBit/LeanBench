@@ -77,7 +77,7 @@ def evaluate_attempt(
         return record
 
     execution = execute(rendered.path, budget=budget)
-    audit_result = audit(execution.output, allowed=allowed_axioms)
+    audit_result = audit(execution.output, allowed=allowed_axioms, decl=problem.target_decl)
     result_status = classify(execution, audit_result)
 
     record.update(execution.to_dict())

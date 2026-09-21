@@ -17,7 +17,8 @@ import re
 from dataclasses import dataclass
 from pathlib import Path
 
-from .config import REPO_ROOT, TARGET_DECL
+from .config import REPO_ROOT
+from .lexing import mask
 
 MAX_PROOF_CHARS = 20_000
 
@@ -66,11 +67,15 @@ def sanitize_proof(proof: str) -> str:
         text = re.sub(r"^```[a-zA-Z0-9]*\n?", "", text)
         text = re.sub(r"\n?```\s*$", "", text).strip()
 
+    # Las comprobaciones se hacen sobre el codigo sin comentarios ni cadenas:
+    # un comentario que diga "sin sorry" o un titulo "## Lemas" no es codigo.
+    code = mask(text)
+
     for token in FORBIDDEN_TOKENS:
-        if re.search(rf"(?<![A-Za-z0-9_]){re.escape(token)}(?![A-Za-z0-9_])", text):
+        if re.search(rf"(?<![A-Za-z0-9_]){re.escape(token)}(?![A-Za-z0-9_])", code):
             raise ProofRejected(f"construccion no permitida: {token}")
 
-    for lineno, line in enumerate(text.splitlines(), start=1):
+    for lineno, line in enumerate(code.splitlines(), start=1):
         if not line or line[0] in " \t":
             continue  # linea indentada: forma parte del cuerpo de la prueba
         head = line.split()[0] if line.split() else ""
@@ -82,9 +87,9 @@ def sanitize_proof(proof: str) -> str:
         if head.startswith("#"):
             raise ProofRejected(f"comando '#' no permitido en la linea {lineno}")
 
-    if re.search(r"(?<![A-Za-z0-9_])set_option(?![A-Za-z0-9_])", text):
+    if re.search(r"(?<![A-Za-z0-9_])set_option(?![A-Za-z0-9_])", code):
         # Solo se permiten opciones de recursos, nunca de confianza.
-        for m in re.finditer(r"set_option\s+([A-Za-z0-9_.]+)", text):
+        for m in re.finditer(r"set_option\s+([A-Za-z0-9_.]+)", code):
             if m.group(1) not in {"maxHeartbeats", "maxRecDepth", "synthInstance.maxHeartbeats"}:
                 raise ProofRejected(f"set_option no permitido: {m.group(1)}")
 
@@ -92,13 +97,20 @@ def sanitize_proof(proof: str) -> str:
 
 
 def indent_proof(proof: str) -> str:
-    """Indenta el cuerpo para que pertenezca a la declaracion del enunciado."""
+    """Coloca la prueba detras del `:=` del enunciado.
+
+    La primera linea va en la misma linea que `:=` (asi `by`/`calc` quedan
+    donde el autor los escribio). Las demas se conservan tal cual, salvo que
+    alguna empiece en la columna 0: entonces todas se indentan 2 espacios,
+    porque Lean no acepta el cuerpo de una declaracion en la columna 0.
+    """
     lines = proof.splitlines()
     if not lines:
         return ""
-    first = lines[0].strip()
-    rest = ["  " + l if l.strip() else "" for l in lines[1:]]
-    return "\n".join(["  " + first] + rest)
+    first, rest = lines[0].strip(), lines[1:]
+    if any(l.strip() and not l[0].isspace() for l in rest):
+        rest = ["  " + l if l.strip() else "" for l in rest]
+    return "\n".join([" " + first] + rest)
 
 
 def render(problem, proof: str, attempt_dir) -> RenderedAttempt:
@@ -108,13 +120,14 @@ def render(problem, proof: str, attempt_dir) -> RenderedAttempt:
     attempt_dir.mkdir(parents=True, exist_ok=True)
 
     imports = "\n".join(f"import {mod}" for mod in problem.imports)
+    epilogue = (problem.epilogue.strip() + "\n\n") if problem.epilogue.strip() else ""
     content = (
         "-- Archivo generado por LeanBench. No editar a mano.\n"
         f"-- problema: {problem.id}\n"
         f"{imports}\n\n"
-        f"{problem.statement}\n"
-        f"{clean}\n\n"
-        f"#print axioms {TARGET_DECL}\n"
+        f"{problem.statement}{clean}\n\n"
+        f"{epilogue}"
+        f"#print axioms {problem.target_decl}\n"
     )
     path = attempt_dir / "Candidate.lean"
     path.write_text(content, encoding="utf-8")

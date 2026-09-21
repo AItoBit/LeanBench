@@ -1,0 +1,34 @@
+{
+  "id": "imo_1986_p3",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1986,
+    "problem": 3,
+    "file": "1986/P3.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1986_p3",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "# IMO 1986, Problem 3 (Algebraic Core of Solution 1)\n\nThis formalizes the algebraic core of the monovariant method\n\n\nThe problem assigns five integers to the vertices of a pentagon.\nWe represent these as a 5-tuple `(x₁, x₂, x₃, x₄, x₅)`.\nThe operation replaces `(x₃, x₄, x₅)` with `(x₃ + x₄, -x₄, x₅ + x₄)`\nwhen `x₄ < 0`.\n\nSolution 1 defines the semi-invariant function:\n  f(x) = Σ (x_i - x_{i+2})^2\nand claims that the change in `f` after one operation is exactly `2 * S * x₄`,\nwhere `S` is the invariant sum of the five entries. Since `S > 0` and `x₄ < 0`, \nthis difference is strictly negative, proving termination.\n\nWe formalize this exact algebraic difference identity.",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1986_p3/reference.proof.lean",
+  "target_decl": "IMO1986P3.candidate",
+  "epilogue": "end IMO1986P3",
+  "import_category": "B",
+  "import_flags": [
+    "core_like"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

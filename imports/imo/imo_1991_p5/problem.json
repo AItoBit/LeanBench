@@ -1,0 +1,35 @@
+{
+  "id": "imo_1991_p5",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1991,
+    "problem": 5,
+    "file": "1991/P5.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1991_p5",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib.Data.Real.Sqrt",
+    "Mathlib.Tactic.Linarith",
+    "Mathlib.Tactic.NormNum",
+    "Mathlib.Tactic.Push"
+  ],
+  "informal_statement": "# IMO 1991, Problem 5\n\nThe predicate `angleLE30 P A B` is an algebraic encoding of\n`∠PAB ≤ 30°`.  For an interior point on the consistently oriented side of\nthe three edges, the oriented determinant is the sine numerator and the dot\nproduct is the cosine numerator, so the comparison is exactly\n\n  `sqrt 3 * sin(∠PAB) ≤ cos(∠PAB)`.",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1991_p5/reference.proof.lean",
+  "target_decl": "IMO1991P5.candidate",
+  "epilogue": "end IMO1991P5",
+  "import_category": "B",
+  "import_flags": [],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

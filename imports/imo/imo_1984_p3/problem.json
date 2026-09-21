@@ -1,0 +1,35 @@
+{
+  "id": "imo_1984_p3",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1984,
+    "problem": 3,
+    "file": "1984/P3.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1984_p3",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "Formalization of the combinatorial core of the argument:\n\"Suppose there are n colors. Then by taking successively smaller circles \nC_2, C_3, ... , C_{n+1} we reach a contradiction, since each circle includes \na point of different color to those on any of the larger circles.\"",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1984_p3/reference.proof.lean",
+  "target_decl": "Problem_A3.candidate",
+  "epilogue": "end Problem_A3",
+  "import_category": "A",
+  "import_flags": [
+    "core_like",
+    "usa variable"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "imo_1994_p1",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1994,
+    "problem": 1,
+    "file": "1994/P1.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1994_p1",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib.Data.Finset.Sort",
+    "Mathlib.Order.Interval.Finset.Nat",
+    "Mathlib.Order.Interval.Finset.Fin",
+    "Mathlib.Data.Rat.Cast.Order",
+    "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+    "Mathlib.Tactic.NormNum",
+    "Mathlib.Tactic.Linarith"
+  ],
+  "informal_statement": "IMO 1994, Problem 1.",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1994_p1/reference.proof.lean",
+  "target_decl": "candidate",
+  "epilogue": "",
+  "import_category": "A",
+  "import_flags": [],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

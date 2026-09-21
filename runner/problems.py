@@ -46,6 +46,16 @@ class Problem:
         )
 
     @property
+    def target_decl(self) -> str:
+        """Nombre completo de la declaracion a auditar (p. ej. 'IMO1985P4.candidate')."""
+        return self.metadata.get("target_decl", "candidate")
+
+    @property
+    def epilogue(self) -> str:
+        """Texto confiable que va DESPUES de la prueba (p. ej. 'end IMO1985P4')."""
+        return self.metadata.get("epilogue", "")
+
+    @property
     def reference_proof(self) -> str:
         return self.reference_proof_path.read_text(encoding="utf-8")
 

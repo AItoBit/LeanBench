@@ -197,3 +197,35 @@ ampliar a 20 problemas y responder a la pregunta:
 
 > ¿Cuánto mejora la reparación basada en errores de Lean frente a generar
 > nuevos intentos, con el mismo presupuesto?
+
+---
+
+## 11. Importar formalizaciones IMO
+
+```bash
+# 1. Clasificar e importar (Python puro, no necesita Lean)
+python scripts/import_imo.py C:\ruta\a\IMO-main\IMO-main
+#    -> imports/imo/<id>/  +  imports/imo/REPORT.md
+
+# 2. Comprobar en CI que las referencias compilan con el Mathlib fijado
+#    (workflow manual: ci/check_imports.yml movido a .github/workflows/)
+
+# 3. Revisar la formalizacion a mano y promoverla al benchmark
+python scripts/promote.py imo_1959_p1 --split dev --reviewer pineapple
+```
+
+Categorias del importador:
+
+| Cat. | Significado | Que pasa |
+| ---- | ----------- | -------- |
+| A | Solo el teorema | Se importa |
+| B | Necesita definiciones previas | Se importa con ellas como contexto confiable |
+| C | Usa lemas auxiliares propios | Pendiente del modo "archivo completo" |
+| X | `sorry`, `axiom`, `native_decide` o sin teorema principal | Excluido |
+
+La marca `core_like` indica que el texto habla de un nucleo, caso particular o
+version parcial. Lean acepta la prueba, pero puede no ser el problema IMO
+completo: revisalo antes de promoverlo y nunca lo cuentes como "IMO resuelto"
+sin decirlo.
+
+Nada importado entra en el benchmark sin `formalization_reviewed: true`.

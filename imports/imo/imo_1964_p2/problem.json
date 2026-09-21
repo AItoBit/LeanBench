@@ -1,0 +1,32 @@
+{
+  "id": "imo_1964_p2",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1964,
+    "problem": 2,
+    "file": "1964/P2.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1964_p2",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "IMO 1964 Problem 2: Suppose that `a, b, c` are the sides of a triangle. Then\n`a^2 (b + c - a) + b^2 (c + a - b) + c^2 (a + b - c) ≤ 3abc`.",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1964_p2/reference.proof.lean",
+  "target_decl": "candidate",
+  "epilogue": "",
+  "import_category": "A",
+  "import_flags": [],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

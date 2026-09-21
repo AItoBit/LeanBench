@@ -1,0 +1,32 @@
+{
+  "id": "imo_1994_p5",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1994,
+    "problem": 5,
+    "file": "1994/P5.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1994_p5",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1994_p5/reference.proof.lean",
+  "target_decl": "IMO1994P5.candidate",
+  "epilogue": "end IMO1994P5",
+  "import_category": "B",
+  "import_flags": [],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

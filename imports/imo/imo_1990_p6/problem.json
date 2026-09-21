@@ -1,0 +1,34 @@
+{
+  "id": "imo_1990_p6",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1990,
+    "problem": 6,
+    "file": "1990/P6.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1990_p6",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "Solution 2 of IMO 1990 Problem 6 reduces the geometric condition \nto proving that \\sum_{n=0}^{994} c_n \\omega^n = 0 for a primitive 995-th \nroot of unity \\omega, where c_n is a permutation of {3, 7, ..., 3979}.\n\nThis theorem formalizes and fully proves the core algebraic identity \nfor the explicit permutation constructed in the solution.",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1990_p6/reference.proof.lean",
+  "target_decl": "candidate",
+  "epilogue": "",
+  "import_category": "A",
+  "import_flags": [
+    "core_like"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

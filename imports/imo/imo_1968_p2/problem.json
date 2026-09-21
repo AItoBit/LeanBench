@@ -1,0 +1,32 @@
+{
+  "id": "imo_1968_p2",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1968,
+    "problem": 2,
+    "file": "1968/P2.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1968_p2",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "Let P be the product of the digits of a natural number x. We have the constraints:\n1. P ≤ x (a known property of the digit product for natural numbers)\n2. P ≥ 0 (since digits are non-negative)\n3. P = x^2 - 10x - 22 (from the problem statement)\n\nWe prove that these constraints uniquely determine x = 12 and P = 2.",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1968_p2/reference.proof.lean",
+  "target_decl": "candidate",
+  "epilogue": "",
+  "import_category": "A",
+  "import_flags": [],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

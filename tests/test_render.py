@@ -65,3 +65,14 @@ def test_el_archivo_generado_conserva_el_enunciado(tmp_path):
     assert PROBLEM.statement in rendered.content
     assert rendered.content.rstrip().endswith("#print axioms candidate")
     assert rendered.content.count("theorem candidate") == 1
+
+
+def test_los_comentarios_no_disparan_el_saneado():
+    """'sorry' o '## Titulo' dentro de un comentario no son codigo."""
+    proof = "by\n/-!\n## Lemas\nNo usamos sorry.\n-/\n  simp -- sin sorry"
+    assert sanitize_proof(proof)
+
+
+def test_sorry_fuera_de_comentario_sigue_rechazado():
+    with pytest.raises(ProofRejected, match="sorry"):
+        sanitize_proof("by\n  -- comentario\n  sorry")

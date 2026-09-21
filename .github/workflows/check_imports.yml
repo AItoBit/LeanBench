@@ -1,0 +1,38 @@
+# Mueve este archivo a .github/workflows/check_imports.yml
+# Se lanza a mano: GitHub -> Actions -> "Compilar referencias importadas" -> Run workflow
+name: Compilar referencias importadas
+
+on:
+  workflow_dispatch:
+    inputs:
+      folder:
+        description: "Carpeta a comprobar"
+        default: "imports/imo"
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v5
+      - uses: leanprover/lean-action@v1
+        with:
+          use-mathlib-cache: true
+          build: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compilar y auditar cada referencia
+        # No falla el job si alguna referencia no compila: el informe es el resultado.
+        run: python -m runner.check_references "${{ inputs.folder }}" --jobs 3 || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: compile-report
+          path: |
+            ${{ inputs.folder }}/COMPILE.md
+            ${{ inputs.folder }}/compile.jsonl
