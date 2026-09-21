@@ -117,7 +117,6 @@ theorem imo2001_p1_of_sbtw (t : Affine.Triangle ℝ E) (P : E)
   linarith
 
 omit [Fact (Module.finrank ℝ V = 2)] in
-
 /-- The altitude foot of an acute triangle lies strictly inside the opposite side. -/
 lemma altitude_sbtw {A B C P : E} (hBC : B ≠ C)
     (hcol : Collinear ℝ ({B, P, C} : Set E))

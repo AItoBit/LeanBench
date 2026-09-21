@@ -3310,14 +3310,40 @@
     "file": "1988/P2.lean",
     "year": 1988,
     "problem": 2,
-    "category": "X",
-    "reasons": [
-      "el evaluador rechazaria los lemas: en los lemas auxiliares solo se admiten theorem/lemma (linea 26: 'include')"
-    ],
+    "category": "C",
+    "reasons": [],
     "flags": [
-      "usa variable"
+      "usa variable",
+      "declaraciones despues del teorema: ['answer_ne_four_dvd']"
     ],
-    "main_theorem": "imo1988_p2_answer"
+    "main_theorem": "imo1988_p2_answer",
+    "imports": [
+      "Mathlib"
+    ],
+    "epilogue": "end Existence\nend IMO1988P2",
+    "target_decl": "IMO1988P2.candidate",
+    "topic": "algebra",
+    "helper_lemmas": [
+      "mem_idx",
+      "exists_inter_fun",
+      "inter_elem_mem_left",
+      "inter_elem_mem_right",
+      "surj_inter_elem",
+      "injOn_inter_elem",
+      "card_idx_eq_two",
+      "sum_card_filter_eq",
+      "even_of_exists_assignment",
+      "cls_neg",
+      "card_filter_cls_zero",
+      "card_filter_cls",
+      "exists_assignment_of_even",
+      "imo1988_p2",
+      "mem_star",
+      "star_card",
+      "star_inter",
+      "star_mem",
+      "exists_config"
+    ]
   },
   {
     "id": "imo_1988_p3",
@@ -4060,7 +4086,8 @@
     "category": "C",
     "reasons": [],
     "flags": [
-      "usa variable"
+      "usa variable",
+      "lemas del autor en el contexto: 2"
     ],
     "main_theorem": "imo1993_p6_part_a",
     "imports": [
@@ -5124,7 +5151,9 @@
     "problem": 4,
     "category": "C",
     "reasons": [],
-    "flags": [],
+    "flags": [
+      "lemas del autor en el contexto: 3"
+    ],
     "main_theorem": "imo2000_p4",
     "imports": [
       "Mathlib"
@@ -5379,14 +5408,31 @@
     "file": "2002/P3.lean",
     "year": 2002,
     "problem": 3,
-    "category": "X",
-    "reasons": [
-      "el evaluador rechazaria los lemas: en los lemas auxiliares solo se admiten theorem/lemma (linea 4: 'include')"
-    ],
+    "category": "C",
+    "reasons": [],
     "flags": [
       "usa variable"
     ],
-    "main_theorem": "imo2002_p3"
+    "main_theorem": "imo2002_p3",
+    "imports": [
+      "Mathlib.Analysis.Polynomial.Basic",
+      "Mathlib.RingTheory.Polynomial.Content",
+      "Mathlib.Tactic"
+    ],
+    "epilogue": "end IMO2002P3",
+    "target_decl": "IMO2002P3.candidate",
+    "topic": "algebra",
+    "helper_lemmas": [
+      "natDegree_numerpol",
+      "monic_numerpol",
+      "natDegree_denompol",
+      "monic_denompol",
+      "proof_body",
+      "result",
+      "denominator_pos",
+      "quotient_integer_iff_dvd",
+      "imo2002_p3_divisibility"
+    ]
   },
   {
     "id": "imo_2002_p4",

@@ -23,4 +23,11 @@ theorem candidate
       ∀ t : ℕ,
         t < q →
         t * t < n) :
-    let k :=
+    let k := q - 1
+    k * k < n ∧
+    n ≤ (k + 1) * (k + 1) ∧
+    n - k + 1 >
+      k * (k - 1) + 1 ∧
+    ∀ m : ℕ,
+      m * m < n →
+      m ≤ k :=

@@ -66,12 +66,9 @@ variable (hABBC : dist A B = dist B C) (hBCCA : dist B C = dist C A)
 
 include hABBC hBCCA
 
-omit hABBC hBCCA in
-
 variable (hAB : A ≠ B)
-include hAB
 
-omit hABBC hBCCA in
+include hAB
 
 end Equilateral
 

@@ -32,6 +32,7 @@ lemma upt_sub (A B C : Pt) (a b c d : ℝ) :
   simp only [upt]
   module
 
+omit hABBC hBCCA in
 lemma inner_uu : ⟪B - A, B - A⟫ = dist A B ^ 2 := by
   rw [real_inner_self_eq_norm_sq, dist_eq_norm, norm_sub_rev]
 
@@ -68,6 +69,7 @@ lemma upt_inner (a b c d a' b' c' d' : ℝ) :
           + ((a - c) * (b' - d') + (b - d) * (a' - c')) / 2) := by
   rw [upt_sub, upt_sub, inner_key hABBC hBCCA]
 
+omit hABBC hBCCA in
 lemma side_sq_pos : (0:ℝ) < dist A B ^ 2 := by
   have : dist A B ≠ 0 := by simpa using hAB
   positivity

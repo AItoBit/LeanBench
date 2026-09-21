@@ -1,6 +1,6 @@
 by
   subst hS
   refine ⟨fun hA ↦ ?_, fun hA ↦ ?_, fun hA ↦ ?_⟩ <;> subst hA
-  · exact candidate.parts.a
-  · exact candidate.parts.b
-  · exact candidate.parts.c
+  · exact imo_1959_p2.parts.a
+  · exact imo_1959_p2.parts.b
+  · exact imo_1959_p2.parts.c

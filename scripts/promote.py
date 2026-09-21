@@ -56,6 +56,19 @@ def main() -> int:
     if "core_like" in meta.get("import_flags", []):
         print("Aviso: marcado como 'core_like'. Confirma que formaliza el problema completo.")
 
+    # Solo se promueve lo que CI ha compilado: referencia aceptada y contexto ok.
+    report = REPO / args.source / "compile.jsonl"
+    if report.exists():
+        rows = {json.loads(l)["problem_id"]: json.loads(l)
+                for l in report.read_text(encoding="utf-8").splitlines() if l.strip()}
+        row = rows.get(args.problem_id)
+        if row is None or row.get("status") != "accepted" or row.get("context") not in ("ok", "-"):
+            print(f"{args.problem_id} no ha pasado la compilacion en CI: {row and row.get('status')}"
+                  f" / contexto {row and row.get('context')}. No se promueve.")
+            return 1
+    else:
+        print("Aviso: no hay compile.jsonl en la carpeta; copia ahi el informe de CI.")
+
     ref_src = src / "reference.proof.lean"
     ref_dst = REPO / "references" / f"{args.problem_id}.proof.lean"
     if ref_dst.exists():

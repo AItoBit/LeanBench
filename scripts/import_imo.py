@@ -62,7 +62,7 @@ OTHER_KW = (
     "namespace", "section", "end", "open", "variable", "universe", "set_option",
     "attribute", "import", "notation", "infix", "infixl", "infixr", "prefix",
     "postfix", "macro", "macro_rules", "syntax", "elab", "local", "scoped",
-    "noncomputable", "mutual", "deriving", "initialize", "export",
+    "noncomputable", "mutual", "deriving", "initialize", "export", "include", "omit",
 )
 CMD_RE = re.compile(
     rf"^{ATTRS}{MODIFIERS}(?P<kw>{'|'.join(DECL_KW + OTHER_KW)}|#[a-zA-Z_]+)\b(?P<rest>[^\n]*)",
@@ -106,7 +106,7 @@ def commands(src: str, masked: str):
             prev = merged.pop()
             c = dict(c, start=prev["start"])
         text_masked = masked[c["start"]:c["end"]].strip()
-        if c["kw"] in ("open", "set_option") and re.search(r"\bin$", text_masked):
+        if c["kw"] in ("open", "set_option", "omit") and re.search(r"\bin$", text_masked):
             c = dict(c, prefix_in=True)
         merged.append(c)
     for c in merged:
@@ -133,6 +133,7 @@ def module_doc(src: str) -> str:
 def find_signature_end(masked_decl: str) -> int:
     """Indice del primer `:=` a profundidad 0 (fin del enunciado) o -1."""
     depth = 0
+    pending = 0  # `let x := v` / `have h := p` dentro del TIPO consumen un `:=`
     opens, closes = "([{⟨⦃", ")]}⟩⦄"
     i = 0
     while i < len(masked_decl) - 1:
@@ -141,14 +142,20 @@ def find_signature_end(masked_decl: str) -> int:
             depth += 1
         elif c in closes:
             depth -= 1
+        elif depth == 0 and re.match(r"(let|have)\b", masked_decl[i:i + 5]) and (
+                i == 0 or not (masked_decl[i - 1].isalnum() or masked_decl[i - 1] in "_.'")):
+            pending += 1
         elif depth == 0 and masked_decl.startswith(":=", i):
-            return i
+            if pending:
+                pending -= 1
+            else:
+                return i
         i += 1
     return -1
 
 
 TRIVIAL_PREAMBLE = {"open", "namespace", "section", "end", "universe", "set_option",
-                    "variable", "noncomputable", "import"}
+                    "variable", "noncomputable", "import", "include", "omit"}
 STATEMENT_CONTEXT = {"def", "abbrev", "structure", "inductive", "instance", "class",
                      "attribute", "notation", "infix", "infixl", "infixr", "prefix",
                      "postfix", "local", "scoped", "opaque", "deriving", "mutual",
@@ -195,6 +202,9 @@ def analyse(path: Path, year: str, pnum: str) -> dict:
                if m.split(".")[0] not in ("Mathlib", "Batteries", "Std", "Lean", "Init", "Aesop")]
     if foreign:
         info["reasons"].append(f"importa modulos externos al proyecto: {foreign}")
+
+    if re.search(r"^[ \t]+(?:private\s+|protected\s+)?(?:lemma|theorem)\s+\S", masked, re.M):
+        info["reasons"].append("declaraciones indentadas: el importador solo separa comandos en la columna 0")
 
     thms = [c for c in cmds if c["kw"] in ("theorem", "lemma")]
     if not thms:
@@ -244,9 +254,11 @@ def analyse(path: Path, year: str, pnum: str) -> dict:
     header_renamed = re.sub(r"^(\s*)lemma\b", r"\1theorem", header_renamed, flags=re.M)
 
     short = main["name"].split(".")[-1]
-    body = re.sub(rf"(?<![\w.]){re.escape(main['name'])}(?![\w'])", "candidate", body)
+    # Solo referencias al propio teorema: `imo_x.parts.a` es OTRO lema (en el
+    # namespace `imo_x`) y no debe renombrarse.
+    body = re.sub(rf"(?<![\w.]){re.escape(main['name'])}(?![\w'.])", "candidate", body)
     if short != main["name"]:
-        body = re.sub(rf"(?<![\w.]){re.escape(short)}(?![\w'])", "candidate", body)
+        body = re.sub(rf"(?<![\w.]){re.escape(short)}(?![\w'.])", "candidate", body)
 
     try:
         sanitize_proof(body)
@@ -271,15 +283,37 @@ def analyse(path: Path, year: str, pnum: str) -> dict:
     epilogue = "\n".join(f"end {n}".rstrip() for _, n in reversed(stack))
     target = f"{ns_path}.candidate" if ns_path else "candidate"
 
-    context_parts, aux_parts, prefix_parts = [], [], []
+    segs = []  # (kind, short_name, text) en el orden original
     for c in before:
         if c["kw"] in ("import", "example"):
             continue
         text = src[c["start"]:c["end"]].rstrip()
         if not text.strip():
             continue
-        prefix_parts.append(text)  # orden original: lo que compila el autor
-        (aux_parts if c["kw"] in ("theorem", "lemma") else context_parts).append(text)
+        is_lemma = c["kw"] in ("theorem", "lemma")
+        segs.append(("lemma" if is_lemma else "ctx", c["name"].split(".")[-1], text))
+
+    # Si una definicion del contexto usa un lema del autor (p. ej. dentro de un
+    # `Equiv` o un subtipo), ese lema tiene que ir en el contexto: sin el, el
+    # participante no podria ni compilar el enunciado. Se calcula por punto fijo.
+    def uses(text, name):
+        return bool(name) and re.search(rf"(?<![\w'.]){re.escape(name)}(?![\w'])", mask(text))
+    keep = set()
+    changed = True
+    while changed:
+        changed = False
+        ctx_texts = [t for k, n, t in segs if k == "ctx" or n in keep]
+        for k, n, t in segs:
+            if k == "lemma" and n not in keep and any(uses(ct, n) for ct in ctx_texts if ct is not t):
+                keep.add(n)
+                changed = True
+    if keep:
+        info["flags"].append(f"lemas del autor en el contexto: {len(keep)}")
+
+    context_parts, aux_parts, prefix_parts = [], [], []
+    for k, n, t in segs:
+        prefix_parts.append(t)  # orden original: lo que compila el autor
+        (aux_parts if (k == "lemma" and n not in keep) else context_parts).append(t)
     context = "\n\n".join(context_parts)
     aux = "\n\n".join(aux_parts)
 

@@ -101,7 +101,6 @@ variable (hABBC : dist A B = dist B C) (hBCCA : dist B C = dist C A)
 include hABBC hBCCA
 
 omit hABBC hBCCA in
-
 lemma inner_uu : ⟪B - A, B - A⟫ = dist A B ^ 2 := by
   rw [real_inner_self_eq_norm_sq, dist_eq_norm, norm_sub_rev]
 
@@ -139,10 +138,10 @@ lemma upt_inner (a b c d a' b' c' d' : ℝ) :
   rw [upt_sub, upt_sub, inner_key hABBC hBCCA]
 
 variable (hAB : A ≠ B)
+
 include hAB
 
 omit hABBC hBCCA in
-
 lemma side_sq_pos : (0:ℝ) < dist A B ^ 2 := by
   have : dist A B ≠ 0 := by simpa using hAB
   positivity

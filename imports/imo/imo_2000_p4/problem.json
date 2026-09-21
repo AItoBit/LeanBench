@@ -24,7 +24,9 @@
   "target_decl": "Imo2000P4.candidate",
   "epilogue": "end Imo2000P4",
   "import_category": "C",
-  "import_flags": [],
+  "import_flags": [
+    "lemas del autor en el contexto: 3"
+  ],
   "formalization_reviewed": false,
   "reviewer": "",
   "formalization_author": "AItoBit",

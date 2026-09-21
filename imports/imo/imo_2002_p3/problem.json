@@ -1,0 +1,40 @@
+{
+  "id": "imo_2002_p3",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2002,
+    "problem": 3,
+    "file": "2002/P3.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2002_p3",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib.Analysis.Polynomial.Basic",
+    "Mathlib.RingTheory.Polynomial.Content",
+    "Mathlib.Tactic"
+  ],
+  "informal_statement": "IMO 2002, Problem 3, with the quotient explicitly required to be an integer.\nBoth directions are proved: necessity and infinitely many positive witnesses for (5, 3).",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2002_p3/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2002_p3/reference.aux.lean",
+  "reference_prefix_file": "imports/imo/imo_2002_p3/reference.prefix.lean",
+  "target_decl": "IMO2002P3.candidate",
+  "epilogue": "end IMO2002P3",
+  "import_category": "C",
+  "import_flags": [
+    "usa variable"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

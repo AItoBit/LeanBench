@@ -53,7 +53,6 @@ lemma card_half (i : Fin 2) : (half p i).card = p := by
   simp [ZMod.card]
 
 omit [NeZero p] in
-
 lemma sh_injective (k : ZMod p) : Function.Injective (sh (p := p) k) := by
   rintro ⟨r, i⟩ ⟨r', i'⟩ h
   simp only [sh, Prod.mk.injEq] at h
@@ -62,18 +61,15 @@ lemma sh_injective (k : ZMod p) : Function.Injective (sh (p := p) k) := by
   simp_all
 
 omit [NeZero p] in
-
 lemma mlen_le_card (B : Finset (G p)) : mlen B ≤ B.card :=
   card_filter_le _ _
 
 omit [NeZero p] in
-
 lemma card_sh_image (k : ZMod p) (B : Finset (G p)) :
     (B.image (sh k)).card = B.card :=
   card_image_of_injective _ (sh_injective k)
 
 omit [NeZero p] in
-
 lemma mlen_sh_image (k : ZMod p) (B : Finset (G p)) :
     mlen (B.image (sh k)) = mlen B := by
   classical
@@ -82,7 +78,6 @@ lemma mlen_sh_image (k : ZMod p) (B : Finset (G p)) :
   rfl
 
 omit [NeZero p] in
-
 lemma rsum_sh_image (k : ZMod p) (B : Finset (G p)) :
     rsum (B.image (sh k)) = rsum B + (mlen B : ZMod p) * k := by
   classical
@@ -209,19 +204,16 @@ lemma sh_mem_X {B : Finset (G p)} (hB : B ∈ X p) (k : ZMod p) : B.image (sh k)
   · rwa [mlen_sh_image]
 
 omit [NeZero p] in
-
 lemma sh_comp (a b : ZMod p) (x : G p) : sh a (sh b x) = sh (a + b) x := by
   simp only [sh]
   split <;> simp [add_comm, add_left_comm]
 
 omit [NeZero p] in
-
 lemma sh_zero_apply (x : G p) : sh (0 : ZMod p) x = x := by
   simp only [sh]
   split <;> simp
 
 omit [NeZero p] in
-
 lemma image_sh_add (a b : ZMod p) (B : Finset (G p)) :
     (B.image (sh b)).image (sh a) = B.image (sh (a + b)) := by
   rw [Finset.image_image]
@@ -230,7 +222,6 @@ lemma image_sh_add (a b : ZMod p) (B : Finset (G p)) :
   exact sh_comp a b x
 
 omit [NeZero p] in
-
 lemma image_sh_zero (B : Finset (G p)) : B.image (sh (0 : ZMod p)) = B := by
   have h : sh (0 : ZMod p) = id := funext sh_zero_apply
   rw [h, Finset.image_id]

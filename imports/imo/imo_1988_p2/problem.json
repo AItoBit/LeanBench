@@ -1,0 +1,39 @@
+{
+  "id": "imo_1988_p2",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1988,
+    "problem": 2,
+    "file": "1988/P2.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1988_p2",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "**IMO 1988, Problem 2, final answer.** The values of `n` for which *every* configuration as in\nthe problem admits an assignment of `0`/`1` making each `A i` carry exactly `n` zeros are exactly\nthe even ones. (The forward implication uses that configurations do exist for every `n`.)",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1988_p2/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_1988_p2/reference.aux.lean",
+  "reference_prefix_file": "imports/imo/imo_1988_p2/reference.prefix.lean",
+  "target_decl": "IMO1988P2.candidate",
+  "epilogue": "end Existence\nend IMO1988P2",
+  "import_category": "C",
+  "import_flags": [
+    "usa variable",
+    "declaraciones despues del teorema: ['answer_ne_four_dvd']"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

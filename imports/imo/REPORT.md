@@ -6,10 +6,10 @@ Archivos analizados: **358**
 | --------- | ----------- | -------- |
 | A | Enunciado limpio: se importa tal cual | 66 |
 | B | Necesita definiciones previas: se importa con ellas | 7 |
-| C | Usa lemas auxiliares propios: se importan como parte de la referencia | 275 |
-| X | Excluido (ver motivo) | 10 |
+| C | Usa lemas auxiliares propios: se importan como parte de la referencia | 277 |
+| X | Excluido (ver motivo) | 8 |
 
-Importados a `imports/imo/`: **348**. De ellos, 145 tienen la marca `core_like`: revisa con cuidado si formalizan el problema completo o solo una parte.
+Importados a `imports/imo/`: **350**. De ellos, 145 tienen la marca `core_like`: revisa con cuidado si formalizan el problema completo o solo una parte.
 
 Ninguno entra en el benchmark hasta que lo revises y lo promuevas:
 
@@ -23,11 +23,9 @@ python scripts/promote.py imo_1959_p1 --split dev
 | -------- | ------ |
 | imo_1971_p1 | declara axiom; no hay teorema principal |
 | imo_1971_p6 | declara axiom |
-| imo_1988_p2 | el evaluador rechazaria los lemas: en los lemas auxiliares solo se admiten theorem/lemma (linea 26: 'include') |
 | imo_1988_p5 | importa modulos externos al proyecto: ['RequestProject.IncenterFormula'] |
 | imo_1989_p1 | usa native_decide (la auditoria lo rechaza) |
 | imo_1997_p5 | declara axiom |
-| imo_2002_p3 | el evaluador rechazaria los lemas: en los lemas auxiliares solo se admiten theorem/lemma (linea 4: 'include') |
 | imo_2003_p4 | usa sorry/admit |
 | imo_2017_p5 | no hay teorema principal |
 | imo_2018_p4 | usa native_decide (la auditoria lo rechaza) |
@@ -181,6 +179,7 @@ python scripts/promote.py imo_1959_p1 --split dev
 | imo_1987_p5 | C | combinatorics |  |
 | imo_1987_p6 | A | number_theory |  |
 | imo_1988_p1 | C | geometry | usa variable |
+| imo_1988_p2 | C | algebra | usa variable, declaraciones despues del teorema: ['answer_ne_four_dvd'] |
 | imo_1988_p3 | A | algebra |  |
 | imo_1988_p4 | A | algebra | core_like |
 | imo_1988_p6 | C | number_theory |  |
@@ -212,7 +211,7 @@ python scripts/promote.py imo_1959_p1 --split dev
 | imo_1993_p3 | C | number_theory |  |
 | imo_1993_p4 | C | algebra | core_like |
 | imo_1993_p5 | C | algebra |  |
-| imo_1993_p6 | C | algebra | usa variable |
+| imo_1993_p6 | C | algebra | usa variable, lemas del autor en el contexto: 2 |
 | imo_1994_p1 | A | algebra |  |
 | imo_1994_p2 | C | algebra |  |
 | imo_1994_p3 | C | algebra |  |
@@ -251,7 +250,7 @@ python scripts/promote.py imo_1959_p1 --split dev
 | imo_2000_p1 | A | geometry |  |
 | imo_2000_p2 | C | algebra | core_like |
 | imo_2000_p3 | C | algebra | core_like, usa variable |
-| imo_2000_p4 | C | algebra |  |
+| imo_2000_p4 | C | algebra | lemas del autor en el contexto: 3 |
 | imo_2000_p5 | C | number_theory |  |
 | imo_2001_p1 | C | geometry | usa variable |
 | imo_2001_p2 | C | algebra | usa variable |
@@ -261,6 +260,7 @@ python scripts/promote.py imo_1959_p1 --split dev
 | imo_2001_p6 | C | number_theory |  |
 | imo_2002_p1 | C | algebra | core_like |
 | imo_2002_p2 | C | geometry | usa variable |
+| imo_2002_p3 | C | algebra | usa variable |
 | imo_2002_p4 | C | algebra | core_like |
 | imo_2002_p5 | C | algebra |  |
 | imo_2002_p6 | C | geometry | core_like |

@@ -81,3 +81,39 @@ def test_modulo_externo_se_excluye(tmp_path):
 def test_prueba_en_linea_propia_conserva_indentacion(tmp_path):
     info = _write(tmp_path, "import Mathlib\ntheorem imo_2000_p1 : True :=\n  have h := trivial\n  h\n", p="7")
     assert info["reference"].startswith("  have h")
+
+
+def test_let_en_el_enunciado(tmp_path):
+    info = _write(tmp_path, "import Mathlib\ntheorem imo_2000_p1 (n : ℕ) :\n    let k := n + 1\n"
+                  "    k = n + 1 := by\n  simp\n", p="8")
+    assert "let k := n + 1" in info["statement"]
+    assert info["statement"].rstrip().endswith("k = n + 1 :=")
+
+
+def test_lema_usado_por_una_definicion_se_queda_en_el_contexto(tmp_path):
+    info = _write(tmp_path, "import Mathlib\nlemma util : (1 : ℕ) = 1 := rfl\n"
+                  "def d : {n : ℕ // n = 1} := ⟨1, util⟩\nlemma solo_prueba : True := trivial\n"
+                  "theorem imo_2000_p1 : d.1 = 1 := d.2\n", p="9")
+    assert "lemma util" in info["context"]
+    assert "lemma solo_prueba" in info["aux"]
+    assert "lemma util" not in info["aux"]
+
+
+def test_omit_in_va_con_su_lema(tmp_path):
+    info = _write(tmp_path, "import Mathlib\nsection S\nvariable (h : True)\ninclude h\n"
+                  "omit h in\nlemma a : True := trivial\nend S\n"
+                  "theorem imo_2000_p1 : True := a\n", p="10")
+    assert "omit h in\nlemma a" in info["aux"]
+    assert "omit" not in info["context"]
+
+
+def test_no_renombra_lemas_con_el_mismo_prefijo(tmp_path):
+    info = _write(tmp_path, "import Mathlib\ntheorem imo_2000_p1.parts.a : True := trivial\n"
+                  "theorem imo_2000_p1 : True := imo_2000_p1.parts.a\n", p="11")
+    assert "imo_2000_p1.parts.a" in info["reference"]
+
+
+def test_declaraciones_indentadas_se_excluyen(tmp_path):
+    info = _write(tmp_path, "import Mathlib\nnamespace N\n  lemma a : True := trivial\n"
+                  "  theorem imo_2000_p1 : True := a\nend N\n", p="12")
+    assert info["category"] == "X"
