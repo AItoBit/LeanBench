@@ -28,8 +28,12 @@ class Budget:
     attempts: int = 1
     verification_seconds: int = 30
     generation_seconds: int = 120
-    memory_mb: int = 4096
-    max_processes: int = 256
+    # 0 = sin limite. RLIMIT_AS limita el ESPACIO DE DIRECCIONES, no la RAM:
+    # Lean reserva mucho mas de 4 GB virtuales al cargar Mathlib aunque use
+    # menos RAM real, asi que un limite bajo lo mata al arrancar. El limite de
+    # memoria real debe ponerlo el contenedor (docker --memory, cgroups).
+    memory_mb: int = 0
+    max_processes: int = 0
 
 
 @dataclass

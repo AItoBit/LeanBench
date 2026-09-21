@@ -66,15 +66,17 @@ def _preexec(budget: Budget):
         os.setsid()
         cpu = max(1, int(budget.verification_seconds) + 5)
         resource.setrlimit(resource.RLIMIT_CPU, (cpu, cpu))
-        mem = budget.memory_mb * 1024 * 1024
-        try:
-            resource.setrlimit(resource.RLIMIT_AS, (mem, mem))
-        except ValueError:
-            pass
-        try:
-            resource.setrlimit(resource.RLIMIT_NPROC, (budget.max_processes, budget.max_processes))
-        except ValueError:
-            pass
+        if budget.memory_mb > 0:
+            mem = budget.memory_mb * 1024 * 1024
+            try:
+                resource.setrlimit(resource.RLIMIT_AS, (mem, mem))
+            except ValueError:
+                pass
+        if budget.max_processes > 0:
+            try:
+                resource.setrlimit(resource.RLIMIT_NPROC, (budget.max_processes, budget.max_processes))
+            except ValueError:
+                pass
         resource.setrlimit(resource.RLIMIT_CORE, (0, 0))
 
     return apply
