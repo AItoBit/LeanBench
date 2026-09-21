@@ -72,6 +72,12 @@ class Problem:
         return self.reference_proof_path.read_text(encoding="utf-8")
 
     @property
+    def reference_prefix(self) -> str:
+        """Prefijo original de la referencia (defs + lemas en su orden), si existe."""
+        f = self.metadata.get("reference_prefix_file")
+        return (REPO_ROOT / f).read_text(encoding="utf-8") if f else ""
+
+    @property
     def reference_aux(self) -> str:
         """Lemas auxiliares de la solucion de referencia (solo en modo 'aux')."""
         f = self.metadata.get("reference_aux_file")

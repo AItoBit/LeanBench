@@ -84,7 +84,8 @@ def _attempts_for(problem, method, generator, budget, run_dir):
     if method == "reference":
         yield evaluate_attempt(problem, problem.reference_proof, run_dir,
                                method="reference", attempt=1, budget=budget,
-                               aux=problem.reference_aux)
+                               aux=problem.reference_aux,
+                               trusted_prefix=problem.reference_prefix or None)
         return
 
     if method.startswith("tactic:"):

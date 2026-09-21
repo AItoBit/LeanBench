@@ -77,6 +77,11 @@ def main() -> int:
         aux_dst = REPO / "references" / f"{args.problem_id}.aux.lean"
         shutil.move(str(aux_src), str(aux_dst))
         meta["reference_aux_file"] = f"references/{args.problem_id}.aux.lean"
+    pre_src = src / "reference.prefix.lean"
+    if pre_src.exists():
+        pre_dst = REPO / "references" / f"{args.problem_id}.prefix.lean"
+        shutil.move(str(pre_src), str(pre_dst))
+        meta["reference_prefix_file"] = f"references/{args.problem_id}.prefix.lean"
     shutil.move(str(src), str(dst))
     (dst / "problem.json").write_text(json.dumps(meta, indent=2, ensure_ascii=False) + "\n",
                                       encoding="utf-8")

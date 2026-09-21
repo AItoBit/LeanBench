@@ -70,3 +70,14 @@ def test_nucleo_parcial_se_marca(tmp_path):
     info = _write(tmp_path, "import Mathlib\n/-! # Algebraic core of the problem -/\n"
                   "theorem imo_2000_p1 : True := trivial\n", p="5")
     assert "core_like" in info["flags"]
+
+
+def test_modulo_externo_se_excluye(tmp_path):
+    info = _write(tmp_path, "import Mathlib\nimport OtroProyecto.Cosa\n"
+                  "theorem imo_2000_p1 : True := trivial\n", p="6")
+    assert info["category"] == "X"
+
+
+def test_prueba_en_linea_propia_conserva_indentacion(tmp_path):
+    info = _write(tmp_path, "import Mathlib\ntheorem imo_2000_p1 : True :=\n  have h := trivial\n  h\n", p="7")
+    assert info["reference"].startswith("  have h")

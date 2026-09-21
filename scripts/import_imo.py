@@ -191,6 +191,11 @@ def analyse(path: Path, year: str, pnum: str) -> dict:
     if re.search(r"\bnative_decide\b", code):
         info["reasons"].append("usa native_decide (la auditoria lo rechaza)")
 
+    foreign = [m for m in re.findall(r"^import\s+(\S+)", masked, re.M)
+               if m.split(".")[0] not in ("Mathlib", "Batteries", "Std", "Lean", "Init", "Aesop")]
+    if foreign:
+        info["reasons"].append(f"importa modulos externos al proyecto: {foreign}")
+
     thms = [c for c in cmds if c["kw"] in ("theorem", "lemma")]
     if not thms:
         info["reasons"].append("no hay teorema principal")
@@ -266,13 +271,14 @@ def analyse(path: Path, year: str, pnum: str) -> dict:
     epilogue = "\n".join(f"end {n}".rstrip() for _, n in reversed(stack))
     target = f"{ns_path}.candidate" if ns_path else "candidate"
 
-    context_parts, aux_parts = [], []
+    context_parts, aux_parts, prefix_parts = [], [], []
     for c in before:
         if c["kw"] in ("import", "example"):
             continue
         text = src[c["start"]:c["end"]].rstrip()
         if not text.strip():
             continue
+        prefix_parts.append(text)  # orden original: lo que compila el autor
         (aux_parts if c["kw"] in ("theorem", "lemma") else context_parts).append(text)
     context = "\n\n".join(context_parts)
     aux = "\n\n".join(aux_parts)
@@ -303,9 +309,12 @@ def analyse(path: Path, year: str, pnum: str) -> dict:
     info.update(
         imports=imports,
         context=context,
+        prefix="\n\n".join(prefix_parts),
         statement=statement,
         aux=aux,
-        reference=body.lstrip("\n").lstrip(" ") if body.strip() else "",
+        # Si la prueba empezaba en una linea nueva, se conserva su indentacion.
+        reference=(re.sub(r"^[ \t]*\n", "", body) if re.match(r"[ \t]*\n", body)
+                   else body.lstrip(" ")) if body.strip() else "",
         epilogue=epilogue,
         target_decl=target,
         informal=informal,
@@ -327,6 +336,9 @@ def write_problem(info: dict, source_url: str) -> None:
         (d / "context.lean").write_text(info["context"] + "\n", encoding="utf-8")
     if info["aux"]:
         (d / "reference.aux.lean").write_text(info["aux"] + "\n", encoding="utf-8")
+        # La referencia se compila con el prefijo ORIGINAL (lemas dentro de sus
+        # namespaces y secciones). El participante ve el contexto sin lemas.
+        (d / "reference.prefix.lean").write_text(info["prefix"] + "\n", encoding="utf-8")
     meta = {
         "id": info["id"],
         "topic": info["topic"],
@@ -344,6 +356,8 @@ def write_problem(info: dict, source_url: str) -> None:
         "reference_file": f"imports/imo/{info['id']}/reference.proof.lean",
         "reference_aux_file": (f"imports/imo/{info['id']}/reference.aux.lean"
                                if info["aux"] else None),
+        "reference_prefix_file": (f"imports/imo/{info['id']}/reference.prefix.lean"
+                                  if info["aux"] else None),
         "target_decl": info["target_decl"],
         "epilogue": info["epilogue"],
         "import_category": info["category"],
@@ -430,7 +444,7 @@ def main() -> int:
             write_problem(info, args.repository)
 
     slim = [{k: v for k, v in r.items()
-             if k not in ("statement", "reference", "informal", "context", "aux")}
+             if k not in ("statement", "reference", "informal", "context", "aux", "prefix")}
             for r in results]
     (OUT / "classification.json").write_text(
         json.dumps(slim, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")

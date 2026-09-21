@@ -20,6 +20,7 @@
   "statement_file": "statement.lean",
   "reference_file": "imports/imo/imo_1970_p1/reference.proof.lean",
   "reference_aux_file": "imports/imo/imo_1970_p1/reference.aux.lean",
+  "reference_prefix_file": "imports/imo/imo_1970_p1/reference.prefix.lean",
   "target_decl": "candidate",
   "epilogue": "",
   "import_category": "C",

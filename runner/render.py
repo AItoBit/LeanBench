@@ -67,10 +67,13 @@ def sanitize_proof(proof: str) -> str:
         raise ProofRejected(f"prueba demasiado larga (> {MAX_PROOF_CHARS} caracteres)")
 
     # Los modelos suelen envolver la respuesta en ```lean ... ```
-    text = proof.strip()
-    if text.startswith("```"):
-        text = re.sub(r"^```[a-zA-Z0-9]*\n?", "", text)
-        text = re.sub(r"\n?```\s*$", "", text).strip()
+    text = proof.rstrip()
+    if text.lstrip().startswith("```"):
+        text = re.sub(r"^\s*```[a-zA-Z0-9]*\n?", "", text)
+        text = re.sub(r"\n?```\s*$", "", text).rstrip()
+    # Quita lineas vacias iniciales pero conserva la indentacion de la primera
+    # linea: indica si la prueba iba en su propia linea (p. ej. `have ... calc`).
+    text = re.sub(r"^(?:[ \t]*\n)+", "", text)
 
     # Las comprobaciones se hacen sobre el codigo sin comentarios ni cadenas:
     # un comentario que diga "sin sorry" o un titulo "## Lemas" no es codigo.
@@ -168,28 +171,42 @@ def sanitize_aux(aux: str, statement: str = "") -> str:
 
 
 def indent_proof(proof: str) -> str:
-    """Coloca la prueba detras del `:=` del enunciado.
+    """Coloca la prueba detras del `:=` del enunciado, respetando su forma.
 
-    La primera linea va en la misma linea que `:=` (asi `by`/`calc` quedan
-    donde el autor los escribio). Las demas se conservan tal cual, salvo que
-    alguna empiece en la columna 0: entonces todas se indentan 2 espacios,
-    porque Lean no acepta el cuerpo de una declaracion en la columna 0.
+    * Si la primera linea viene indentada, el autor la escribio en su propia
+      linea: se conserva todo tal cual en una linea nueva. Mover un `have` o un
+      `calc` al final del enunciado rompe la alineacion con las lineas siguientes.
+    * Si no (lo normal: `by ...`), la primera linea va detras de `:=`.
+    * Si alguna linea posterior esta en la columna 0, se indentan 2 espacios,
+      porque Lean no acepta el cuerpo de una declaracion en la columna 0.
     """
     lines = proof.splitlines()
     if not lines:
         return ""
-    first, rest = lines[0].strip(), lines[1:]
+    first, rest = lines[0], lines[1:]
+    own_line = first[:1] in (" ", "\t")
+    if own_line:
+        body = lines
+        if any(l.strip() and not l[0].isspace() for l in body):
+            body = ["  " + l if l.strip() else "" for l in body]
+        return "\n" + "\n".join(body)
     if any(l.strip() and not l[0].isspace() for l in rest):
         rest = ["  " + l if l.strip() else "" for l in rest]
-    return "\n".join([" " + first] + rest)
+    return "\n".join([" " + first.strip()] + rest)
 
 
-def render(problem, proof: str, attempt_dir, aux: str = "") -> RenderedAttempt:
+def render(problem, proof: str, attempt_dir, aux: str = "",
+           trusted_prefix: str = None) -> RenderedAttempt:
     """Escribe `Candidate.lean` en `attempt_dir` y lo devuelve.
 
     Orden: imports, contexto confiable, lemas del participante (solo en modo
     'aux'), enunciado confiable + prueba del participante, epilogo, auditoria.
     """
+    if trusted_prefix is not None:
+        # Solo para soluciones de referencia del repositorio: el prefijo original
+        # del autor (defs y lemas en su orden y sus namespaces) sustituye a
+        # contexto + lemas. No se usa nunca con respuestas de un participante.
+        aux = ""
     if aux and aux.strip() and problem.mode != "aux":
         raise ProofRejected("este problema no admite lemas auxiliares")
     clean_aux = sanitize_aux(aux, problem.statement) if problem.mode == "aux" else ""
@@ -200,6 +217,8 @@ def render(problem, proof: str, attempt_dir, aux: str = "") -> RenderedAttempt:
     imports = "\n".join(f"import {mod}" for mod in problem.imports)
     epilogue = (problem.epilogue.strip() + "\n\n") if problem.epilogue.strip() else ""
     context = (problem.context + "\n\n") if problem.context else ""
+    if trusted_prefix is not None:
+        context = (trusted_prefix.strip() + "\n\n") if trusted_prefix.strip() else ""
     aux_block = (
         "-- >>> lemas del participante\n" + clean_aux + "\n-- <<< fin de los lemas\n\n"
     ) if clean_aux else ""
@@ -220,6 +239,9 @@ def render(problem, proof: str, attempt_dir, aux: str = "") -> RenderedAttempt:
 
 def render_reference(problem, attempt_dir) -> RenderedAttempt:
     """La solucion de referencia pasa por la MISMA plantilla que un agente."""
+    if problem.reference_prefix:
+        return render(problem, problem.reference_proof, attempt_dir,
+                      trusted_prefix=problem.reference_prefix)
     return render(problem, problem.reference_proof, attempt_dir, aux=problem.reference_aux)
 
 

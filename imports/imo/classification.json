@@ -3360,26 +3360,12 @@
     "file": "1988/P5.lean",
     "year": 1988,
     "problem": 5,
-    "category": "C",
-    "reasons": [],
-    "flags": [
-      "declaraciones despues del teorema: ['dist_eq_dist_altitude']"
+    "category": "X",
+    "reasons": [
+      "importa modulos externos al proyecto: ['RequestProject.IncenterFormula']"
     ],
-    "main_theorem": "imo1988_p5",
-    "imports": [
-      "Mathlib",
-      "RequestProject.IncenterFormula"
-    ],
-    "epilogue": "end Imo1988P5",
-    "target_decl": "Imo1988P5.candidate",
-    "topic": "geometry",
-    "helper_lemmas": [
-      "area_of_right_angle",
-      "coeff_eq_zero_of_orthogonal",
-      "norm_sq_smul_add_smul",
-      "collinear_det",
-      "imo1988_p5_aux"
-    ]
+    "flags": [],
+    "main_theorem": "imo1988_p5"
   },
   {
     "id": "imo_1988_p6",

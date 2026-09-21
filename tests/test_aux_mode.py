@@ -62,3 +62,20 @@ def test_modo_proof_no_admite_lemas(tmp_path):
     p = _problem(tmp_path, "proof")
     with pytest.raises(ProofRejected, match="no admite lemas"):
         render(p, "by rfl", tmp_path / "out", aux="lemma uno : True := trivial")
+
+
+def test_referencia_usa_el_prefijo_original(tmp_path):
+    """La referencia conserva lemas dentro de su namespace; el participante no."""
+    from runner.render import render_reference
+
+    p = _problem(tmp_path, "aux")
+    d = p.directory
+    (d / "prefix.lean").write_text("namespace N\nlemma uno : (1 : ℕ) = 1 := rfl\nend N\nopen N",
+                                   encoding="utf-8")
+    meta = json.loads((d / "problem.json").read_text(encoding="utf-8"))
+    meta["reference_prefix_file"] = str(d / "prefix.lean")
+    (d / "problem.json").write_text(json.dumps(meta), encoding="utf-8")
+    p = load_problem(d)
+    c = render_reference(p, tmp_path / "ref").content
+    assert c.index("namespace N") < c.index("lemma uno") < c.index("end N") < c.index("theorem candidate")
+    assert "open Real" not in c  # el prefijo sustituye al contexto del participante

@@ -23,6 +23,7 @@
   "statement_file": "statement.lean",
   "reference_file": "imports/imo/imo_1991_p5/reference.proof.lean",
   "reference_aux_file": null,
+  "reference_prefix_file": null,
   "target_decl": "IMO1991P5.candidate",
   "epilogue": "end IMO1991P5",
   "import_category": "B",

@@ -30,8 +30,11 @@ def classify(execution, audit_result, rejected_reason=None):
         return S.TIMEOUT
     if execution.resource_limited:
         return S.RESOURCE_LIMIT
-    out = execution.output.lower()
-    if any(re.search(p, out) for p in INFRA_PATTERNS):
+    # Solo lineas que NO son diagnosticos del archivo del intento: un error de
+    # Lean sobre la prueba (aunque mencione "failed to load") es matematico.
+    outside = "\n".join(l for l in execution.output.lower().splitlines()
+                        if "candidate.lean:" not in l)
+    if any(re.search(p, outside) for p in INFRA_PATTERNS):
         return S.INFRASTRUCTURE_ERROR
     if execution.exit_code != 0:
         return S.COMPILE_ERROR
@@ -49,6 +52,7 @@ def evaluate_attempt(
     generation_seconds=0.0,
     extra=None,
     aux: str = "",
+    trusted_prefix: str = None,
 ) -> dict:
     budget = budget or problem.budget
     attempt_dir = Path(run_dir) / "attempts" / f"{problem.id}__{method}__{attempt:03d}"
@@ -65,7 +69,7 @@ def evaluate_attempt(
     }
 
     try:
-        rendered = render(problem, proof, attempt_dir, aux=aux)
+        rendered = render(problem, proof, attempt_dir, aux=aux, trusted_prefix=trusted_prefix)
     except ProofRejected as exc:
         record.update(
             status=S.AUDIT_REJECTED,

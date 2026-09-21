@@ -76,3 +76,15 @@ def test_los_comentarios_no_disparan_el_saneado():
 def test_sorry_fuera_de_comentario_sigue_rechazado():
     with pytest.raises(ProofRejected, match="sorry"):
         sanitize_proof("by\n  -- comentario\n  sorry")
+
+
+def test_prueba_en_su_propia_linea_conserva_la_alineacion(tmp_path):
+    """`have ... calc` en termino: mover la primera linea rompe la alineacion."""
+    proof = "  have h : True := trivial\n  calc\n    1 = 1 := rfl"
+    c = render(PROBLEM, proof, tmp_path).content
+    assert ":=\n  have h : True := trivial\n  calc\n    1 = 1 := rfl" in c
+
+
+def test_by_en_la_linea_del_enunciado(tmp_path):
+    c = render(PROBLEM, "by\n  simp", tmp_path).content
+    assert ":= by\n  simp" in c

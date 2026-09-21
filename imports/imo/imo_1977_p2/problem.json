@@ -20,6 +20,7 @@
   "statement_file": "statement.lean",
   "reference_file": "imports/imo/imo_1977_p2/reference.proof.lean",
   "reference_aux_file": null,
+  "reference_prefix_file": null,
   "target_decl": "Imo1977P2.candidate",
   "epilogue": "end Imo1977P2",
   "import_category": "A",

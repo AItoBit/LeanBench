@@ -20,6 +20,7 @@
   "statement_file": "statement.lean",
   "reference_file": "imports/imo/imo_2003_p6/reference.proof.lean",
   "reference_aux_file": "imports/imo/imo_2003_p6/reference.aux.lean",
+  "reference_prefix_file": "imports/imo/imo_2003_p6/reference.prefix.lean",
   "target_decl": "Imo2003P6.candidate",
   "epilogue": "end Imo2003P6",
   "import_category": "C",

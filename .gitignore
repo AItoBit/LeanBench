@@ -1,5 +1,10 @@
 /.lake
 /runs
+/_to_delete
 __pycache__/
 *.pyc
 .venv/
+.pytest_cache/
+# Archivos de diagnostico locales
+/tmp_check.lean
+/diagnose.py

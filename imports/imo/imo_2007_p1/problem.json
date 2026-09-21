@@ -20,6 +20,7 @@
   "statement_file": "statement.lean",
   "reference_file": "imports/imo/imo_2007_p1/reference.proof.lean",
   "reference_aux_file": "imports/imo/imo_2007_p1/reference.aux.lean",
+  "reference_prefix_file": "imports/imo/imo_2007_p1/reference.prefix.lean",
   "target_decl": "IMO2007P1.candidate",
   "epilogue": "end IMO2007P1",
   "import_category": "C",
