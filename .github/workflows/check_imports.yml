@@ -1,4 +1,4 @@
-# Mueve este archivo a .github/workflows/check_imports.yml
+# Copia este archivo a .github/workflows/check_imports.yml
 # Se lanza a mano: GitHub -> Actions -> "Compilar referencias importadas" -> Run workflow
 name: Compilar referencias importadas
 
@@ -29,6 +29,9 @@ jobs:
       - name: Compilar y auditar cada referencia
         # No falla el job si alguna referencia no compila: el informe es el resultado.
         run: python -m runner.check_references "${{ inputs.folder }}" --jobs 3 || true
+      - name: Publicar el informe en la pagina de resumen (visible sin iniciar sesion)
+        if: always()
+        run: cat "${{ inputs.folder }}/COMPILE.md" >> "$GITHUB_STEP_SUMMARY" || true
       - uses: actions/upload-artifact@v4
         if: always()
         with:
