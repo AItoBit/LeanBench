@@ -1,5 +1,3 @@
-namespace IMO1985P5
-
 theorem candidate
     (θ φ η lam angle_AON angle_AMN angle_OMN angle_MNB angle_OMB : ℝ)
     (h1 : θ + φ = 90)

@@ -1,5 +1,3 @@
-namespace IMO1987P3
-
 theorem candidate
     (S_a S_x S_ax n k : ℝ)
     (h_CS : S_ax^2 ≤ S_a * S_x)

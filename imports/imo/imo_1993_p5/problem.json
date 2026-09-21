@@ -1,0 +1,39 @@
+{
+  "id": "imo_1993_p5",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1993,
+    "problem": 5,
+    "file": "1993/P5.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1993_p5",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib.Algebra.Order.Floor.Ring",
+    "Mathlib.Data.Real.Sqrt",
+    "Mathlib.Tactic.Linarith",
+    "Mathlib.Tactic.NormNum",
+    "Mathlib.Tactic.Ring"
+  ],
+  "informal_statement": "There exists a strictly increasing `f : ℕ → ℕ` such that `f 1 = 2` and\n`f (f n) = f n + n`.  This is slightly stronger than the problem, whose\nnatural numbers start at `1`, because the identity is also proved at `0`.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1993_p5/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_1993_p5/reference.aux.lean",
+  "target_decl": "GoldenRatioFunction.candidate",
+  "epilogue": "end GoldenRatioFunction",
+  "import_category": "C",
+  "import_flags": [],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

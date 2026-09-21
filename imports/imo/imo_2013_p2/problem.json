@@ -1,0 +1,37 @@
+{
+  "id": "imo_2013_p2",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2013,
+    "problem": 2,
+    "file": "2013/P2.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2013_p2",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "Purely numerical summary of the source argument:\n\n* the construction uses exactly 2013 lines;\n* any cyclic extremal configuration satisfying the capacity bound\n  requires at least 2013 lines.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2013_p2/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2013_p2/reference.aux.lean",
+  "target_decl": "IMO2013P2.candidate",
+  "epilogue": "end IMO2013P2",
+  "import_category": "C",
+  "import_flags": [
+    "core_like"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

@@ -15,8 +15,11 @@
     "Mathlib"
   ],
   "informal_statement": "# IMO 1985, Problem 1 (Algebraic Core)\n\nBy evaluating the lengths of the tangent segments in terms of the circle's \nradius `r` and the angles at vertices `A` and `B`, we get:\n  AD = r * cot A + r * tan (B / 2)\n  BC = r * cot B + r * tan (A / 2)\n  AB = r * csc A + r * csc B\n  \nTo prove AD + BC = AB, we must algebraically verify the identity:\n  cot θ + tan (θ / 2) = csc θ\n\nWe substitute the half-angle formulas:\n  sin θ = 2xy\n  cos θ = 2y² - 1\nwhere x = sin(θ/2) and y = cos(θ/2), ensuring x² + y² = 1.",
+  "mode": "aux",
+  "context_file": "context.lean",
   "statement_file": "statement.lean",
   "reference_file": "imports/imo/imo_1985_p1/reference.proof.lean",
+  "reference_aux_file": null,
   "target_decl": "IMO1985P1.candidate",
   "epilogue": "end IMO1985P1",
   "import_category": "A",

@@ -15,8 +15,11 @@
     "Mathlib"
   ],
   "informal_statement": "Let P be the product of the digits of a natural number x. We have the constraints:\n1. P ≤ x (a known property of the digit product for natural numbers)\n2. P ≥ 0 (since digits are non-negative)\n3. P = x^2 - 10x - 22 (from the problem statement)\n\nWe prove that these constraints uniquely determine x = 12 and P = 2.",
+  "mode": "aux",
+  "context_file": null,
   "statement_file": "statement.lean",
   "reference_file": "imports/imo/imo_1968_p2/reference.proof.lean",
+  "reference_aux_file": null,
   "target_decl": "candidate",
   "epilogue": "",
   "import_category": "A",

@@ -1,0 +1,35 @@
+{
+  "id": "imo_1975_p1",
+  "topic": "combinatorics",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1975,
+    "problem": 1,
+    "file": "1975/P1.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1975_p1",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "**IMO 1975, Problem 1.**\nLet `x i`, `y i` (`i = 1, …, n`) be real numbers with\n`x 1 ≥ x 2 ≥ … ≥ x n` and `y 1 ≥ y 2 ≥ … ≥ y n`.\nIf `z` is any permutation of `y`, then\n`∑ (x i - y i)^2 ≤ ∑ (x i - z i)^2`.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1975_p1/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_1975_p1/reference.aux.lean",
+  "target_decl": "Imo1975Q1.candidate",
+  "epilogue": "end Imo1975Q1",
+  "import_category": "C",
+  "import_flags": [],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

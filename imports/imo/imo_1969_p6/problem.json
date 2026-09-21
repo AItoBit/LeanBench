@@ -1,0 +1,37 @@
+{
+  "id": "imo_1969_p6",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1969,
+    "problem": 6,
+    "file": "1969/P6.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1969_p6",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "IMO 1969 Problem 6 is sharp: equality holds when `x₁ = x₂`, `y₁ = y₂`, `z₁ = z₂`.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1969_p6/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_1969_p6/reference.aux.lean",
+  "target_decl": "IMO1969P6.candidate",
+  "epilogue": "end IMO1969P6",
+  "import_category": "C",
+  "import_flags": [
+    "core_like"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

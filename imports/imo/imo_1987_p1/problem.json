@@ -1,0 +1,35 @@
+{
+  "id": "imo_1987_p1",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1987,
+    "problem": 1,
+    "file": "1987/P1.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1987_p1",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "# IMO 1987, Problem 1\n\nLet `p n k` be the number of permutations of an `n`-element set with exactly `k`\nfixed points. Prove that `∑_{k=0}^{n} k * p n k = n!`  (for `n ≥ 1`).\n\nWe model `{1, …, n}` as `Fin n`.\n\nProof (double counting):\n  ∑ k * p n k = ∑_σ #fix(σ) = ∑_i #{σ | σ i = i} = ∑_i #{σ | σ a = i} = #Perm = n!,\nwhere the third step uses the bijection `σ ↦ σ * swap a i`.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1987_p1/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_1987_p1/reference.aux.lean",
+  "target_decl": "Imo1987P1.candidate",
+  "epilogue": "end Imo1987P1",
+  "import_category": "C",
+  "import_flags": [],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

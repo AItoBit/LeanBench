@@ -15,8 +15,11 @@
     "Mathlib"
   ],
   "informal_statement": "Formalization of the algebraic core of IMO 1968 Problem 1.\nIf a, b, c are consecutive integers forming a valid triangle,\nand they satisfy the algebraic relation derived from one angle being twice another\n(a^2 * c = b * (a^2 + c^2 - b^2)), then the sides must be 4, 5, and 6.\n(Specifically, a = 6, b = 4, c = 5, where a is opposite the larger angle).",
+  "mode": "aux",
+  "context_file": "context.lean",
   "statement_file": "statement.lean",
   "reference_file": "imports/imo/imo_1968_p1/reference.proof.lean",
+  "reference_aux_file": null,
   "target_decl": "candidate",
   "epilogue": "",
   "import_category": "A",

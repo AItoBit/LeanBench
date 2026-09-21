@@ -1,0 +1,35 @@
+{
+  "id": "imo_2008_p2",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2008,
+    "problem": 2,
+    "file": "2008/P2.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2008_p2",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "**IMO 2008, Problem 2 (ii).** There are infinitely many rational triples `(x, y, z)`,\nall entries different from `1`, with `x * y * z = 1`, for which equality holds.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2008_p2/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2008_p2/reference.aux.lean",
+  "target_decl": "Imo2008P2.candidate",
+  "epilogue": "end Imo2008P2",
+  "import_category": "C",
+  "import_flags": [],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

@@ -22,7 +22,8 @@ Categorias:
     B  con definiciones: el enunciado necesita defs/estructuras previas,
        pero no hay lemas auxiliares.
     C  con lemas auxiliares: la prueba depende de lemas propios declarados
-       antes. Requiere el modo "archivo completo" (pendiente, v0.2).
+       antes. Se importan en modo archivo completo: los lemas van a
+       reference.aux.lean y el evaluador los valida con sanitize_aux.
     X  excluido: sin teorema principal, usa `sorry`/`admit`, declara
        `axiom`, usa `native_decide`, o el evaluador rechazaria la prueba.
 
@@ -43,7 +44,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from runner.lexing import mask  # noqa: E402
-from runner.render import ProofRejected, sanitize_proof  # noqa: E402
+from runner.render import ProofRejected, sanitize_aux, sanitize_proof  # noqa: E402
 
 REPO = Path(__file__).resolve().parent.parent
 OUT = REPO / "imports" / "imo"
@@ -83,8 +84,34 @@ def commands(src: str, masked: str):
             mm = re.match(r"([^\s(:{\[⦃]+)", rest)
             name = mm.group(1) if mm else ""
         cmds.append({"kw": kw, "name": name, "start": start, "end": end,
-                     "head": rest, "text": src[start:end]})
-    return cmds
+                     "head": rest})
+
+    # a) Un docstring `/-- -/` pertenece al comando SIGUIENTE, no al anterior.
+    for i in range(1, len(cmds)):
+        seg = src[cmds[i - 1]["start"]:cmds[i]["start"]]
+        stripped = seg.rstrip()
+        if stripped.endswith("-/"):
+            j = stripped.rfind("/--")
+            k = stripped.rfind("/-!")
+            if j != -1 and j > k and j > 0:
+                pos = cmds[i - 1]["start"] + j
+                if pos > cmds[i - 1]["start"]:
+                    cmds[i - 1]["end"] = pos
+                    cmds[i]["start"] = pos
+
+    # b) `open X in` / `set_option o v in` modifican solo el comando siguiente.
+    merged = []
+    for c in cmds:
+        if merged and merged[-1].get("prefix_in"):
+            prev = merged.pop()
+            c = dict(c, start=prev["start"])
+        text_masked = masked[c["start"]:c["end"]].strip()
+        if c["kw"] in ("open", "set_option") and re.search(r"\bin$", text_masked):
+            c = dict(c, prefix_in=True)
+        merged.append(c)
+    for c in merged:
+        c["text"] = src[c["start"]:c["end"]]
+    return merged
 
 
 def docstring_before(src: str, pos: int) -> str:
@@ -239,21 +266,31 @@ def analyse(path: Path, year: str, pnum: str) -> dict:
     epilogue = "\n".join(f"end {n}".rstrip() for _, n in reversed(stack))
     target = f"{ns_path}.candidate" if ns_path else "candidate"
 
-    preamble_parts = []
+    context_parts, aux_parts = [], []
     for c in before:
-        if c["kw"] == "import":
+        if c["kw"] in ("import", "example"):
             continue
-        if c["kw"] in ("theorem", "lemma", "example"):
+        text = src[c["start"]:c["end"]].rstrip()
+        if not text.strip():
             continue
-        preamble_parts.append(src[c["start"]:c["end"]].rstrip())
-    preamble = "\n\n".join(p for p in preamble_parts if p.strip())
+        (aux_parts if c["kw"] in ("theorem", "lemma") else context_parts).append(text)
+    context = "\n\n".join(context_parts)
+    aux = "\n\n".join(aux_parts)
 
     imports = re.findall(r"^import\s+(\S+)", masked, re.M)
     imports = [m for m in dict.fromkeys(imports)] or ["Mathlib"]
 
+    statement = header_renamed.rstrip() + " :="
+    if aux:
+        try:
+            sanitize_aux(aux, statement)
+        except ProofRejected as exc:
+            info["reasons"].append(f"el evaluador rechazaria los lemas: {exc.reason}")
+            info["category"] = "X"
+            return info
+
     if helper_lemmas:
         info["category"] = "C"
-        info["reasons"].append(f"{len(helper_lemmas)} lema(s) auxiliar(es) antes del teorema")
     elif context_decls or odd_before:
         info["category"] = "B"
     else:
@@ -261,10 +298,13 @@ def analyse(path: Path, year: str, pnum: str) -> dict:
     if decls_after:
         info["flags"].append(f"declaraciones despues del teorema: {decls_after[:3]}")
 
-    informal = docstring_before(src, main["start"]) or module_doc(src)
+    mdoc = re.match(r"\s*/--(.*?)-/", src[main["start"]:main["end"]], re.S)
+    informal = (mdoc.group(1).strip() if mdoc else "") or module_doc(src)
     info.update(
         imports=imports,
-        statement=(preamble + "\n\n" if preamble else "") + header_renamed.rstrip() + " :=",
+        context=context,
+        statement=statement,
+        aux=aux,
         reference=body.lstrip("\n").lstrip(" ") if body.strip() else "",
         epilogue=epilogue,
         target_decl=target,
@@ -283,6 +323,10 @@ def write_problem(info: dict, source_url: str) -> None:
     d.mkdir(parents=True, exist_ok=True)
     (d / "statement.lean").write_text(info["statement"] + "\n", encoding="utf-8")
     (d / "reference.proof.lean").write_text(info["reference"] + "\n", encoding="utf-8")
+    if info["context"]:
+        (d / "context.lean").write_text(info["context"] + "\n", encoding="utf-8")
+    if info["aux"]:
+        (d / "reference.aux.lean").write_text(info["aux"] + "\n", encoding="utf-8")
     meta = {
         "id": info["id"],
         "topic": info["topic"],
@@ -294,8 +338,12 @@ def write_problem(info: dict, source_url: str) -> None:
         "split": "unassigned",
         "imports": info["imports"],
         "informal_statement": info["informal"],
+        "mode": "aux",
+        "context_file": "context.lean" if info["context"] else None,
         "statement_file": "statement.lean",
         "reference_file": f"imports/imo/{info['id']}/reference.proof.lean",
+        "reference_aux_file": (f"imports/imo/{info['id']}/reference.aux.lean"
+                               if info["aux"] else None),
         "target_decl": info["target_decl"],
         "epilogue": info["epilogue"],
         "import_category": info["category"],
@@ -312,7 +360,8 @@ def write_problem(info: dict, source_url: str) -> None:
 
 def write_report(results) -> str:
     cats = Counter(r["category"] for r in results)
-    core = [r for r in results if "core_like" in r["flags"] and r["category"] in "AB"]
+    imported = [r for r in results if r["category"] in ("A", "B", "C")]
+    core = [r for r in imported if "core_like" in r["flags"]]
     lines = [
         "# Importacion IMO",
         "",
@@ -322,10 +371,10 @@ def write_report(results) -> str:
         "| --------- | ----------- | -------- |",
         f"| A | Enunciado limpio: se importa tal cual | {cats['A']} |",
         f"| B | Necesita definiciones previas: se importa con ellas | {cats['B']} |",
-        f"| C | Lemas auxiliares: pendiente del modo archivo completo | {cats['C']} |",
+        f"| C | Usa lemas auxiliares propios: se importan como parte de la referencia | {cats['C']} |",
         f"| X | Excluido (ver motivo) | {cats['X']} |",
         "",
-        f"Importados a `imports/imo/`: **{cats['A'] + cats['B']}**. "
+        f"Importados a `imports/imo/`: **{len(imported)}**. "
         f"De ellos, {len(core)} tienen la marca `core_like`: revisa con cuidado si "
         "formalizan el problema completo o solo una parte.",
         "",
@@ -343,18 +392,13 @@ def write_report(results) -> str:
     for r in results:
         if r["category"] == "X":
             lines.append(f"| {r['id']} | {'; '.join(r['reasons'])} |")
-    lines += ["", "## Importados (A y B)", "",
+    lines += ["", "## Importados (A, B y C)", "",
               "| Problema | Cat. | Tema (estimado) | Marcas |",
               "| -------- | ---- | --------------- | ------ |"]
     for r in results:
-        if r["category"] in ("A", "B"):
+        if r["category"] in ("A", "B", "C"):
             lines.append(f"| {r['id']} | {r['category']} | {r.get('topic', '')} | "
                          f"{', '.join(r['flags']) or ''} |")
-    lines += ["", "## Pendientes (C)", "", "| Problema | Lemas auxiliares |",
-              "| -------- | ---------------- |"]
-    for r in results:
-        if r["category"] == "C":
-            lines.append(f"| {r['id']} | {len(r.get('helper_lemmas', []))} |")
     lines.append("")
     return "\n".join(lines)
 
@@ -382,10 +426,11 @@ def main() -> int:
             continue
         info = analyse(f, f.parent.name, m.group(1))
         results.append(info)
-        if info["category"] in ("A", "B"):
+        if info["category"] in ("A", "B", "C"):
             write_problem(info, args.repository)
 
-    slim = [{k: v for k, v in r.items() if k not in ("statement", "reference", "informal")}
+    slim = [{k: v for k, v in r.items()
+             if k not in ("statement", "reference", "informal", "context", "aux")}
             for r in results]
     (OUT / "classification.json").write_text(
         json.dumps(slim, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")

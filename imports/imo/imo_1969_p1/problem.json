@@ -15,8 +15,11 @@
     "Mathlib"
   ],
   "informal_statement": "Formalization of IMO 1969 Problem 1.\nProve that there are infinitely many natural numbers a with the following property:\nthe number z = n^4 + a is not prime for any natural number n.\n\nWe model \"infinitely many\" by showing that for any arbitrary bound `m`, \nthere exists an `a ≥ m` satisfying the property.",
+  "mode": "aux",
+  "context_file": null,
   "statement_file": "statement.lean",
   "reference_file": "imports/imo/imo_1969_p1/reference.proof.lean",
+  "reference_aux_file": null,
   "target_decl": "candidate",
   "epilogue": "",
   "import_category": "A",

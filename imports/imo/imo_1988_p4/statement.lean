@@ -1,5 +1,3 @@
-namespace IMO1988P4
-
 theorem candidate 
     (sum_k sum_r a_70 a_69 : ℚ)
     (h_sum_k : sum_k = 35 * 71)

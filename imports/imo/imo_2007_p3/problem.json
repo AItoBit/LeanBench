@@ -1,0 +1,37 @@
+{
+  "id": "imo_2007_p3",
+  "topic": "combinatorics",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2007,
+    "problem": 3,
+    "file": "2007/P3.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2007_p3",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "**IMO 2007, Problem 3.**  If the largest size of a clique among all the competitors is\neven, then the competitors can be arranged into two rooms (a room `A` and its complement)\nso that the largest size of a clique contained in one room equals the largest size of a\nclique contained in the other.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2007_p3/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2007_p3/reference.aux.lean",
+  "target_decl": "IMO2007P3.candidate",
+  "epilogue": "end Main\nend IMO2007P3",
+  "import_category": "C",
+  "import_flags": [
+    "usa variable"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

@@ -1,0 +1,83 @@
+lemma step (c : ℕ → Fin 6) (hc : SumFreeColoring c) (T : Finset ℕ) (F : Finset (Fin 6))
+    (q : ℕ) (hinv : Inv c T F) (hcard : q * (6 - F.card) < T.card) :
+    ∃ (T' : Finset ℕ) (F' : Finset (Fin 6)), Inv c T' F' ∧ F'.card = F.card + 1 ∧ q ≤ T'.card := by
+  obtain ⟨hpos, hcol, hdiff⟩ := hinv
+  -- pigeonhole: some colour outside `F` occurs at least `q + 1` times in `T`
+  have hsum : T.card = ∑ a ∈ Fᶜ, (T.filter (fun t => c t = a)).card :=
+    Finset.card_eq_sum_card_fiberwise (fun t ht => Finset.mem_compl.mpr (hcol t ht))
+  have hFc : (Fᶜ : Finset (Fin 6)).card = 6 - F.card := by
+    rw [Finset.card_compl]; simp
+  obtain ⟨a, ha, hA⟩ : ∃ a ∈ (Fᶜ : Finset (Fin 6)), q + 1 ≤ (T.filter (fun t => c t = a)).card := by
+    by_contra hcon
+    push_neg at hcon
+    have hle : ∑ a ∈ (Fᶜ : Finset (Fin 6)), (T.filter (fun t => c t = a)).card
+        ≤ ∑ _a ∈ (Fᶜ : Finset (Fin 6)), q :=
+      Finset.sum_le_sum (fun a ha => Nat.lt_succ_iff.mp (hcon a ha))
+    rw [Finset.sum_const, smul_eq_mul, hFc, mul_comm] at hle
+    omega
+  set A : Finset ℕ := T.filter (fun t => c t = a)
+  have hAsub : A ⊆ T := Finset.filter_subset _ _
+  have hAcol : ∀ t ∈ A, c t = a := by
+    intro t ht
+    exact (Finset.mem_filter.mp ht).2
+  have hAne : A.Nonempty := Finset.card_pos.mp (by omega)
+  set M : ℕ := A.max' hAne
+  have hMA : M ∈ A := A.max'_mem hAne
+  have hMT : M ∈ T := hAsub hMA
+  have hMle : ∀ t ∈ A, t ≤ M := fun t ht => A.le_max' t ht
+  refine ⟨(A.erase M).image (fun t => M - t), insert a F, ⟨?_, ?_, ?_⟩, ?_, ?_⟩
+  · -- positivity / boundedness
+    intro u hu
+    simp only [Finset.mem_image, Finset.mem_erase] at hu
+    obtain ⟨t, ⟨htM, htA⟩, rfl⟩ := hu
+    have h1 : t < M := lt_of_le_of_ne (hMle t htA) htM
+    have h2 : M ≤ 1978 := (hpos M hMT).2
+    omega
+  · -- colours of elements
+    intro u hu
+    simp only [Finset.mem_image, Finset.mem_erase] at hu
+    obtain ⟨t, ⟨htM, htA⟩, rfl⟩ := hu
+    have htT : t ∈ T := hAsub htA
+    have h1 : t < M := lt_of_le_of_ne (hMle t htA) htM
+    have hnF : c (M - t) ∉ F := hdiff t htT M hMT h1
+    simp only [Finset.mem_insert]
+    rintro (heq | hmem)
+    · -- `c (M - t) = a` would give a monochromatic solution `t + (M - t) = M`
+      refine hc t (M - t) (hpos t htT).1 (by omega) (by
+        have := (hpos M hMT).2; omega) ?_ ?_
+      · rw [show t + (M - t) = M by omega, hAcol t htA, hAcol M hMA]
+      · rw [show t + (M - t) = M by omega, heq, hAcol M hMA]
+    · exact hnF hmem
+  · -- colours of differences
+    intro u hu u' hu' hlt
+    simp only [Finset.mem_image, Finset.mem_erase] at hu hu'
+    obtain ⟨t, ⟨htM, htA⟩, rfl⟩ := hu
+    obtain ⟨s, ⟨hsM, hsA⟩, rfl⟩ := hu'
+    have htT : t ∈ T := hAsub htA
+    have hsT : s ∈ T := hAsub hsA
+    have h1 : t < M := lt_of_le_of_ne (hMle t htA) htM
+    have h2 : s < M := lt_of_le_of_ne (hMle s hsA) hsM
+    have h3 : s < t := by omega
+    have hsub : M - s - (M - t) = t - s := by omega
+    rw [hsub]
+    have hnF : c (t - s) ∉ F := hdiff s hsT t htT h3
+    simp only [Finset.mem_insert]
+    rintro (heq | hmem)
+    · refine hc s (t - s) (hpos s hsT).1 (by omega) (by
+        have := (hpos t htT).2; omega) ?_ ?_
+      · rw [show s + (t - s) = t by omega, hAcol s hsA, hAcol t htA]
+      · rw [show s + (t - s) = t by omega, heq, hAcol t htA]
+    · exact hnF hmem
+  · -- the set of discarded colours grows by one
+    have : a ∉ F := Finset.mem_compl.mp ha
+    rw [Finset.card_insert_of_notMem this]
+  · -- cardinality bound
+    have hinj : Set.InjOn (fun t => M - t) (A.erase M) := by
+      intro x hx y hy hxy
+      simp only [Finset.mem_coe, Finset.mem_erase] at hx hy
+      have h1 : x ≤ M := hMle x hx.2
+      have h2 : y ≤ M := hMle y hy.2
+      simp only at hxy
+      omega
+    rw [Finset.card_image_of_injOn hinj, Finset.card_erase_of_mem hMA]
+    omega

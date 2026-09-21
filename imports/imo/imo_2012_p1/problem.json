@@ -1,0 +1,37 @@
+{
+  "id": "imo_2012_p1",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2012,
+    "problem": 1,
+    "file": "2012/P1.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2012_p1",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "Point-valued final conclusion: `M` itself equals the midpoint of `ST`.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2012_p1/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2012_p1/reference.aux.lean",
+  "target_decl": "IMO2012P1.candidate",
+  "epilogue": "end IMO2012P1",
+  "import_category": "C",
+  "import_flags": [
+    "core_like"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

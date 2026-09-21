@@ -1,5 +1,3 @@
-namespace IMO1985P1
-
 theorem candidate
     (r xA yA xB yB : ℝ)
     (hA_unit : xA^2 + yA^2 = 1)

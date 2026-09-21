@@ -15,8 +15,11 @@
     "Mathlib"
   ],
   "informal_statement": "# IMO 1999, Problem 6\n\nDetermine all `f : ℝ → ℝ` with `f (x - f y) = f (f y) + x * f y + f x - 1` for all `x, y`.\n\nAnswer: `f x = 1 - x²/2`.\n\n## Proof\n\nWrite `c = f 0`.\n\n* `c ≠ 0`: putting `x = y = 0` with `f 0 = 0` gives `0 = -1`.\n* Putting `x = f y` gives `c = 2 f (f y) + (f y)² - 1`, i.e.\n  `f (f y) = (c + 1 - (f y)²)/2` — valid for every value `f y` of `f`.\n* Putting `x = f z` and substituting the previous line twice,\n  `f (f z - f y) = c - (f z - f y)²/2`.\n* Every real is such a difference: `x = 0`'s instance reads\n  `f (x - c) - f x = f c + c x - 1`, which is a nonconstant affine function of `x` because\n  `c ≠ 0`, so it attains every value. Hence `f w = c - w²/2` for **all** `w`.\n* Comparing this at `w = c` with `f (f 0) = (c + 1 - c²)/2` gives `c = 1`.\n\nNote the AoPS write-up derives `f x = (c+1)/2 - x²/2` \"for all `x`\" from the substitution\n`x = f y`, which only licenses it on the range of `f` (its own parenthetical admits this), and\nthen uses evenness of that formula at `-c`. The difference step above closes that gap: it proves\nthe formula on the *set of differences* of values of `f`, which is all of `ℝ`.",
+  "mode": "aux",
+  "context_file": "context.lean",
   "statement_file": "statement.lean",
   "reference_file": "imports/imo/imo_1999_p6/reference.proof.lean",
+  "reference_aux_file": null,
   "target_decl": "Imo1999P6.candidate",
   "epilogue": "end Imo1999P6",
   "import_category": "A",

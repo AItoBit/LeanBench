@@ -48,6 +48,7 @@ def evaluate_attempt(
     allowed_axioms=DEFAULT_ALLOWED_AXIOMS,
     generation_seconds=0.0,
     extra=None,
+    aux: str = "",
 ) -> dict:
     budget = budget or problem.budget
     attempt_dir = Path(run_dir) / "attempts" / f"{problem.id}__{method}__{attempt:03d}"
@@ -64,7 +65,7 @@ def evaluate_attempt(
     }
 
     try:
-        rendered = render(problem, proof, attempt_dir)
+        rendered = render(problem, proof, attempt_dir, aux=aux)
     except ProofRejected as exc:
         record.update(
             status=S.AUDIT_REJECTED,

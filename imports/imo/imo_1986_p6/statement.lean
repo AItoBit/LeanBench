@@ -1,13 +1,8 @@
-namespace IMO1986P6
-
-open Finset
-
 /-- 
 Given a finite grid of points colored with integers, if all rows sum to 0 
 except row `r₀` which sums to `t_h`, and all columns sum to 0 except 
 column `c₀` which sums to `t_v`, then `t_h = t_v`.
 -/
-
 theorem candidate
     {α : Type*} [Fintype α] [DecidableEq α]
     {β : Type*} [Fintype β] [DecidableEq β]

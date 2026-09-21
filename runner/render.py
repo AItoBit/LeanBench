@@ -39,6 +39,11 @@ FORBIDDEN_TOKENS = (
 )
 
 
+#: Opciones que solo cambian presupuestos de recursos, nunca la confianza.
+RESOURCE_OPTIONS = {"maxHeartbeats", "maxRecDepth", "synthInstance.maxHeartbeats",
+                    "synthInstance.maxSize"}
+
+
 class ProofRejected(Exception):
     """El intento se rechaza antes de compilar."""
 
@@ -90,9 +95,75 @@ def sanitize_proof(proof: str) -> str:
     if re.search(r"(?<![A-Za-z0-9_])set_option(?![A-Za-z0-9_])", code):
         # Solo se permiten opciones de recursos, nunca de confianza.
         for m in re.finditer(r"set_option\s+([A-Za-z0-9_.]+)", code):
-            if m.group(1) not in {"maxHeartbeats", "maxRecDepth", "synthInstance.maxHeartbeats"}:
+            if m.group(1) not in RESOURCE_OPTIONS:
                 raise ProofRejected(f"set_option no permitido: {m.group(1)}")
 
+    return text
+
+
+#: Atributos permitidos en lemas auxiliares: no cambian el significado del
+#: enunciado. Cualquier otro (instance, default_instance, macro...) podria.
+ALLOWED_AUX_ATTRIBUTES = {"simp", "local simp"}
+
+_IDENT = re.compile(r"[A-Za-z_\u00C0-\u024F\u0370-\u03FF\u1F00-\u1FFF][A-Za-z0-9_'.!?\u00C0-\u024F\u0370-\u03FF\u2080-\u209C\u1F00-\u1FFF]*")
+
+
+def sanitize_aux(aux: str, statement: str = "") -> str:
+    """Valida los lemas auxiliares del modo archivo completo.
+
+    Solo se admiten `theorem`/`lemma` (opcionalmente `private`, con docstring
+    y con `@[simp]`). Nada que pueda cambiar como se elabora el enunciado:
+    ni `def`, ni `instance`, ni `notation`, ni `open`, ni `namespace`.
+    Ademas, ningun lema puede llamarse como un identificador del enunciado,
+    para que no pueda suplantar un nombre que el enunciado usa.
+    """
+    if aux is None or not aux.strip():
+        return ""
+    if len(aux) > 20 * MAX_PROOF_CHARS:
+        raise ProofRejected("lemas auxiliares demasiado largos")
+    text = aux.strip("\n")
+    code = mask(text)
+
+    for token in FORBIDDEN_TOKENS:
+        if re.search(rf"(?<![A-Za-z0-9_]){re.escape(token)}(?![A-Za-z0-9_])", code):
+            raise ProofRejected(f"construccion no permitida en los lemas: {token}")
+    for m in re.finditer(r"set_option\s+([A-Za-z0-9_.]+)", code):
+        if m.group(1) not in RESOURCE_OPTIONS:
+            raise ProofRejected(f"set_option no permitido en los lemas: {m.group(1)}")
+
+    names = []
+    for lineno, line in enumerate(code.splitlines(), start=1):
+        if not line.strip() or line[0] in " \t":
+            continue
+        rest = line.strip()
+        for attr in re.findall(r"@\[([^\]]*)\]", rest):
+            if attr.strip() not in ALLOWED_AUX_ATTRIBUTES:
+                raise ProofRejected(f"atributo no permitido en la linea {lineno}: @[{attr}]")
+        rest = re.sub(r"^(?:@\[[^\]]*\]\s*)*", "", rest)
+        if not rest:
+            continue  # atributo solo en su linea; se aplica al lema siguiente
+        m = re.match(r"(?:private\s+)?(theorem|lemma)\s+([^\s(:{\[⦃]+)", rest)
+        if m:
+            names.append(m.group(2))
+            continue
+        if re.match(r"set_option\s+\S+\s+\S+\s+in\s*$", rest):
+            continue
+        if re.match(r"(open|omit)\s+[^\n]*\bin\s*$", rest):
+            continue  # `open X in` / `omit h in` solo afectan al lema siguiente
+        if re.match(r"(termination_by|decreasing_by)\b", rest):
+            continue  # clausulas del lema anterior
+        # `include` NO se admite: anadiria hipotesis tambien al enunciado.
+        head = rest.split()[0]
+        raise ProofRejected(
+            f"en los lemas auxiliares solo se admiten theorem/lemma (linea {lineno}: '{head}')")
+
+    stmt_idents = set(_IDENT.findall(mask(statement))) if statement else set()
+    stmt_last = {i.split(".")[-1] for i in stmt_idents} | stmt_idents
+    for n in names:
+        if n == "candidate" or n.split(".")[-1] == "candidate":
+            raise ProofRejected("un lema auxiliar no puede llamarse 'candidate'")
+        if n in stmt_last or n.split(".")[-1] in stmt_last:
+            raise ProofRejected(f"el lema '{n}' usa un nombre que aparece en el enunciado")
     return text
 
 
@@ -113,18 +184,31 @@ def indent_proof(proof: str) -> str:
     return "\n".join([" " + first] + rest)
 
 
-def render(problem, proof: str, attempt_dir) -> RenderedAttempt:
-    """Escribe `Candidate.lean` en `attempt_dir` y lo devuelve."""
+def render(problem, proof: str, attempt_dir, aux: str = "") -> RenderedAttempt:
+    """Escribe `Candidate.lean` en `attempt_dir` y lo devuelve.
+
+    Orden: imports, contexto confiable, lemas del participante (solo en modo
+    'aux'), enunciado confiable + prueba del participante, epilogo, auditoria.
+    """
+    if aux and aux.strip() and problem.mode != "aux":
+        raise ProofRejected("este problema no admite lemas auxiliares")
+    clean_aux = sanitize_aux(aux, problem.statement) if problem.mode == "aux" else ""
     clean = indent_proof(sanitize_proof(proof))
     attempt_dir = Path(attempt_dir)
     attempt_dir.mkdir(parents=True, exist_ok=True)
 
     imports = "\n".join(f"import {mod}" for mod in problem.imports)
     epilogue = (problem.epilogue.strip() + "\n\n") if problem.epilogue.strip() else ""
+    context = (problem.context + "\n\n") if problem.context else ""
+    aux_block = (
+        "-- >>> lemas del participante\n" + clean_aux + "\n-- <<< fin de los lemas\n\n"
+    ) if clean_aux else ""
     content = (
         "-- Archivo generado por LeanBench. No editar a mano.\n"
         f"-- problema: {problem.id}\n"
         f"{imports}\n\n"
+        f"{context}"
+        f"{aux_block}"
         f"{problem.statement}{clean}\n\n"
         f"{epilogue}"
         f"#print axioms {problem.target_decl}\n"
@@ -136,7 +220,7 @@ def render(problem, proof: str, attempt_dir) -> RenderedAttempt:
 
 def render_reference(problem, attempt_dir) -> RenderedAttempt:
     """La solucion de referencia pasa por la MISMA plantilla que un agente."""
-    return render(problem, problem.reference_proof, attempt_dir)
+    return render(problem, problem.reference_proof, attempt_dir, aux=problem.reference_aux)
 
 
 def relative_to_repo(path) -> str:

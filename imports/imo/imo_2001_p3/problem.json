@@ -1,0 +1,41 @@
+{
+  "id": "imo_2001_p3",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2001,
+    "problem": 3,
+    "file": "2001/P3.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2001_p3",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib.Algebra.BigOperators.Group.Finset.Piecewise",
+    "Mathlib.Algebra.Group.Action.Defs",
+    "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+    "Mathlib.Data.Fintype.Prod",
+    "Mathlib.Tactic"
+  ],
+  "informal_statement": "IMO 2001, Problem 3, with the hypotheses and conclusion stated explicitly.\nThe natural numbers label the competition problems.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2001_p3/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2001_p3/reference.aux.lean",
+  "target_decl": "IMO2001P3.candidate",
+  "epilogue": "end IMO2001P3",
+  "import_category": "C",
+  "import_flags": [
+    "usa variable"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

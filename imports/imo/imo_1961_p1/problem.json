@@ -1,0 +1,37 @@
+{
+  "id": "imo_1961_p1",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1961,
+    "problem": 1,
+    "file": "1961/P1.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1961_p1",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "The originally proposed version of the statement, which omits the condition `0 < a`,\nis false: for `a = -2`, `b = Real.sqrt 2` the right-hand side holds while there are of course\nno positive `x, y, z` summing to a negative number.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1961_p1/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_1961_p1/reference.aux.lean",
+  "target_decl": "candidate",
+  "epilogue": "",
+  "import_category": "C",
+  "import_flags": [
+    "core_like"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

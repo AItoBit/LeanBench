@@ -1,0 +1,37 @@
+{
+  "id": "imo_1982_p2",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1982,
+    "problem": 2,
+    "file": "1982/P2.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1982_p2",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "**IMO 1982, Problem 2.**  The three lines `MᵢSᵢ` pass through the common\npoint `P = e₂/e₁`: for the *real* number `λ = e₃/(e₁e₂)` one has\n`P = Mᵢ + λ (Sᵢ - Mᵢ)` for `i = 1, 2, 3`.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1982_p2/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_1982_p2/reference.aux.lean",
+  "target_decl": "Imo1982P2.candidate",
+  "epilogue": "end Imo1982P2",
+  "import_category": "C",
+  "import_flags": [
+    "core_like"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

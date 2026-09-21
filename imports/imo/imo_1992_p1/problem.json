@@ -15,8 +15,11 @@
     "Mathlib"
   ],
   "informal_statement": "# IMO 1992, Problem 1\n\nFind all integers `1 < a < b < c` such that `(a-1)(b-1)(c-1)` divides `abc - 1`.\n\nAnswer: `(a,b,c) = (2,4,8)` and `(a,b,c) = (3,5,15)`.\n\n## Proof\n\nWrite `abc - 1 = k·(a-1)(b-1)(c-1)`.\n\n* `k ≥ 2`, because `abc - 1 - (a-1)(b-1)(c-1) = ab + ac + bc - a - b - c > 0`.\n* `k ≤ 3`, because `abc ≤ 4(a-1)(b-1)(c-1)` when `a ≥ 2`, `b ≥ 3`, `c ≥ 4`.\n\nFor `k = 2`: if `a ≥ 4` then `abc ≤ 2(a-1)(b-1)(c-1)`, which is impossible, so `a ∈ {2,3}`.\n`a = 2` forces `2b + 2c = 3`, impossible; `a = 3` forces `bc + 5 = 4b + 4c`, giving `(3,5,15)`.\n\nFor `k = 3`: if `a ≥ 3` then `abc ≤ 3(a-1)(b-1)(c-1)`, impossible, so `a = 2`, which forces\n`bc + 4 = 3b + 3c`, giving `(2,4,8)`.\n\nEach time, `b` is bounded by comparing `bc` with a multiple of `c`, after which `interval_cases`\nplus `omega` finishes.",
+  "mode": "aux",
+  "context_file": "context.lean",
   "statement_file": "statement.lean",
   "reference_file": "imports/imo/imo_1992_p1/reference.proof.lean",
+  "reference_aux_file": null,
   "target_decl": "Imo1992P1.candidate",
   "epilogue": "end Imo1992P1",
   "import_category": "A",

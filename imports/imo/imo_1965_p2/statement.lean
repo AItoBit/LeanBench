@@ -1,3 +1,4 @@
+/-- IMO 1965, Problem 2. -/
 theorem candidate
     (a₁₁ a₁₂ a₁₃ a₂₁ a₂₂ a₂₃ a₃₁ a₃₂ a₃₃ x₁ x₂ x₃ : ℝ)
     -- (a) diagonal entries are positive

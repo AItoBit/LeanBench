@@ -1,3 +1,10 @@
+/--
+**Problem.** Let `a, b, c` be the sides of a triangle and `α, β, γ` the opposite angles
+(so the angles are positive and sum to `π`, and the law of sines holds).
+If `a + b = tan (γ/2) * (a * tan α + b * tan β)` then the triangle is isosceles: `a = b`.
+(The hypotheses `cos α ≠ 0`, `cos β ≠ 0` express that the tangents occurring in the
+statement are defined.)
+-/
 theorem candidate
     (a b c α β γ : ℝ)
     (ha : 0 < a) (_hb : 0 < b) (_hc : 0 < c)

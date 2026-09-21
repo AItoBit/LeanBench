@@ -1,0 +1,35 @@
+{
+  "id": "imo_1965_p3",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1965,
+    "problem": 3,
+    "file": "1965/P3.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1965_p3",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "**IMO 1965, Problem 3.**\n    For any tetrahedron of volume `V > 0`, the ratio of the volume of the piece\n    containing edge `AB` to the volume of the piece containing edge `CD` is\n    `k² (k + 3) / (3k + 1)`.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1965_p3/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_1965_p3/reference.aux.lean",
+  "target_decl": "IMO1965P3.candidate",
+  "epilogue": "end IMO1965P3\nend",
+  "import_category": "C",
+  "import_flags": [],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "imo_2023_p2",
+  "topic": "geometry",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2023,
+    "problem": 2,
+    "file": "2023/P2.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2023_p2",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "# IMO 2023 Problem 2 — geometric proof core\n\nThe source introduces H on BS and on the internal angle\nbisector of ∠BAC. The remaining geometric work shows that\nHP is tangent to ω at P.\n\nNo `sorry`, `admit`, or additional axioms are used.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2023_p2/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2023_p2/reference.aux.lean",
+  "target_decl": "IMO2023P2.candidate",
+  "epilogue": "end IMO2023P2",
+  "import_category": "C",
+  "import_flags": [
+    "core_like",
+    "usa variable"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

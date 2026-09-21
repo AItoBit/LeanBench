@@ -1,5 +1,3 @@
-open Real
-
 /-- Formalization of the system derivation.
 Assume `a₁ > a₂ > a₃ > a₄` (so all absolute values become signed differences)
 and that the three linear relations obtained by pairwise subtraction hold:
@@ -8,7 +6,6 @@ and that the three linear relations obtained by pairwise subtraction hold:
   -x₁ - x₂ + x₃ + x₄ = 0
 Then `x₂ = x₃ = 0`, hence `x₁ = x₄`, and substituting back gives
 `x₁ = x₄ = 1/(a₁-a₄)`. -/
-
 theorem candidate
     (a1 a2 a3 a4 x1 x2 x3 x4 : ℝ)
     (ha : a1 > a2 ∧ a2 > a3 ∧ a3 > a4)

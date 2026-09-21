@@ -1,0 +1,37 @@
+{
+  "id": "imo_2009_p2",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2009,
+    "problem": 2,
+    "file": "2009/P2.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2009_p2",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "A version that follows literally the chain displayed in the\npublished solution.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2009_p2/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2009_p2/reference.aux.lean",
+  "target_decl": "IMO2009P2.candidate",
+  "epilogue": "end IMO2009P2",
+  "import_category": "C",
+  "import_flags": [
+    "core_like"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

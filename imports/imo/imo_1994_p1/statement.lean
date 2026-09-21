@@ -1,7 +1,4 @@
-open scoped Nat
-
 /-- IMO 1994, Problem 1. -/
-
 theorem candidate (m n : ℕ) (a : ℕ → ℕ) (h₀ : 0 < m ∧ 0 < n)
     (h₁ : Set.MapsTo a (Set.Icc 1 m) (Set.Icc 1 n))
     (h₂ : Set.InjOn a (Set.Icc 1 m))

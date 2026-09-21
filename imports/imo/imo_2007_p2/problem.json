@@ -1,0 +1,38 @@
+{
+  "id": "imo_2007_p2",
+  "topic": "geometry",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2007,
+    "problem": 2,
+    "file": "2007/P2.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2007_p2",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "IMO 2007 P2: AF is the internal bisector of angle DAB.\n\n* `hpar` and `hnd` say ABCD is a nondegenerate parallelogram.\n* `hcyclic` places B,C,D,E on one circle.\n* `hF` places F strictly inside DC.\n* `hG` places G on the full line BC.\n* `hline` places G on the full line through A and F.\n* `hEF` and `hEG` express EF = EC and EG = EC.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2007_p2/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2007_p2/reference.aux.lean",
+  "target_decl": "IMO2007P2.candidate",
+  "epilogue": "end IMO2007P2",
+  "import_category": "C",
+  "import_flags": [
+    "core_like",
+    "usa variable"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "imo_1962_p1",
+  "topic": "number_theory",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1962,
+    "problem": 1,
+    "file": "1962/P1.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1962_p1",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "**IMO 1962 Problem 1.** The smallest natural number whose last decimal digit is `6` and\nwhich is multiplied by `4` when that final `6` is moved to the front is `153846`.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1962_p1/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_1962_p1/reference.aux.lean",
+  "target_decl": "candidate",
+  "epilogue": "",
+  "import_category": "C",
+  "import_flags": [],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "imo_1972_p6",
+  "topic": "geometry",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1972,
+    "problem": 6,
+    "file": "1972/P6.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1972_p6",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "**IMO 1972, Problem 6.**  Given four distinct parallel planes — all orthogonal to a common\nnonzero vector `n`, cutting out the pairwise distinct levels `c 0, c 1, c 2, c 3` — there is a\nregular tetrahedron with one vertex on each plane: four points `P i` with `P i` on the `i`-th\nplane, whose pairwise distances are all equal to a single positive number `s`.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1972_p6/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_1972_p6/reference.aux.lean",
+  "target_decl": "IMO1972P6.candidate",
+  "epilogue": "end IMO1972P6",
+  "import_category": "C",
+  "import_flags": [],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

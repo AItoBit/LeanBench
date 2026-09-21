@@ -1,0 +1,37 @@
+{
+  "id": "imo_2009_p4",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2009,
+    "problem": 4,
+    "file": "2009/P4.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2009_p4",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "From\n\n    sin(3x - 45°) = 0  or  sin(2x - 45°) = 0\n\nthe source, using `0 < x < 45`, obtains the two linear equations below.\nOnce those bounded-zero conclusions are available, Lean closes the\nolympiad result purely arithmetically.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2009_p4/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2009_p4/reference.aux.lean",
+  "target_decl": "IMO2009P4.candidate",
+  "epilogue": "end IMO2009P4",
+  "import_category": "C",
+  "import_flags": [
+    "core_like"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

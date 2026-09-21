@@ -1,0 +1,38 @@
+{
+  "id": "imo_2015_p3",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2015,
+    "problem": 3,
+    "file": "2015/P3.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2015_p3",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "This packages the final portion of the source proof.\n\nThe source has already established:\n\n* `T` is the midpoint of `HA`;\n* `N` is the midpoint of `HQ`;\n* `TNML` is a rectangle;\n* `L` lies on the perpendicular bisector of `AQ`.\n\nThe first three imply `ML ∥ AQ`, and the fourth gives\n`LA = LQ`.\n\nHence `ML` is tangent to the circumcircle of `ALQ`.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2015_p3/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2015_p3/reference.aux.lean",
+  "target_decl": "IMO2015P3.candidate",
+  "epilogue": "end IMO2015P3",
+  "import_category": "C",
+  "import_flags": [
+    "core_like",
+    "declaraciones despues del teorema: ['tangent_dot_product', 'equidistant_difference']"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

@@ -1,7 +1,4 @@
-namespace IMO1984P4
-
 /-- The algebraic core of Solution 2. -/
-
 theorem candidate
   (AM DN d_M d_N : ℝ)
   (hAM_pos : 0 < AM)

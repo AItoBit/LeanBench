@@ -15,8 +15,11 @@
     "Mathlib"
   ],
   "informal_statement": "# IMO 1985, Problem 5 (Algebraic Core of Solution 5)\n\n\nWe are given the following angular relations:\n1. `θ + φ = 90` (Step 1)\n2. `θ = η + lam` (Step 2)\n3. `angle_AON = 2 * (η + lam)` (Step 4, combined)\n4. `angle_AMN = 2 * φ` (Step 3 conclusion)\n5. `angle_OMN = φ` (Step 5, derived from cyclic quad AOMN)\n6. `angle_MNB = θ` (Step 5)\n\nWe prove that `angle_AON + angle_AMN = 180` (establishing that AOMN is cyclic),\nand subsequently that `angle_OMB = angle_OMN + angle_MNB = 90`.",
+  "mode": "aux",
+  "context_file": "context.lean",
   "statement_file": "statement.lean",
   "reference_file": "imports/imo/imo_1985_p5/reference.proof.lean",
+  "reference_aux_file": null,
   "target_decl": "IMO1985P5.candidate",
   "epilogue": "end IMO1985P5",
   "import_category": "A",

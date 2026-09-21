@@ -1,5 +1,3 @@
-open Real
-
 /--
 Formalization of the algebraic core of IMO 1968 Problem 1.
 If a, b, c are consecutive integers forming a valid triangle,
@@ -7,7 +5,6 @@ and they satisfy the algebraic relation derived from one angle being twice anoth
 (a^2 * c = b * (a^2 + c^2 - b^2)), then the sides must be 4, 5, and 6.
 (Specifically, a = 6, b = 4, c = 5, where a is opposite the larger angle).
 -/
-
 theorem candidate
   (a b c n : ℤ)
   (h_pos : 0 < n)

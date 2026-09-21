@@ -1,0 +1,35 @@
+{
+  "id": "imo_1974_p2",
+  "topic": "geometry",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1974,
+    "problem": 2,
+    "file": "1974/P2.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1974_p2",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "**IMO 1974, Problem 2.**  In a (nondegenerate) triangle `ABC` there is a point `D` on the\nside `AB` such that `CD` is the geometric mean of `AD` and `DB` if and only if\n`sin A * sin B ≤ sin (C / 2) ^ 2`.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1974_p2/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_1974_p2/reference.aux.lean",
+  "target_decl": "IMO1974P2.candidate",
+  "epilogue": "end IMO1974P2",
+  "import_category": "C",
+  "import_flags": [],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

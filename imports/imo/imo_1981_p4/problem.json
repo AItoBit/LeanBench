@@ -1,0 +1,35 @@
+{
+  "id": "imo_1981_p4",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1981,
+    "problem": 4,
+    "file": "1981/P4.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1981_p4",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "**IMO 1981, Problem 4 (b).** For `n > 2`, there is exactly one set of `n` consecutive positive\nintegers with the stated property precisely when `n = 4`.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1981_p4/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_1981_p4/reference.aux.lean",
+  "target_decl": "IMO1981P4.candidate",
+  "epilogue": "end IMO1981P4",
+  "import_category": "C",
+  "import_flags": [],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

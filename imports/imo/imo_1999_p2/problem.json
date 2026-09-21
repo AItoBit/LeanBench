@@ -1,0 +1,37 @@
+{
+  "id": "imo_1999_p2",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1999,
+    "problem": 2,
+    "file": "1999/P2.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1999_p2",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "Part (b): for `C = 1 / 8`, equality holds exactly when two of the `x i` are equal to\neach other and all the others are zero.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1999_p2/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_1999_p2/reference.aux.lean",
+  "target_decl": "Imo1999P2.candidate",
+  "epilogue": "end Imo1999P2",
+  "import_category": "C",
+  "import_flags": [
+    "usa variable"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "imo_2002_p2",
+  "topic": "geometry",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2002,
+    "problem": 2,
+    "file": "2002/P2.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2002_p2",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "The incenter of a triangle in barycentric form: with `a`, `b`, `c` the lengths of the sides\nopposite to the vertices `p₀`, `p₁`, `p₂`, we have\n`(a + b + c) • incenter = a • p₀ + b • p₁ + c • p₂`.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2002_p2/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2002_p2/reference.aux.lean",
+  "target_decl": "IncenterBarycentric.candidate",
+  "epilogue": "end IncenterBarycentric",
+  "import_category": "C",
+  "import_flags": [
+    "usa variable"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

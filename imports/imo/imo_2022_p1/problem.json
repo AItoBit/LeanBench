@@ -1,0 +1,38 @@
+{
+  "id": "imo_2022_p1",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2022,
+    "problem": 1,
+    "file": "2022/P1.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2022_p1",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "# IMO 2022 Problem 1 — classification core\n\nThe source proves that the valid values of k are exactly\n\n    n ≤ k ≤ ⌊3n / 2⌋.\n\nWe isolate the three combinatorial components of the proof:\n\n1. `k < n` never works;\n2. `⌊3n/2⌋ < k ≤ 2n` never works;\n3. `n ≤ k ≤ ⌊3n/2⌋` always works.\n\nOnce these are established for the concrete coin process,\nLean proves the exact classification.\n\nNo `sorry`, `admit`, or additional axioms are used.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2022_p1/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2022_p1/reference.aux.lean",
+  "target_decl": "IMO2022P1.candidate",
+  "epilogue": "end IMO2022P1",
+  "import_category": "C",
+  "import_flags": [
+    "core_like",
+    "usa variable"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

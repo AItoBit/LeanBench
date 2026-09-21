@@ -1,5 +1,3 @@
-namespace IMO1986P5
-
 theorem candidate (y F : ℝ)
     (hy1 : 0 ≤ y) (hy2 : y < 2)
     (hF_pos : 0 < F)

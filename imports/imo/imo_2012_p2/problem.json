@@ -1,0 +1,35 @@
+{
+  "id": "imo_2012_p2",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2012,
+    "problem": 2,
+    "file": "2012/P2.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2012_p2",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "IMO 2012 Problem 2 after establishing the pointwise AM-GM estimate.\n\nThe assumption\n\n    ∏ i<n-1, a(i+2) = 1\n\nis exactly\n\n    a₂ a₃ ... aₙ = 1.\n\nThe conclusion is\n\n    n^n ≤\n      (a₂+1)^2 (a₃+1)^3 ... (aₙ+1)^n.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2012_p2/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2012_p2/reference.aux.lean",
+  "target_decl": "IMO2012P2.candidate",
+  "epilogue": "end IMO2012P2",
+  "import_category": "C",
+  "import_flags": [],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

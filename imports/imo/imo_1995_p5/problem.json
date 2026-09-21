@@ -1,0 +1,37 @@
+{
+  "id": "imo_1995_p5",
+  "topic": "geometry",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1995,
+    "problem": 5,
+    "file": "1995/P5.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1995_p5",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "**IMO 1995, Problem 5.**  Let `ABCDEF` be a convex hexagon with `AB = BC = CD` and\n`DE = EF = FA`, such that `∠BCD = ∠EFA = π/3`.  If `G` and `H` are points in the interior\nof the hexagon with `∠AGB = ∠DHE = 2π/3`, then `AG + GB + GH + DH + HE ≥ CF`.\n\nThe hypotheses `hG`, `hH`, `hGmem`, `hHmem` concerning the two points `G` and `H` are part\nof the original statement and are kept here, but the inequality in fact holds for arbitrary\npoints `G` and `H`, so they are not used in the proof.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1995_p5/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_1995_p5/reference.aux.lean",
+  "target_decl": "IMO1995P5.candidate",
+  "epilogue": "end IMO1995P5",
+  "import_category": "C",
+  "import_flags": [
+    "core_like"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

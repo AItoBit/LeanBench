@@ -1,0 +1,38 @@
+{
+  "id": "imo_2001_p2",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2001,
+    "problem": 2,
+    "file": "2001/P2.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2001_p2",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+    "Mathlib.Tactic"
+  ],
+  "informal_statement": "# IMO 2001 Q2\n\nLet $a$, $b$, $c$ be positive reals. Prove that\n$$\n\\frac{a}{\\sqrt{a^2 + 8bc}} +\n\\frac{b}{\\sqrt{b^2 + 8ca}} +\n\\frac{c}{\\sqrt{c^2 + 8ab}} ≥ 1.\n$$\n\nVerified with Lean 4.34.0 and mathlib commit\n7801e8406155c31b340d28e2762f754d02b5e9b0.\nAdapted from Archive/Imo/Imo2001Q2.lean (Tian Chen).\n\n## Solution\n\nThis proof is based on the bound\n$$\n\\frac{a}{\\sqrt{a^2 + 8bc}} ≥\n\\frac{a^{\\frac43}}{a^{\\frac43} + b^{\\frac43} + c^{\\frac43}}.\n$$",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2001_p2/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2001_p2/reference.aux.lean",
+  "target_decl": "candidate",
+  "epilogue": "",
+  "import_category": "C",
+  "import_flags": [
+    "usa variable"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

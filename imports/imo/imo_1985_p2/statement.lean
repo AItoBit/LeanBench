@@ -1,5 +1,3 @@
-namespace IMO1985P2
-
 theorem candidate {α : Type*}
     (n k : ℤ)
     (h_coprime : Int.gcd n k = 1)

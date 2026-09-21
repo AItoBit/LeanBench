@@ -1,0 +1,1 @@
+namespace Imo1992P1

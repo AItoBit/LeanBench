@@ -1,5 +1,3 @@
-namespace IMO1986P2
-
 theorem candidate
     (ω a : ℂ)
     (hω_root : ω^2 + ω + 1 = 0)

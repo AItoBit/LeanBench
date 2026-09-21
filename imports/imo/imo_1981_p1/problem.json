@@ -1,0 +1,37 @@
+{
+  "id": "imo_1981_p1",
+  "topic": "geometry",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1981,
+    "problem": 1,
+    "file": "1981/P1.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1981_p1",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "**IMO 1981, Problem 1.**  Let `P` be a point inside the triangle `ABC` (given by strictly\npositive barycentric coordinates `α, β, γ`), and let `D`, `E`, `F` be the feet of the\nperpendiculars from `P` to the lines `BC`, `CA`, `AB`.  Then\n\n  `BC/PD + CA/PE + AB/PF ≥ (BC + CA + AB)² / (2·area ABC)`,\n\nwith equality if and only if `P` is the incenter of the triangle, i.e.\n`(a + b + c) • P = a • A + b • B + c • C` with `a = BC`, `b = CA`, `c = AB`; equivalently,\nif and only if `PD = PE = PF`.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1981_p1/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_1981_p1/reference.aux.lean",
+  "target_decl": "Imo1981P1.candidate",
+  "epilogue": "end Imo1981P1",
+  "import_category": "C",
+  "import_flags": [
+    "usa variable"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

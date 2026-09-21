@@ -1,0 +1,37 @@
+{
+  "id": "imo_1978_p2",
+  "topic": "geometry",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1978,
+    "problem": 2,
+    "file": "1978/P2.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1978_p2",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "The same statement as a distance: `Q` lies on the sphere of centre `O` and\nradius `√(3R² − 2·OP²)`.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1978_p2/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_1978_p2/reference.aux.lean",
+  "target_decl": "Imo1978P2.candidate",
+  "epilogue": "end Imo1978P2",
+  "import_category": "C",
+  "import_flags": [
+    "usa variable"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

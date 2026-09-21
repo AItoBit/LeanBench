@@ -1,0 +1,37 @@
+{
+  "id": "imo_1997_p6",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1997,
+    "problem": 6,
+    "file": "1997/P6.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1997_p6",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "**IMO 1997, Problem 6.** For `n ≥ 3`,\n`2 ^ (n ^ 2 / 4) < f (2 ^ n) < 2 ^ (n ^ 2 / 2)`.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1997_p6/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_1997_p6/reference.aux.lean",
+  "target_decl": "BinaryPartition.candidate",
+  "epilogue": "end BinaryPartition",
+  "import_category": "C",
+  "import_flags": [
+    "core_like"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

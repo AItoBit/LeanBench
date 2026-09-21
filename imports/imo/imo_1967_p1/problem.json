@@ -15,8 +15,11 @@
     "Mathlib"
   ],
   "informal_statement": "Formalization of the boundary case calculations from the solution to IMO 1967 Problem 1.\n  the solution simplifies the geometric\ncondition to a set of algebraic and trigonometric calculations for the maximum bounding case.",
+  "mode": "aux",
+  "context_file": "context.lean",
   "statement_file": "statement.lean",
   "reference_file": "imports/imo/imo_1967_p1/reference.proof.lean",
+  "reference_aux_file": null,
   "target_decl": "candidate",
   "epilogue": "",
   "import_category": "A",

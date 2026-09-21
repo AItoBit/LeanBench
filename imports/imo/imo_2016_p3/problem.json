@@ -1,0 +1,38 @@
+{
+  "id": "imo_2016_p3",
+  "topic": "number_theory",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2016,
+    "problem": 3,
+    "file": "2016/P3.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2016_p3",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "Arithmetic conclusion of the official counting argument:\n\nany table satisfying the source's counting identities has\nside length divisible by `9`.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2016_p3/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2016_p3/reference.aux.lean",
+  "target_decl": "IMO2016P2.candidate",
+  "epilogue": "end IMO2016P2",
+  "import_category": "C",
+  "import_flags": [
+    "core_like",
+    "declaraciones despues del teorema: ['three_dvd_of_nine_dvd', 'eq_nine_mul_of_nine_dvd']"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

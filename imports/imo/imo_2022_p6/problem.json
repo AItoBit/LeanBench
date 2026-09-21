@@ -1,0 +1,38 @@
+{
+  "id": "imo_2022_p6",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2022,
+    "problem": 6,
+    "file": "2022/P6.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2022_p6",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "Same theorem with\n\n    2*n*(n-1)+1\n\nwritten directly in the conclusion.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2022_p6/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2022_p6/reference.aux.lean",
+  "target_decl": "IMO2022P6.candidate",
+  "epilogue": "end IMO2022P6",
+  "import_category": "C",
+  "import_flags": [
+    "usa variable",
+    "declaraciones despues del teorema: ['edge_count_decomposition', 'edges_plus_singleton', 'minimum_eq_target']"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

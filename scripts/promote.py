@@ -50,7 +50,7 @@ def main() -> int:
         return 1
 
     meta = json.loads((src / "problem.json").read_text(encoding="utf-8"))
-    if meta.get("import_category") not in ("A", "B"):
+    if meta.get("import_category") not in ("A", "B", "C"):
         print(f"Categoria {meta.get('import_category')}: no se puede promover todavia")
         return 1
     if "core_like" in meta.get("import_flags", []):
@@ -72,6 +72,11 @@ def main() -> int:
         meta.update(topic=args.topic, topic_is_guess=False)
 
     shutil.move(str(ref_src), str(ref_dst))
+    aux_src = src / "reference.aux.lean"
+    if aux_src.exists():
+        aux_dst = REPO / "references" / f"{args.problem_id}.aux.lean"
+        shutil.move(str(aux_src), str(aux_dst))
+        meta["reference_aux_file"] = f"references/{args.problem_id}.aux.lean"
     shutil.move(str(src), str(dst))
     (dst / "problem.json").write_text(json.dumps(meta, indent=2, ensure_ascii=False) + "\n",
                                       encoding="utf-8")

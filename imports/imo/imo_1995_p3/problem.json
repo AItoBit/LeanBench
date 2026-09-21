@@ -1,0 +1,35 @@
+{
+  "id": "imo_1995_p3",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1995,
+    "problem": 3,
+    "file": "1995/P3.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1995_p3",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "**No two labels can be equal.**  Suppose `U` and `V` carry the same label,\nso that for each of the three pairs taken from `X`, `Y`, `Z` the triangles on\nthat pair with apex `U` and with apex `V` have equal areas.  If `X`, `Y`, `Z`\nare not collinear and none of `X`, `Y`, `Z` is collinear with `U` and `V`, this\nis impossible.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1995_p3/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_1995_p3/reference.aux.lean",
+  "target_decl": "EqualAreaLabelling.candidate",
+  "epilogue": "end EqualAreaLabelling",
+  "import_category": "C",
+  "import_flags": [],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

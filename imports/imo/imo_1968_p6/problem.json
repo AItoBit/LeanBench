@@ -15,8 +15,11 @@
     "Mathlib"
   ],
   "informal_statement": "Formalization of IMO 1968 Problem 6.\nEvaluates the infinite sum of floor((n + 2^k) / 2^{k+1}) to n.\nSince terms where 2^{k+1} > n + 2^k are zero, the sum is formulated \nas a finite sum up to N where 2^N > n, directly yielding the final atomic conclusion.",
+  "mode": "aux",
+  "context_file": "context.lean",
   "statement_file": "statement.lean",
   "reference_file": "imports/imo/imo_1968_p6/reference.proof.lean",
+  "reference_aux_file": null,
   "target_decl": "candidate",
   "epilogue": "",
   "import_category": "A",

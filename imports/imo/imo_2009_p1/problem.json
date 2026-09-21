@@ -1,0 +1,37 @@
+{
+  "id": "imo_2009_p1",
+  "topic": "number_theory",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2009,
+    "problem": 1,
+    "file": "2009/P1.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2009_p1",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "**IMO 2009 Problem 1.**\n\nZero-based formulation.\n\n`a 0, ..., a (k-1)` are distinct integers in `{1, ..., n}` and\n\n    n ∣ a i * (a (i+1) - 1)\n\nfor every consecutive pair.\n\nThen\n\n    n ∤ a (k-1) * (a 0 - 1).",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2009_p1/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2009_p1/reference.aux.lean",
+  "target_decl": "IMO2009P1.candidate",
+  "epilogue": "end IMO2009P1",
+  "import_category": "C",
+  "import_flags": [
+    "core_like"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

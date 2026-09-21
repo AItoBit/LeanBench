@@ -15,8 +15,11 @@
     "Mathlib"
   ],
   "informal_statement": "# IMO 1986, Problem 5 (Algebraic Core of Solution 2)\n\nFor `0 ≤ y < 2`, we let `F = f(y)`. The functional equation and the \nroot condition `f(x) = 0 ↔ x ≥ 2` yield two strict inequalities:\n1. `2 ≤ (2 - y) * F`\n2. `2 ≤ y + 2 / F`\n\nWe prove algebraically that these strict conditions force `F = 2 / (2 - y)`.",
+  "mode": "aux",
+  "context_file": "context.lean",
   "statement_file": "statement.lean",
   "reference_file": "imports/imo/imo_1986_p5/reference.proof.lean",
+  "reference_aux_file": null,
   "target_decl": "IMO1986P5.candidate",
   "epilogue": "end IMO1986P5",
   "import_category": "A",

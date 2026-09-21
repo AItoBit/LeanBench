@@ -1,0 +1,1 @@
+namespace Imo2006P3

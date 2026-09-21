@@ -1,0 +1,37 @@
+{
+  "id": "imo_1962_p2",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1962,
+    "problem": 2,
+    "file": "1962/P2.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1962_p2",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "**IMO 1962, Problem 2.**  The set of real `x` with `3 - x ≥ 0`, `x + 1 ≥ 0` and\n`√(3 - x) - √(x + 1) > 1/2` is exactly `[-1, 1 - √31/8)`.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1962_p2/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_1962_p2/reference.aux.lean",
+  "target_decl": "candidate",
+  "epilogue": "",
+  "import_category": "C",
+  "import_flags": [
+    "core_like"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

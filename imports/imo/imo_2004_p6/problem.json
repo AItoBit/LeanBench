@@ -1,0 +1,38 @@
+{
+  "id": "imo_2004_p6",
+  "topic": "number_theory",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2004,
+    "problem": 6,
+    "file": "2004/P6.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2004_p6",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "**IMO 2004 P6, the \"only if\" direction.**",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2004_p6/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2004_p6/reference.aux.lean",
+  "target_decl": "Imo2004P6.candidate",
+  "epilogue": "end Imo2004P6",
+  "import_category": "C",
+  "import_flags": [
+    "core_like",
+    "declaraciones despues del teorema: ['div_pow_of_le', 'div_pow_of_ge', 'parity_shift']"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

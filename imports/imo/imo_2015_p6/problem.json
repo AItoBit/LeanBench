@@ -1,0 +1,38 @@
+{
+  "id": "imo_2015_p6",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2015,
+    "problem": 6,
+    "file": "2015/P6.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2015_p6",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "The source eventually supplies `v`, `N`, and `w`.\n\nTaking\n\n    b = v + 1\n\nand increasing `N` to `N+1` if necessary gives positive\nintegers `b,N₀` satisfying the required bound.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2015_p6/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2015_p6/reference.aux.lean",
+  "target_decl": "IMO2015P6.candidate",
+  "epilogue": "end IMO2015P6",
+  "import_category": "C",
+  "import_flags": [
+    "core_like",
+    "declaraciones despues del teorema: ['midpoint_identity', 'final_square_identity']"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

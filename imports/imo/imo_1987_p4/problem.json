@@ -15,8 +15,11 @@
     "Mathlib"
   ],
   "informal_statement": "# IMO 1987, Problem 4\n\nProve that there is no function `f : ℕ → ℕ` such that `f (f n) = n + 1987` for every `n`.\n\nProof (Solution 3 on AoPS):\n1. `f (n + 1987) = f n + 1987`, hence `f (n + 1987 k) = f n + 1987 k`.\n2. So `f n % 1987` only depends on `n % 1987`, and `g r := f r % 1987`\n   is an involution of `{0, …, 1986}`.\n3. `g` has no fixed point: `f r = r + 1987 q` would give `r + 1987 = r + 2·1987 q`.\n4. A fixed-point-free involution forces an even number of elements\n   (via `Finset.prod_involution` with the constant `-1`), but `1987` is odd.",
+  "mode": "aux",
+  "context_file": "context.lean",
   "statement_file": "statement.lean",
   "reference_file": "imports/imo/imo_1987_p4/reference.proof.lean",
+  "reference_aux_file": null,
   "target_decl": "Imo1987P4.candidate",
   "epilogue": "end Imo1987P4",
   "import_category": "A",

@@ -22,7 +22,7 @@ from . import status as S
 from .config import REPO_ROOT, Budget, build_run_config
 from .evaluate import evaluate_attempt
 from .problems import load_split
-from .models import AnthropicProofGenerator, FixedProofGenerator
+from .models import AnthropicProofGenerator, FixedProofGenerator, split_response
 
 import sys
 
@@ -83,7 +83,8 @@ def run(method: str, split: str, attempts: int, verification_seconds: int,
 def _attempts_for(problem, method, generator, budget, run_dir):
     if method == "reference":
         yield evaluate_attempt(problem, problem.reference_proof, run_dir,
-                               method="reference", attempt=1, budget=budget)
+                               method="reference", attempt=1, budget=budget,
+                               aux=problem.reference_aux)
         return
 
     if method.startswith("tactic:"):
@@ -116,9 +117,12 @@ def _attempts_for(problem, method, generator, budget, run_dir):
                     "output_tokens": gen.output_tokens,
                 }
                 return
+            aux, proof = ("", gen.proof)
+            if problem.mode == "aux":
+                aux, proof = split_response(gen.proof)
             record = evaluate_attempt(
-                problem, gen.proof, run_dir, method=method, attempt=i, budget=budget,
-                generation_seconds=gen.seconds,
+                problem, proof, run_dir, method=method, attempt=i, budget=budget,
+                generation_seconds=gen.seconds, aux=aux,
                 extra={"input_tokens": gen.input_tokens, "output_tokens": gen.output_tokens,
                        "cost_usd": gen.cost_usd, "independent": method == "model"},
             )

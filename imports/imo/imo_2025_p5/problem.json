@@ -1,0 +1,38 @@
+{
+  "id": "imo_2025_p5",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2025,
+    "problem": 5,
+    "file": "2025/P5.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2025_p5",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "# IMO 2025 Problem 5\n\nThe critical value is\n\n    1 / √2.\n\nThe source classification is:\n\n    0 < lam < 1 / √2   → Bazza wins\n    lam = 1 / √2       → neither wins\n    1 / √2 < lam       → Alice wins\n\nThe central analytic inequality in Bazza's strategy is\n\n    √2 ≤ t + √(2 - t²)\n\nfor 0 ≤ t ≤ √2.\n\nNo `sorry`, `admit`, or additional axioms are used.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2025_p5/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2025_p5/reference.aux.lean",
+  "target_decl": "IMO2025P5.candidate",
+  "epilogue": "end\nend IMO2025P5",
+  "import_category": "C",
+  "import_flags": [
+    "usa variable",
+    "declaraciones despues del teorema: ['alice_iff_above', 'bazza_iff_below']"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

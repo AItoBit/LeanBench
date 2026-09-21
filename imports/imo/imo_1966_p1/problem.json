@@ -15,8 +15,11 @@
     "Mathlib"
   ],
   "informal_statement": "Formalization of the contest problem, following the given solution.\n* `a`        = number of students who solved B and C but not A;\n* `2*x - a`  = number who solved B only,  `x - a` = number who solved C only\n  (`x` a positive integer and `a ≤ x`, so `x - a ≥ 0`);\n* `2*y - 1`  = number who solved A, and `y` = number who solved only A.\nThe two stated conditions become `h_total` and `h_half`.  We prove that the\nnumber of students who solved only problem B, namely `2*x - a`, is `6`.\nNo `sorry`, no `axiom` declarations: `omega` gives a kernel‑checkable\nPresburger‑arithmetic proof.",
+  "mode": "aux",
+  "context_file": null,
   "statement_file": "statement.lean",
   "reference_file": "imports/imo/imo_1966_p1/reference.proof.lean",
+  "reference_aux_file": null,
   "target_decl": "candidate",
   "epilogue": "",
   "import_category": "A",

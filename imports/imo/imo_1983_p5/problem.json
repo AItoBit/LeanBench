@@ -15,8 +15,11 @@
     "Mathlib"
   ],
   "informal_statement": "# IMO 1984, Problem B2 (Coordinate Algebra)\n\nFormalization of the algebraic system arising from the coordinate geometry\nsolution to IMO 1984 Problem B2, as presented in the reference text.\n\nThe text establishes a system of equations by comparing the coordinates of \npoints M and N on the lines. \nHere, `s3` represents `√3`. We prove that this system uniquely forces `r^2 = 1/3`.",
+  "mode": "aux",
+  "context_file": "context.lean",
   "statement_file": "statement.lean",
   "reference_file": "imports/imo/imo_1983_p5/reference.proof.lean",
+  "reference_aux_file": null,
   "target_decl": "IMO1984B2.candidate",
   "epilogue": "end IMO1984B2",
   "import_category": "A",

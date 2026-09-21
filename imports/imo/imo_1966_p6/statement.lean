@@ -1,3 +1,4 @@
+/-- The algebraic contradiction underlying the geometry problem. -/
 theorem candidate
     (a b c d e f : ℝ)
     (ha : 0 < a) (hb : 0 < b) (hc : 0 < c)

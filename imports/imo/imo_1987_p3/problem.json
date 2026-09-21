@@ -15,8 +15,11 @@
     "Mathlib"
   ],
   "informal_statement": "# IMO 1987, Problem 3 (Algebraic Core of Solution 2)\n\nThis formalizes the Cauchy-Schwarz bounding deduction \n\nGiven the abstracted sums:\n  S_a = Σ a_i^2\n  S_x = Σ x_i^2\n  S_ax = Σ a_i |x_i|\n\nBy Cauchy-Schwarz, S_ax^2 ≤ S_a * S_x.\nWe are given the condition S_x = 1, and the maximum absolute value\nof a_i is (k - 1), meaning S_a ≤ n * (k - 1)^2.\n\nWe prove algebraically that these conditions strictly force:\nS_ax ≤ √n * (k - 1).",
+  "mode": "aux",
+  "context_file": "context.lean",
   "statement_file": "statement.lean",
   "reference_file": "imports/imo/imo_1987_p3/reference.proof.lean",
+  "reference_aux_file": null,
   "target_decl": "IMO1987P3.candidate",
   "epilogue": "end IMO1987P3",
   "import_category": "A",

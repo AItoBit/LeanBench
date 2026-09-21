@@ -1,0 +1,37 @@
+{
+  "id": "imo_2011_p6",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2011,
+    "problem": 6,
+    "file": "2011/P6.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2011_p6",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "Suppose the coordinate computation for the three reflected lines has\nproduced:\n\n* `P`, a common point of the original unit circle and the new circle;\n* a nonzero real `lam` such that the new circumcenter is `lam P`.\n\nThen the new circumcircle is tangent to the original unit circle.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2011_p6/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2011_p6/reference.aux.lean",
+  "target_decl": "IMO2011P6.candidate",
+  "epilogue": "end IMO2011P6",
+  "import_category": "C",
+  "import_flags": [
+    "core_like"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

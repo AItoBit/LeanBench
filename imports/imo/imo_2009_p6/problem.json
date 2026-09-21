@@ -1,0 +1,37 @@
+{
+  "id": "imo_2009_p6",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2009,
+    "problem": 6,
+    "file": "2009/P6.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2009_p6",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "The main induction:  a grasshopper standing at `p`, with jumps `l` (distinct, positive) still\nto perform, can avoid the obstacle set `M` provided that fewer than `l.length` obstacles lie\nbeyond `p` and that its final landing point is not an obstacle.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2009_p6/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2009_p6/reference.aux.lean",
+  "target_decl": "IMO2009P6.candidate",
+  "epilogue": "end IMO2009P6",
+  "import_category": "C",
+  "import_flags": [
+    "core_like"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

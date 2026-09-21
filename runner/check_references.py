@@ -38,7 +38,8 @@ def main() -> int:
 
     def one(d):
         p = load_problem(d)
-        r = evaluate_attempt(p, p.reference_proof, run_dir, method="reference", budget=budget)
+        r = evaluate_attempt(p, p.reference_proof, run_dir, method="reference", budget=budget,
+                             aux=p.reference_aux)
         return {k: r.get(k) for k in ("problem_id", "status", "verification_seconds",
                                       "axioms", "audit_reason", "error_head")}
 

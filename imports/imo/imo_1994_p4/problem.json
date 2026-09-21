@@ -1,0 +1,39 @@
+{
+  "id": "imo_1994_p4",
+  "topic": "number_theory",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1994,
+    "problem": 4,
+    "file": "1994/P4.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1994_p4",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib.Data.Nat.ModEq",
+    "Mathlib.Tactic.NormNum",
+    "Mathlib.Tactic.Linarith",
+    "Mathlib.Tactic.Ring",
+    "Mathlib.Tactic.IntervalCases"
+  ],
+  "informal_statement": "IMO 1994, Problem 4.",
+  "mode": "aux",
+  "context_file": null,
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1994_p4/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_1994_p4/reference.aux.lean",
+  "target_decl": "candidate",
+  "epilogue": "",
+  "import_category": "C",
+  "import_flags": [],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

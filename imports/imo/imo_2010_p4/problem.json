@@ -1,0 +1,38 @@
+{
+  "id": "imo_2010_p4",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2010,
+    "problem": 4,
+    "file": "2010/P4.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2010_p4",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "If the geometric angle chase establishes equal arcs and the two\nlengths are the chords corresponding to those arcs, then `MK = ML`.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2010_p4/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2010_p4/reference.aux.lean",
+  "target_decl": "IMO2010P4.candidate",
+  "epilogue": "end IMO2010P4",
+  "import_category": "C",
+  "import_flags": [
+    "core_like",
+    "declaraciones despues del teorema: ['equal_chords_of_arc_midpoint']"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

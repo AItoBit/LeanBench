@@ -1,0 +1,39 @@
+{
+  "id": "imo_2015_p1",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2015,
+    "problem": 1,
+    "file": "2015/P1.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2015_p1",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "If the even case leads to a contradiction, then `n` is odd.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2015_p1/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2015_p1/reference.aux.lean",
+  "target_decl": "IMO2015P1.candidate",
+  "epilogue": "end IMO2015P1",
+  "import_category": "C",
+  "import_flags": [
+    "core_like",
+    "usa variable",
+    "declaraciones despues del teorema: ['two_coprime_of_odd']"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

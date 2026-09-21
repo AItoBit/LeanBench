@@ -1,7 +1,4 @@
-namespace Imo1977P1
-
 /-- **IMO 1977, Problem 1.** -/
-
 theorem candidate (o p A B C D K L M N : ℂ) (hp : p ≠ 0)
     (hA : A = o + p) (hB : B = o + Complex.I * p)
     (hC : C = o - p) (hD : D = o - Complex.I * p)

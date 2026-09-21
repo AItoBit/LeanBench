@@ -1,0 +1,35 @@
+{
+  "id": "imo_1976_p2",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1976,
+    "problem": 2,
+    "file": "1976/P2.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1976_p2",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "Restatement: the set of real solutions of `P n (x) = x` has exactly `2 ^ n` elements.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1976_p2/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_1976_p2/reference.aux.lean",
+  "target_decl": "IMO1976P2.candidate",
+  "epilogue": "end IMO1976P2",
+  "import_category": "C",
+  "import_flags": [],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

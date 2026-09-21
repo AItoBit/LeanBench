@@ -1,0 +1,38 @@
+{
+  "id": "imo_2019_p2",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2019,
+    "problem": 2,
+    "file": "2019/P2.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2019_p2",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "This packages the complete logical structure of the supplied\nsolution.\n\nIt assumes the standard Euclidean facts that:\n\n1. the first equal-angle relation constructs the auxiliary\n   circle through `P,Q,A0,B0`;\n\n2. the equal-angle criterion puts `P1` on that circle;\n\n3. the analogous equal-angle criterion puts `Q1` on that circle.\n\nEverything connecting those facts is fully checked by Lean.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2019_p2/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2019_p2/reference.aux.lean",
+  "target_decl": "IMO2019P2.candidate",
+  "epilogue": "end IMO2019P2",
+  "import_category": "C",
+  "import_flags": [
+    "core_like",
+    "usa variable"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

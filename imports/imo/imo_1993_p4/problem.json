@@ -1,0 +1,37 @@
+{
+  "id": "imo_1993_p4",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1993,
+    "problem": 4,
+    "file": "1993/P4.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1993_p4",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "Formalization of the problem's geometric lemma: \n\"If Y lies between D and E, then FY is less than the greater than FD and FE.\"\n\nHere, F is shifted to the origin (0, 0). D is (d1, d2) and E is (e1, e2).\nY is represented as the convex combination `t * D + (1 - t) * E` for `0 ≤ t ≤ 1`.\nThe theorem strictly proves that the squared length of Y is at most the maximum \nof the squared lengths of D and E.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1993_p4/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_1993_p4/reference.aux.lean",
+  "target_decl": "GeometryLemma.candidate",
+  "epilogue": "end GeometryLemma",
+  "import_category": "C",
+  "import_flags": [
+    "core_like"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "imo_1995_p6",
+  "topic": "number_theory",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1995,
+    "problem": 6,
+    "file": "1995/P6.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1995_p6",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "# IMO 1995 Problem 6\n\nLet `p` be an odd prime.  The number of `p`-element subsets `A` of `{1, 2, …, 2p}`\nwhose element sum is divisible by `p` is `(C(2p, p) - 2)/p + 2`.\n\nThe proof uses the model `G p = ZMod p × Fin 2` for the ground set `{1, …, 2p}`\n(an element `n` corresponds to its residue together with the information of which\nhalf of the interval it lies in), and a free shift action of `ZMod p` on the first\nhalf of the ground set.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1995_p6/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_1995_p6/reference.aux.lean",
+  "target_decl": "candidate",
+  "epilogue": "",
+  "import_category": "C",
+  "import_flags": [
+    "usa variable"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

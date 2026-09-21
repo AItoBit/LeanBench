@@ -1,0 +1,37 @@
+{
+  "id": "imo_2005_p1",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2005,
+    "problem": 1,
+    "file": "2005/P1.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2005_p1",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "**IMO 2005 P1.** The three main diagonals of the hexagon all pass through the centroid\n`(0, h/3)` of the triangle, hence are concurrent.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2005_p1/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2005_p1/reference.aux.lean",
+  "target_decl": "Imo2005P1.candidate",
+  "epilogue": "end Imo2005P1",
+  "import_category": "C",
+  "import_flags": [
+    "core_like"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

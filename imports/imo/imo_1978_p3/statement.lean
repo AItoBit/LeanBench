@@ -1,7 +1,4 @@
-namespace Imo1978P3
-
 /-- **IMO 1978, Problem 3.** -/
-
 theorem candidate (f g : ℕ → ℕ)
     (hfmono : ∀ a b, 1 ≤ a → a < b → f a < f b)
     (hgmono : ∀ a b, 1 ≤ a → a < b → g a < g b)

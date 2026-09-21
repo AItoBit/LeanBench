@@ -1,0 +1,39 @@
+{
+  "id": "imo_2020_p6",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2020,
+    "problem": 6,
+    "file": "2020/P6.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2020_p6",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "# IMO 2020 Problem 6 — two-case reduction\n\nWe work in the Euclidean plane.\n\nThe source proof has two cases:\n\n1. a direction of sufficiently large width;\n2. the complementary narrow case, handled by the\n   disk/strip packing argument.\n\nThe hard geometric estimates are represented by\n`wide_case` and `narrow_case`.\n\nTheir combination into one universal positive constant\nis proved completely below.\n\nNo `sorry`, `admit`, or additional axioms are used.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2020_p6/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2020_p6/reference.aux.lean",
+  "target_decl": "IMO2020P6.candidate",
+  "epilogue": "end\nend IMO2020P6",
+  "import_category": "C",
+  "import_flags": [
+    "core_like",
+    "usa variable",
+    "declaraciones despues del teorema: ['clearance_of_hasSeparatingLine', 'min_positive_constant', 'two_case_separation']"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

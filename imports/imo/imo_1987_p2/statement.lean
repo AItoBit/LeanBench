@@ -1,5 +1,3 @@
-namespace IMO1987P2
-
 theorem candidate
     (KM BC AL AN Area_AKNM Area_ABC : ℝ)
     (h_BC_pos : BC ≠ 0)

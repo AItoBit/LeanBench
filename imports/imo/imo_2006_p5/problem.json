@@ -1,0 +1,35 @@
+{
+  "id": "imo_2006_p5",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2006,
+    "problem": 5,
+    "file": "2006/P5.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2006_p5",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "**IMO 2006, Problem 5**, set version: there are at most `n` integers `t` with `Q(t) = t`.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2006_p5/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2006_p5/reference.aux.lean",
+  "target_decl": "Imo2006P5.candidate",
+  "epilogue": "end Imo2006P5",
+  "import_category": "C",
+  "import_flags": [],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

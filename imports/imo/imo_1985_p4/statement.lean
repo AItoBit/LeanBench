@@ -1,5 +1,3 @@
-namespace IMO1985P4
-
 theorem candidate (a b c d x y z : ℕ)
     (hx : a * b = x^2)
     (hy : c * d = y^2)

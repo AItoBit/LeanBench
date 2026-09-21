@@ -1,0 +1,252 @@
+/--
+Difference identity:
+
+    P(x+y) - P(x)
+      =
+    y(2x+y+1).
+-/
+lemma Pz_difference
+    (x y : ℤ) :
+    Pz (x + y) - Pz x
+      =
+    y * (2 * x + y + 1) := by
+  unfold Pz
+  ring
+
+/--
+If a number divides both `P(x)` and `P(x+y)`,
+then it divides their difference.
+-/
+lemma common_dvd_difference
+    {d x y : ℤ}
+    (hx :
+      d ∣ Pz x)
+    (hy :
+      d ∣ Pz (x + y)) :
+    d ∣ y * (2 * x + y + 1) := by
+
+  rcases hx with ⟨r, hr⟩
+  rcases hy with ⟨s, hs⟩
+
+  refine ⟨s - r, ?_⟩
+
+  calc
+    y * (2 * x + y + 1)
+        =
+      Pz (x + y) - Pz x := by
+        rw [Pz_difference]
+    _ =
+      d * s - d * r := by
+        rw [hs, hr]
+    _ =
+      d * (s - r) := by
+        ring
+
+/--
+Useful identity from the source argument:
+
+    4 P(x)
+      =
+    (2x+y+1)^2
+      - 2y(2x+y+1)
+      + y^2 + 3.
+-/
+lemma Pz_resultant_identity
+    (x y : ℤ) :
+    4 * Pz x
+      =
+    (2 * x + y + 1) ^ 2
+      -
+    2 * y * (2 * x + y + 1)
+      +
+    y ^ 2 + 3 := by
+  unfold Pz
+  ring
+
+/-!
+## Fragrant blocks
+-/
+
+/--
+3 divides both P(196) and P(199).
+-/
+lemma three_pair :
+    3 ∣ P 196 ∧
+    3 ∣ P 199 := by
+  constructor <;> norm_num [P]
+
+/--
+19 divides both P(197) and P(201).
+-/
+lemma nineteen_pair :
+    19 ∣ P 197 ∧
+    19 ∣ P 201 := by
+  constructor <;> norm_num [P]
+
+/--
+7 divides both P(198) and P(200).
+-/
+lemma seven_pair :
+    7 ∣ P 198 ∧
+    7 ∣ P 200 := by
+  constructor <;> norm_num [P]
+
+/-!
+## The explicit b = 6 construction
+-/
+
+/--
+The block
+
+    P(196), P(197), ..., P(201)
+
+is fragrant.
+
+Thus `b = 6` is attainable.
+-/
+theorem fragrant_block_six :
+    FragrantBlock 195 6 := by
+
+  refine ⟨by norm_num, ?_⟩
+
+  intro i hi1 hi6
+
+  interval_cases i
+
+  ·
+    refine
+      ⟨4,
+       by norm_num,
+       by norm_num,
+       by norm_num,
+       3,
+       by norm_num,
+       ?_,
+       ?_⟩
+
+    · exact three_pair.1
+
+    · exact three_pair.2
+
+  ·
+    refine
+      ⟨6,
+       by norm_num,
+       by norm_num,
+       by norm_num,
+       19,
+       by norm_num,
+       ?_,
+       ?_⟩
+
+    · exact nineteen_pair.1
+
+    · exact nineteen_pair.2
+
+  ·
+    refine
+      ⟨5,
+       by norm_num,
+       by norm_num,
+       by norm_num,
+       7,
+       by norm_num,
+       ?_,
+       ?_⟩
+
+    · exact seven_pair.1
+
+    · exact seven_pair.2
+
+  ·
+    refine
+      ⟨1,
+       by norm_num,
+       by norm_num,
+       by norm_num,
+       3,
+       by norm_num,
+       ?_,
+       ?_⟩
+
+    · exact three_pair.2
+
+    · exact three_pair.1
+
+  ·
+    refine
+      ⟨3,
+       by norm_num,
+       by norm_num,
+       by norm_num,
+       7,
+       by norm_num,
+       ?_,
+       ?_⟩
+
+    · exact seven_pair.2
+
+    · exact seven_pair.1
+
+  ·
+    refine
+      ⟨2,
+       by norm_num,
+       by norm_num,
+       by norm_num,
+       19,
+       by norm_num,
+       ?_,
+       ?_⟩
+
+    · exact nineteen_pair.2
+
+    · exact nineteen_pair.1
+
+/-!
+## The exact numerical values, useful for debugging
+-/
+
+lemma P196 :
+    P 196 = 38613 := by
+  norm_num [P]
+
+lemma P197 :
+    P 197 = 39007 := by
+  norm_num [P]
+
+lemma P198 :
+    P 198 = 39403 := by
+  norm_num [P]
+
+lemma P199 :
+    P 199 = 39801 := by
+  norm_num [P]
+
+lemma P200 :
+    P 200 = 40201 := by
+  norm_num [P]
+
+lemma P201 :
+    P 201 = 40603 := by
+  norm_num [P]
+
+/-!
+## Prime witnesses explicitly
+-/
+
+lemma prime_three :
+    Nat.Prime 3 := by
+  norm_num
+
+lemma prime_seven :
+    Nat.Prime 7 := by
+  norm_num
+
+lemma prime_nineteen :
+    Nat.Prime 19 := by
+  norm_num
+
+/-!
+## Upper-bound conclusion
+-/

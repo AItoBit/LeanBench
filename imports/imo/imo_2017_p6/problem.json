@@ -1,0 +1,35 @@
+{
+  "id": "imo_2017_p6",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2017,
+    "problem": 6,
+    "file": "2017/P6.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2017_p6",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "This is the final construction from the PDF:\n\n  h(x,y) = M (αx + βy)^d,\n\nwhere αa + βb = 1.\n\nAt the primitive point p=(a,b), it evaluates to M.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2017_p6/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2017_p6/reference.aux.lean",
+  "target_decl": "IMO2017P6.candidate",
+  "epilogue": "end\nend IMO2017P6",
+  "import_category": "C",
+  "import_flags": [],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

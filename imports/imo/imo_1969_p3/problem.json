@@ -15,8 +15,11 @@
     "Mathlib"
   ],
   "informal_statement": "Formalization of the algebraic identity used in the solution to IMO 1969 Problem 3\nto relate the cases k = 2 and k = 4 (as shown in \"image_99ace1.png\").\nThe solution relies on the identity: 1 / √(2 + √3) = √(2 - √3).",
+  "mode": "aux",
+  "context_file": "context.lean",
   "statement_file": "statement.lean",
   "reference_file": "imports/imo/imo_1969_p3/reference.proof.lean",
+  "reference_aux_file": null,
   "target_decl": "candidate",
   "epilogue": "",
   "import_category": "A",

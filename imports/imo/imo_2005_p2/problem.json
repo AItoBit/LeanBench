@@ -1,0 +1,42 @@
+{
+  "id": "imo_2005_p2",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2005,
+    "problem": 2,
+    "file": "2005/P2.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2005_p2",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib.Data.Finset.Interval",
+    "Mathlib.Data.Fintype.Card",
+    "Mathlib.Data.Int.ModEq",
+    "Mathlib.Data.Int.Interval",
+    "Mathlib.Data.ZMod.Basic",
+    "Mathlib.Order.Interval.Finset.Basic",
+    "Mathlib.Tactic.Push",
+    "Mathlib.Tactic.Ring"
+  ],
+  "informal_statement": "A kernel-checked formalization of IMO 2005, Problem 2.\n\nThe sequence is indexed from `1`, as in the statement; index `0` is ignored.\n`Int.emod (a i) n` is the remainder of `a i` modulo `n`.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2005_p2/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2005_p2/reference.aux.lean",
+  "target_decl": "IMO2005P2.candidate",
+  "epilogue": "end IMO2005P2",
+  "import_category": "C",
+  "import_flags": [],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

@@ -1,7 +1,4 @@
-namespace Imo2000P1
-
 /-- **IMO 2000 P1.** -/
-
 theorem candidate
     (a b r₁ r₂ m₁ m₂ n₁ n₂ ex ey px qx : ℝ)
     (hab : a ≠ b) (hm₂ : m₂ ≠ 0) (hn₂ : n₂ ≠ 0)

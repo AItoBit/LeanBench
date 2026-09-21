@@ -220,7 +220,7 @@ Categorias del importador:
 | ---- | ----------- | -------- |
 | A | Solo el teorema | Se importa |
 | B | Necesita definiciones previas | Se importa con ellas como contexto confiable |
-| C | Usa lemas auxiliares propios | Pendiente del modo "archivo completo" |
+| C | Usa lemas auxiliares propios | Se importa en modo archivo completo |
 | X | `sorry`, `axiom`, `native_decide` o sin teorema principal | Excluido |
 
 La marca `core_like` indica que el texto habla de un nucleo, caso particular o
@@ -229,3 +229,33 @@ completo: revisalo antes de promoverlo y nunca lo cuentes como "IMO resuelto"
 sin decirlo.
 
 Nada importado entra en el benchmark sin `formalization_reviewed: true`.
+
+### Modo archivo completo (`"mode": "aux"`)
+
+El participante puede entregar, ademas del cuerpo de la prueba, lemas
+auxiliares. El archivo se monta asi, y solo lo marcado es del participante:
+
+```
+imports                      (confiable)
+context.lean                 (confiable: defs, open, namespace)
+lemas auxiliares             <- participante
+enunciado                    (confiable)
+cuerpo de la prueba          <- participante
+epilogo + #print axioms      (confiable)
+```
+
+En los lemas solo se admiten `theorem`/`lemma` (con `private`, docstrings,
+`@[simp]`, `open X in`, `omit h in`). Se rechaza todo lo que podria cambiar
+como se elabora el enunciado: `def`, `instance`, `notation`, `macro`,
+`include`, `open` sin `in`, otros atributos, y cualquier lema que se llame
+como un identificador del enunciado.
+
+Un modelo responde en este formato:
+
+```
+-- LEMAS
+lemma ayuda ... := ...
+-- PRUEBA
+by
+  ...
+```

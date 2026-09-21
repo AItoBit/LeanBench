@@ -1,0 +1,37 @@
+{
+  "id": "imo_2006_p1",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2006,
+    "problem": 1,
+    "file": "2006/P1.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2006_p1",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "If `X` is strictly on the same side of the line `AB` as `C`, then the oriented angles\n`∡ A B X` and `∡ A B C` have the same sign.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2006_p1/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2006_p1/reference.aux.lean",
+  "target_decl": "Imo2006P1.candidate",
+  "epilogue": "end Oriented\nend Imo2006P1",
+  "import_category": "C",
+  "import_flags": [
+    "usa variable"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

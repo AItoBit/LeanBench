@@ -15,8 +15,11 @@
     "Mathlib"
   ],
   "informal_statement": "Formalization of the logical core of the \"Solution re-written\" for IMO 1970 Problem 6. \n\nThe rewritten solution notes a key abstraction: we do not actually need to compute \nthe exact overcounting factor `k = C(n-3, 2)` (\"...but we don't need this\"). \nWe only need to know that it is strictly positive, and that it uniformly scales \nboth the total number of triangles `T` and the number of acute triangles `A` \ninto the lists `L₁` and `L₂`.",
+  "mode": "aux",
+  "context_file": null,
   "statement_file": "statement.lean",
   "reference_file": "imports/imo/imo_1970_p6/reference.proof.lean",
+  "reference_aux_file": null,
   "target_decl": "candidate",
   "epilogue": "",
   "import_category": "A",

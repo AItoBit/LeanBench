@@ -1,5 +1,3 @@
-namespace IMO1984B2
-
 theorem candidate
   (x k1 k2 r s3 : ℝ)
   (hs3 : s3 ≠ 0)

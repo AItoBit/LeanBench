@@ -40,13 +40,17 @@ def test_definiciones_previas_es_B(tmp_path):
     info = _write(tmp_path, "import Mathlib\n\ndef f (n : ℕ) : ℕ := n\n\n"
                   "theorem imo_2000_p1 : f 0 = 0 := rfl\n")
     assert info["category"] == "B"
-    assert "def f" in info["statement"]
+    assert "def f" in info["context"]
+    assert "def f" not in info["statement"]
 
 
 def test_lemas_auxiliares_es_C(tmp_path):
-    info = _write(tmp_path, "import Mathlib\n\nlemma aux : True := trivial\n\n"
-                  "theorem imo_2000_p1 : True := aux\n")
+    info = _write(tmp_path, "import Mathlib\n\n/-- ayuda -/\nlemma aux : True := trivial\n\n"
+                  "/-- Enunciado. -/\ntheorem imo_2000_p1 : True := aux\n")
     assert info["category"] == "C"
+    assert info["aux"].startswith("/-- ayuda -/")       # el docstring va con su lema
+    assert "Enunciado" not in info["aux"]
+    assert info["statement"].startswith("/-- Enunciado. -/")
 
 
 def test_sorry_y_axiom_se_excluyen(tmp_path):

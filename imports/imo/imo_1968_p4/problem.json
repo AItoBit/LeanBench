@@ -15,8 +15,11 @@
     "Mathlib"
   ],
   "informal_statement": "Formalization of the solution of IMO 1968 Problem 4.\nIf `a, b, c, d, e, f` are the edge lengths of a tetrahedron, they form 4 triangular faces.\nWithout loss of generality, we can assume `a` is the maximum edge length.\nWe prove that either the vertex with edges `a, c, e` or the vertex with edges `a, b, f`\nsatisfies the condition that its three meeting edges form a triangle.",
+  "mode": "aux",
+  "context_file": null,
   "statement_file": "statement.lean",
   "reference_file": "imports/imo/imo_1968_p4/reference.proof.lean",
+  "reference_aux_file": null,
   "target_decl": "candidate",
   "epilogue": "",
   "import_category": "A",

@@ -1,0 +1,38 @@
+{
+  "id": "imo_1979_p4",
+  "topic": "geometry",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1979,
+    "problem": 4,
+    "file": "1979/P4.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1979_p4",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "**IMO 1979, Problem 4** (complete answer).  Let `P` be a point of the plane `p` (given here\nas the plane through `P` with nonzero normal vector `nv`) and let `Q ∉ p`.  Then\n`√(2·PQ/(PQ - PT))`, with `T` the orthogonal projection of `Q` on `p`, is the greatest value of\n`(QP + PR)/QR` for `R ∈ p`, and it is attained exactly at those points `R` of `p` with `PR = PQ`\nlying on the ray `PT` (the ray condition degenerating to no condition at all when `T = P`, i.e.\nwhen `PQ ⊥ p`).",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1979_p4/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_1979_p4/reference.aux.lean",
+  "target_decl": "Imo1979P4.candidate",
+  "epilogue": "end Main\nend Imo1979P4",
+  "import_category": "C",
+  "import_flags": [
+    "core_like",
+    "usa variable"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

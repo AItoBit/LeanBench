@@ -15,8 +15,11 @@
     "Mathlib"
   ],
   "informal_statement": "Formalization of the algebraic core of IMO 2007 Problem 4.\nProves that the areas of triangles RQL and RPK are equal given the\nmidpoint symmetry on the secant line and the similarity of the projected right triangles.",
+  "mode": "aux",
+  "context_file": "context.lean",
   "statement_file": "statement.lean",
   "reference_file": "imports/imo/imo_2007_p4/reference.proof.lean",
+  "reference_aux_file": null,
   "target_decl": "Imo2007P4.candidate",
   "epilogue": "end Imo2007P4",
   "import_category": "A",

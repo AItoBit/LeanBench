@@ -1,0 +1,42 @@
+{
+  "id": "imo_1995_p2",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1995,
+    "problem": 2,
+    "file": "1995/P2.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1995_p2",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib.Analysis.MeanInequalities",
+    "Mathlib.Algebra.Order.BigOperators.Ring.Finset",
+    "Mathlib.Data.Fin.VecNotation",
+    "Mathlib.Tactic.FieldSimp",
+    "Mathlib.Tactic.FinCases",
+    "Mathlib.Tactic.Linarith",
+    "Mathlib.Tactic.NormNum",
+    "Mathlib.Tactic.Ring"
+  ],
+  "informal_statement": "",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1995_p2/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_1995_p2/reference.aux.lean",
+  "target_decl": "candidate",
+  "epilogue": "",
+  "import_category": "C",
+  "import_flags": [],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

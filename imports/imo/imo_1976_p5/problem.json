@@ -1,0 +1,35 @@
+{
+  "id": "imo_1976_p5",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1976,
+    "problem": 5,
+    "file": "1976/P5.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1976_p5",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "**IMO 1976, Problem 5.**  For a homogeneous linear system of `p` equations in `q = 2p`\nunknowns whose coefficients all lie in `{-1, 0, 1}`, there is a nontrivial integer solution\nall of whose entries are bounded in absolute value by `q`.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1976_p5/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_1976_p5/reference.aux.lean",
+  "target_decl": "Imo1976P5.candidate",
+  "epilogue": "end Imo1976P5",
+  "import_category": "C",
+  "import_flags": [],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

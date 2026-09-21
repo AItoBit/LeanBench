@@ -1,0 +1,37 @@
+{
+  "id": "imo_2014_p6",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2014,
+    "problem": 6,
+    "file": "2014/P6.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2014_p6",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "The same argument without mentioning real square roots:\n\n    n ≤ k².\n\nThis is exactly equivalent to the numerical conclusion\nneeded by the olympiad problem.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2014_p6/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2014_p6/reference.aux.lean",
+  "target_decl": "IMO2014P6.candidate",
+  "epilogue": "end IMO2014P6",
+  "import_category": "C",
+  "import_flags": [
+    "core_like"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

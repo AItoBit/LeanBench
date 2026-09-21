@@ -1,0 +1,37 @@
+{
+  "id": "imo_2013_p4",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2013,
+    "problem": 4,
+    "file": "2013/P4.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2013_p4",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "Compact final statement of the algebraic core.\n\nThe Law of Sines gives the cotangent relation,\nthe side decomposition gives `BC = A+D`,\nand therefore the point identified by the source with the\northocenter lies on `XY` for every parameter `w`.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2013_p4/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2013_p4/reference.aux.lean",
+  "target_decl": "IMO2013P4.candidate",
+  "epilogue": "end IMO2013P4",
+  "import_category": "C",
+  "import_flags": [
+    "core_like"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

@@ -1,5 +1,3 @@
-namespace Imo1996P3
-
 theorem candidate (f : ℕ → ℕ) :
     (∀ m n, f (m + f n) = f (f m) + f n) ↔
       (∀ n, f n = 0) ∨

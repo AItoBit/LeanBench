@@ -1,0 +1,35 @@
+{
+  "id": "imo_1966_p4",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1966,
+    "problem": 4,
+    "file": "1966/P4.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1966_p4",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "**1966 IMO Problem 4**\n    For any natural number `n` and real `x` such that all intermediate sines are non-zero:\n    ∑_{i=1}^n 1 / sin (2^i * x) = cot x - cot (2^n * x).",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1966_p4/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_1966_p4/reference.aux.lean",
+  "target_decl": "candidate",
+  "epilogue": "",
+  "import_category": "C",
+  "import_flags": [],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

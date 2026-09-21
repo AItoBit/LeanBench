@@ -1,0 +1,35 @@
+{
+  "id": "imo_1974_p5",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1974,
+    "problem": 5,
+    "file": "1974/P5.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1974_p5",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "**IMO 1974, Problem 5.** The set of values attained by\n`S = a/(a+b+d) + b/(a+b+c) + c/(b+c+d) + d/(a+c+d)` for positive reals `a, b, c, d`\nis exactly the open interval `(1, 2)`.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1974_p5/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_1974_p5/reference.aux.lean",
+  "target_decl": "Imo1974P5.candidate",
+  "epilogue": "end Imo1974P5",
+  "import_category": "C",
+  "import_flags": [],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

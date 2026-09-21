@@ -15,8 +15,11 @@
     "Mathlib"
   ],
   "informal_statement": "Formalization of the algebraic core of IMO 1969 Problem 2, Solution 2.\nThe function f(x) can be rewritten using the cosine addition formula as\nA * cos x - B * sin x, where A and B depend on the constants a_i.\nIf x₁ and x₂ are roots of this function, we show that sin(x₂ - x₁) = 0.\nThis implies their difference is a multiple of π, as required.",
+  "mode": "aux",
+  "context_file": "context.lean",
   "statement_file": "statement.lean",
   "reference_file": "imports/imo/imo_1969_p2/reference.proof.lean",
+  "reference_aux_file": null,
   "target_decl": "candidate",
   "epilogue": "",
   "import_category": "A",

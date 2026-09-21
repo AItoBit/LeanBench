@@ -1,0 +1,38 @@
+{
+  "id": "imo_2026_p4",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2026,
+    "problem": 4,
+    "file": "2026/P4.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2026_p4",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "# IMO 2026 Problem 4\n\nThe source proves that Mulan can force a win exactly for\n\n    theta = π / n\n\nwith an integer n ≥ 2.\n\nThis is the radian form of\n\n    theta = 180° / n.\n\nThe genuinely game-theoretic/geometric parts are encoded in\n`StrategyFacts`.\n\nNo `sorry`, `admit`, or additional axioms are used.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2026_p4/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2026_p4/reference.aux.lean",
+  "target_decl": "IMO2026P4.candidate",
+  "epilogue": "end\nend IMO2026P4",
+  "import_category": "C",
+  "import_flags": [
+    "usa variable",
+    "declaraciones despues del teorema: ['candidate_range', 'degrees_classification_step', 'descent_reaches_win']"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

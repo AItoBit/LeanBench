@@ -1,11 +1,8 @@
-open Real
-
 /--
 Formalization of the boundary case calculations from the solution to IMO 1967 Problem 1.
   the solution simplifies the geometric
 condition to a set of algebraic and trigonometric calculations for the maximum bounding case.
 -/
-
 theorem candidate
     (x a α : ℝ)
     (hx_nonneg : 0 ≤ x)

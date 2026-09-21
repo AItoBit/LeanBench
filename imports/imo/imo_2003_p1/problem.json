@@ -1,0 +1,39 @@
+{
+  "id": "imo_2003_p1",
+  "topic": "combinatorics",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2003,
+    "problem": 1,
+    "file": "2003/P1.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2003_p1",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib.Data.Int.Interval",
+    "Mathlib.Data.Finset.Prod",
+    "Mathlib.Data.Fintype.EquivFin",
+    "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+    "Mathlib.Tactic"
+  ],
+  "informal_statement": "IMO 2003, Problem 1, with an explicit indexed family of 100 distinct shifts.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2003_p1/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2003_p1/reference.aux.lean",
+  "target_decl": "IMO2003P1.candidate",
+  "epilogue": "end IMO2003P1",
+  "import_category": "C",
+  "import_flags": [],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

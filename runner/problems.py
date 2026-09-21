@@ -56,8 +56,26 @@ class Problem:
         return self.metadata.get("epilogue", "")
 
     @property
+    def mode(self) -> str:
+        """'proof': el participante entrega solo el cuerpo de la prueba.
+        'aux': ademas puede entregar lemas auxiliares (modo archivo completo)."""
+        return self.metadata.get("mode", "proof")
+
+    @property
+    def context(self) -> str:
+        """Contexto confiable (defs, open, namespace) que va antes de todo."""
+        f = self.metadata.get("context_file")
+        return (self.directory / f).read_text(encoding="utf-8").strip() if f else ""
+
+    @property
     def reference_proof(self) -> str:
         return self.reference_proof_path.read_text(encoding="utf-8")
+
+    @property
+    def reference_aux(self) -> str:
+        """Lemas auxiliares de la solucion de referencia (solo en modo 'aux')."""
+        f = self.metadata.get("reference_aux_file")
+        return (REPO_ROOT / f).read_text(encoding="utf-8") if f else ""
 
 
 def load_problem(problem_dir) -> Problem:

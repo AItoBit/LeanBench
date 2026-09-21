@@ -1,5 +1,3 @@
-namespace IMO1988P3
-
 theorem candidate
     (f : ℤ → ℤ)
     (h_even : ∀ n, f (2 * n) = f n)

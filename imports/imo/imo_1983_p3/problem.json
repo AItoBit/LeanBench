@@ -1,0 +1,35 @@
+{
+  "id": "imo_1983_p3",
+  "topic": "number_theory",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1983,
+    "problem": 3,
+    "file": "1983/P3.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1983_p3",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "**IMO 1983, Problem 3.**  For positive integers `a`, `b`, `c` that are pairwise coprime,\n`2abc - ab - bc - ca` is the largest integer that cannot be written as `x*bc + y*ca + z*ab`\nwith `x, y, z` non-negative integers.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1983_p3/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_1983_p3/reference.aux.lean",
+  "target_decl": "Imo1983P3.candidate",
+  "epilogue": "end Imo1983P3",
+  "import_category": "C",
+  "import_flags": [],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

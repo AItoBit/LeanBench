@@ -1,0 +1,37 @@
+{
+  "id": "imo_1976_p3",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1976,
+    "problem": 3,
+    "file": "1976/P3.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1976_p3",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "**IMO 1976, Problem 3.**  A box with positive integer sides `a`, `b`, `c` is filled with as\nmany cubes of volume `2` (i.e. of edge `∛2`) as possible, their edges parallel to the edges of the\nbox; the number of such cubes is `⌊a/∛2⌋ * ⌊b/∛2⌋ * ⌊c/∛2⌋`.  Exactly `40 %` of the volume of the\nbox is filled precisely when the sides are, in some order, `2, 3, 5` or `2, 5, 6`.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1976_p3/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_1976_p3/reference.aux.lean",
+  "target_decl": "Imo1976P3.candidate",
+  "epilogue": "end Imo1976P3",
+  "import_category": "C",
+  "import_flags": [
+    "core_like"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

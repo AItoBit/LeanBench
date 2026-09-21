@@ -15,8 +15,11 @@
     "Mathlib"
   ],
   "informal_statement": "Formalization of the system derivation.\nAssume `a₁ > a₂ > a₃ > a₄` (so all absolute values become signed differences)\nand that the three linear relations obtained by pairwise subtraction hold:\n  -x₁ + x₂ + x₃ + x₄ = 0\n  -x₁ - x₂ - x₃ + x₄ = 0\n  -x₁ - x₂ + x₃ + x₄ = 0\nThen `x₂ = x₃ = 0`, hence `x₁ = x₄`, and substituting back gives\n`x₁ = x₄ = 1/(a₁-a₄)`.",
+  "mode": "aux",
+  "context_file": "context.lean",
   "statement_file": "statement.lean",
   "reference_file": "imports/imo/imo_1966_p5/reference.proof.lean",
+  "reference_aux_file": null,
   "target_decl": "candidate",
   "epilogue": "",
   "import_category": "A",

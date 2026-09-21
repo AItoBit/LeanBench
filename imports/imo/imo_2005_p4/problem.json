@@ -15,8 +15,11 @@
     "Mathlib"
   ],
   "informal_statement": "**IMO 2005 P4.**\n\nThe only positive natural number coprime to every number\n\n`2^n + 3^n + 6^n - 1`, for `n ≥ 1`,\n\nis `1`.",
+  "mode": "aux",
+  "context_file": "context.lean",
   "statement_file": "statement.lean",
   "reference_file": "imports/imo/imo_2005_p4/reference.proof.lean",
+  "reference_aux_file": null,
   "target_decl": "Imo2005P4.candidate",
   "epilogue": "end Imo2005P4",
   "import_category": "A",

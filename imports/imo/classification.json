@@ -22,9 +22,7 @@
     "year": 1959,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "17 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "usa variable"
     ],
@@ -61,9 +59,7 @@
     "year": 1959,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo_1959_p3_special_case",
     "imports": [
@@ -82,9 +78,7 @@
     "year": 1959,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "exists_right_triangle_median_eq_geom_mean",
     "imports": [
@@ -105,9 +99,7 @@
     "year": 1960,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo_1960_p1",
     "imports": [
@@ -126,9 +118,7 @@
     "year": 1960,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo_1960_p2",
     "imports": [
@@ -147,9 +137,7 @@
     "year": 1961,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "4 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -173,9 +161,7 @@
     "year": 1961,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo_1961_p3",
     "imports": [
@@ -194,9 +180,7 @@
     "year": 1962,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "6 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo_1962_p1",
     "imports": [
@@ -220,9 +204,7 @@
     "year": 1962,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -243,9 +225,7 @@
     "year": 1963,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "2 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo_1963_p1",
     "imports": [
@@ -265,9 +245,7 @@
     "year": 1963,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo_1963_p4",
     "imports": [
@@ -286,9 +264,7 @@
     "year": 1963,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "2 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo_1963_p5",
     "imports": [
@@ -308,9 +284,7 @@
     "year": 1964,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "3 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo_1964_p1",
     "imports": [
@@ -348,9 +322,7 @@
     "year": 1964,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "3 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo_1964_p4",
     "imports": [
@@ -371,9 +343,7 @@
     "year": 1965,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "10 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1965_p1",
     "imports": [
@@ -418,9 +388,7 @@
     "year": 1965,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "5 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1965_p3",
     "imports": [
@@ -460,9 +428,7 @@
     "year": 1965,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "16 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "locus_line_equation",
     "imports": [
@@ -496,9 +462,7 @@
     "year": 1965,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "4 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -556,9 +520,7 @@
     "year": 1966,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "4 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "declaraciones despues del teorema: ['exists_regular_tetrahedron_with_circumcenter']"
     ],
@@ -582,9 +544,7 @@
     "year": 1966,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1966_p4",
     "imports": [
@@ -671,9 +631,7 @@
     "year": 1967,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "3 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -715,9 +673,7 @@
     "year": 1967,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "2 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -739,9 +695,7 @@
     "year": 1967,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -798,9 +752,7 @@
     "year": 1968,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "3 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -840,9 +792,7 @@
     "year": 1968,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "15 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "declaraciones despues del teorema: ['square_inConvexPosition', 'not_inConvexPosition_triangle_with_interior_point']"
     ],
@@ -947,9 +897,7 @@
     "year": 1969,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -970,9 +918,7 @@
     "year": 1969,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "23 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1969_p5'",
     "imports": [
@@ -1013,9 +959,7 @@
     "year": 1969,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "7 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -1042,9 +986,7 @@
     "year": 1970,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1970_p1_solution",
     "imports": [
@@ -1099,9 +1041,7 @@
     "year": 1970,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "3 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "declaraciones despues del teorema: ['answer_set_eq_empty']"
     ],
@@ -1191,9 +1131,7 @@
     "year": 1971,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "14 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1971_p3",
     "imports": [
@@ -1225,9 +1163,7 @@
     "year": 1971,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "3 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "usa variable"
@@ -1251,9 +1187,7 @@
     "year": 1971,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "8 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1971_p5",
     "imports": [
@@ -1294,9 +1228,7 @@
     "year": 1972,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "2 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1972_p1",
     "imports": [
@@ -1316,9 +1248,7 @@
     "year": 1972,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "5 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "cut_pieces_cyclic",
     "imports": [
@@ -1341,9 +1271,7 @@
     "year": 1972,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "4 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1972_p3",
     "imports": [
@@ -1365,9 +1293,7 @@
     "year": 1972,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "2 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1972_p4",
     "imports": [
@@ -1404,9 +1330,7 @@
     "year": 1972,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "4 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1972_p6",
     "imports": [
@@ -1428,9 +1352,7 @@
     "year": 1973,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -1451,9 +1373,7 @@
     "year": 1973,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1973_p2",
     "imports": [
@@ -1489,9 +1409,7 @@
     "year": 1973,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "5 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -1533,9 +1451,7 @@
     "year": 1973,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "14 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1973_p6",
     "imports": [
@@ -1567,9 +1483,7 @@
     "year": 1974,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "3 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1974_p1",
     "imports": [
@@ -1590,9 +1504,7 @@
     "year": 1974,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "5 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1974_p2",
     "imports": [
@@ -1615,9 +1527,7 @@
     "year": 1974,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "6 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1974_p3",
     "imports": [
@@ -1641,9 +1551,7 @@
     "year": 1974,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "20 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1974_p4_seq_set",
     "imports": [
@@ -1681,9 +1589,7 @@
     "year": 1974,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "5 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1974_p5",
     "imports": [
@@ -1706,9 +1612,7 @@
     "year": 1974,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "13 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1974_p6",
     "imports": [
@@ -1739,9 +1643,7 @@
     "year": 1975,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "2 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1975_q1",
     "imports": [
@@ -1778,9 +1680,7 @@
     "year": 1975,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "22 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "declaraciones despues del teorema: ['exists_config']"
     ],
@@ -1822,9 +1722,7 @@
     "year": 1975,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "5 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "digitSum_digitSum_digitSum_pow",
     "imports": [
@@ -1847,9 +1745,7 @@
     "year": 1975,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "15 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1975_p5",
     "imports": [
@@ -1882,9 +1778,7 @@
     "year": 1975,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "23 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1975_p6",
     "imports": [
@@ -1925,9 +1819,7 @@
     "year": 1976,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "4 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1976_p1_attained",
     "imports": [
@@ -1949,9 +1841,7 @@
     "year": 1976,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "17 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1976_p2'",
     "imports": [
@@ -1986,9 +1876,7 @@
     "year": 1976,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "17 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -2025,9 +1913,7 @@
     "year": 1976,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "6 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1976_p4",
     "imports": [
@@ -2051,9 +1937,7 @@
     "year": 1976,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "4 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1976_p5",
     "imports": [
@@ -2075,9 +1959,7 @@
     "year": 1976,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "11 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1976_p6",
     "imports": [
@@ -2142,9 +2024,7 @@
     "year": 1977,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "2 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1977_p3",
     "imports": [
@@ -2164,9 +2044,7 @@
     "year": 1977,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1977_p4",
     "imports": [
@@ -2185,9 +2063,7 @@
     "year": 1977,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "5 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1977_p5",
     "imports": [
@@ -2229,9 +2105,7 @@
     "year": 1978,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "3 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1978_p1",
     "imports": [
@@ -2252,9 +2126,7 @@
     "year": 1978,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "2 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "usa variable"
     ],
@@ -2295,9 +2167,7 @@
     "year": 1978,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "3 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -2320,9 +2190,7 @@
     "year": 1978,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1978_p6",
     "imports": [
@@ -2341,9 +2209,7 @@
     "year": 1979,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "7 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1979_q1",
     "imports": [
@@ -2368,9 +2234,7 @@
     "year": 1979,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "5 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "usa variable",
       "declaraciones despues del teorema: ['exists_admissible_colouring']"
@@ -2396,9 +2260,7 @@
     "year": 1979,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "4 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1979_p3",
     "imports": [
@@ -2420,9 +2282,7 @@
     "year": 1979,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "16 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "usa variable"
@@ -2459,9 +2319,7 @@
     "year": 1979,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "2 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1979_p5",
     "imports": [
@@ -2481,9 +2339,7 @@
     "year": 1979,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "24 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1979_p6_even'",
     "imports": [
@@ -2525,9 +2381,7 @@
     "year": 1981,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "16 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "usa variable"
     ],
@@ -2563,9 +2417,7 @@
     "year": 1981,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "4 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1981_p2",
     "imports": [
@@ -2587,9 +2439,7 @@
     "year": 1981,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "2 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1981_p3",
     "imports": [
@@ -2609,9 +2459,7 @@
     "year": 1981,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "5 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1981_p4b",
     "imports": [
@@ -2634,9 +2482,7 @@
     "year": 1981,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "17 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "declaraciones despues del teorema: ['pt', 'pt_dist', 'pt_dist_eq']"
     ],
@@ -2673,9 +2519,7 @@
     "year": 1981,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "4 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "usa variable"
     ],
@@ -2718,9 +2562,7 @@
     "year": 1982,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "2 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -2742,9 +2584,7 @@
     "year": 1982,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "2 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1982_p3b",
     "imports": [
@@ -2764,9 +2604,7 @@
     "year": 1982,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1982_p4b",
     "imports": [
@@ -2802,9 +2640,7 @@
     "year": 1982,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "3 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "usa variable"
@@ -2828,9 +2664,7 @@
     "year": 1983,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -2851,9 +2685,7 @@
     "year": 1983,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "10 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -2883,9 +2715,7 @@
     "year": 1983,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "2 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1983_p3",
     "imports": [
@@ -2905,9 +2735,7 @@
     "year": 1983,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "16 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "usa variable",
@@ -2979,9 +2807,7 @@
     "year": 1984,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "4 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "usa variable"
     ],
@@ -3005,9 +2831,7 @@
     "year": 1984,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -3067,9 +2891,7 @@
     "year": 1984,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -3185,9 +3007,7 @@
     "year": 1985,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "19 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1985_p6",
     "imports": [
@@ -3338,9 +3158,7 @@
     "year": 1987,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1987_p1",
     "imports": [
@@ -3414,9 +3232,7 @@
     "year": 1987,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "3 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1987_p5",
     "imports": [
@@ -3454,9 +3270,7 @@
     "year": 1988,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "21 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "usa variable"
     ],
@@ -3496,42 +3310,14 @@
     "file": "1988/P2.lean",
     "year": 1988,
     "problem": 2,
-    "category": "C",
+    "category": "X",
     "reasons": [
-      "19 lema(s) auxiliar(es) antes del teorema"
+      "el evaluador rechazaria los lemas: en los lemas auxiliares solo se admiten theorem/lemma (linea 26: 'include')"
     ],
     "flags": [
-      "usa variable",
-      "declaraciones despues del teorema: ['answer_ne_four_dvd']"
+      "usa variable"
     ],
-    "main_theorem": "imo1988_p2_answer",
-    "imports": [
-      "Mathlib"
-    ],
-    "epilogue": "end Existence\nend IMO1988P2",
-    "target_decl": "IMO1988P2.candidate",
-    "topic": "algebra",
-    "helper_lemmas": [
-      "mem_idx",
-      "exists_inter_fun",
-      "inter_elem_mem_left",
-      "inter_elem_mem_right",
-      "surj_inter_elem",
-      "injOn_inter_elem",
-      "card_idx_eq_two",
-      "sum_card_filter_eq",
-      "even_of_exists_assignment",
-      "cls_neg",
-      "card_filter_cls_zero",
-      "card_filter_cls",
-      "exists_assignment_of_even",
-      "imo1988_p2",
-      "mem_star",
-      "star_card",
-      "star_inter",
-      "star_mem",
-      "exists_config"
-    ]
+    "main_theorem": "imo1988_p2_answer"
   },
   {
     "id": "imo_1988_p3",
@@ -3575,9 +3361,7 @@
     "year": 1988,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "5 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "declaraciones despues del teorema: ['dist_eq_dist_altitude']"
     ],
@@ -3603,9 +3387,7 @@
     "year": 1988,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "2 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1988_q6'",
     "imports": [
@@ -3637,9 +3419,7 @@
     "year": 1989,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "3 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "usa variable"
@@ -3663,9 +3443,7 @@
     "year": 1989,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1989_p3",
     "imports": [
@@ -3684,9 +3462,7 @@
     "year": 1989,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "2 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "declaraciones despues del teorema: ['sharp_value']"
@@ -3709,9 +3485,7 @@
     "year": 1989,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1989_p5",
     "imports": [
@@ -3730,9 +3504,7 @@
     "year": 1989,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "9 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1989_p6",
     "imports": [
@@ -3759,9 +3531,7 @@
     "year": 1990,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "2 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -3783,9 +3553,7 @@
     "year": 1990,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "20 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1990_p2",
     "imports": [
@@ -3823,9 +3591,7 @@
     "year": 1990,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "7 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1990_p3",
     "imports": [
@@ -3850,9 +3616,7 @@
     "year": 1990,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "18 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -3890,9 +3654,7 @@
     "year": 1990,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "5 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "classification_between_45_and_1990",
     "imports": [
@@ -3934,9 +3696,7 @@
     "year": 1991,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "3 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -3959,9 +3719,7 @@
     "year": 1991,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "10 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1991_problem2",
     "imports": [
@@ -3989,9 +3747,7 @@
     "year": 1991,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "13 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -4112,9 +3868,7 @@
     "year": 1992,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "5 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1992_p3",
     "imports": [
@@ -4137,9 +3891,7 @@
     "year": 1992,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "2 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1992_p4",
     "imports": [
@@ -4159,9 +3911,7 @@
     "year": 1992,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1992_p5_real",
     "imports": [
@@ -4180,9 +3930,7 @@
     "year": 1992,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "3 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "rep_of_two_three",
     "imports": [
@@ -4203,9 +3951,7 @@
     "year": 1993,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "8 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -4233,9 +3979,7 @@
     "year": 1993,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "2 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -4257,9 +4001,7 @@
     "year": 1993,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "5 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1993_p3_of_three_dvd",
     "imports": [
@@ -4267,7 +4009,7 @@
     ],
     "epilogue": "end Imo1993P3",
     "target_decl": "Imo1993P3.candidate",
-    "topic": "algebra",
+    "topic": "number_theory",
     "helper_lemmas": [
       "colors_sum",
       "w_move",
@@ -4282,9 +4024,7 @@
     "year": 1993,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -4305,9 +4045,7 @@
     "year": 1993,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "5 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "exists_strictMono_function",
     "imports": [
@@ -4334,9 +4072,7 @@
     "year": 1993,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "2 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "usa variable"
     ],
@@ -4381,9 +4117,7 @@
     "year": 1994,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "2 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1994_p2",
     "imports": [
@@ -4403,9 +4137,7 @@
     "year": 1994,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "19 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "unique_f_eq_iff",
     "imports": [
@@ -4442,9 +4174,7 @@
     "year": 1994,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo_1994_p4",
     "imports": [
@@ -4484,9 +4214,7 @@
     "year": 1994,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "2 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo_1994_p6",
     "imports": [
@@ -4530,9 +4258,7 @@
     "year": 1995,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "2 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo_1995_p2",
     "imports": [
@@ -4559,9 +4285,7 @@
     "year": 1995,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "10 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "labels_not_equal",
     "imports": [
@@ -4589,9 +4313,7 @@
     "year": 1995,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "6 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1995_p4",
     "imports": [
@@ -4615,9 +4337,7 @@
     "year": 1995,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "17 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -4654,9 +4374,7 @@
     "year": 1995,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "34 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "usa variable"
     ],
@@ -4710,9 +4428,7 @@
     "year": 1996,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "11 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "part_c",
     "imports": [
@@ -4741,9 +4457,7 @@
     "year": 1996,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "2 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "declaraciones despues del teorema: ['ratio_eq', 'divPt', 'feet_eq']"
@@ -4785,9 +4499,7 @@
     "year": 1996,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "2 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1996_p4",
     "imports": [
@@ -4826,9 +4538,7 @@
     "year": 1996,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -4849,9 +4559,7 @@
     "year": 1997,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "isBlack_rotation",
     "imports": [
@@ -4889,9 +4597,7 @@
     "year": 1997,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "10 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1997_p3",
     "imports": [
@@ -4919,9 +4625,7 @@
     "year": 1997,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "10 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1997_p4_b",
     "imports": [
@@ -4961,9 +4665,7 @@
     "year": 1997,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "24 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -5007,9 +4709,7 @@
     "year": 1998,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -5034,9 +4734,7 @@
     "year": 1998,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "3 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1998_p2",
     "imports": [
@@ -5057,9 +4755,7 @@
     "year": 1998,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "8 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1998_p3",
     "imports": [
@@ -5085,9 +4781,7 @@
     "year": 1998,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1998_p4",
     "imports": [
@@ -5106,9 +4800,7 @@
     "year": 1998,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "17 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "usa variable",
       "declaraciones despues del teorema: ['not_collinear_of_cross_ne_zero']"
@@ -5146,9 +4838,7 @@
     "year": 1998,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "24 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "usa variable"
     ],
@@ -5192,9 +4882,7 @@
     "year": 1999,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "20 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "usa variable"
     ],
@@ -5234,9 +4922,7 @@
     "year": 1999,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "14 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "usa variable"
     ],
@@ -5270,9 +4956,7 @@
     "year": 1999,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "22 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1999_p3",
     "imports": [
@@ -5312,9 +4996,7 @@
     "year": 1999,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "2 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo1999_p4",
     "imports": [
@@ -5334,9 +5016,7 @@
     "year": 1999,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "5 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -5395,9 +5075,7 @@
     "year": 2000,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -5418,9 +5096,7 @@
     "year": 2000,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "20 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "usa variable"
@@ -5461,9 +5137,7 @@
     "year": 2000,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "8 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo2000_p4",
     "imports": [
@@ -5489,9 +5163,7 @@
     "year": 2000,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "10 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo2000_p5",
     "imports": [
@@ -5519,9 +5191,7 @@
     "year": 2001,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "3 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "usa variable"
     ],
@@ -5548,9 +5218,7 @@
     "year": 2001,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "2 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "usa variable"
     ],
@@ -5573,9 +5241,7 @@
     "year": 2001,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "3 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "usa variable"
     ],
@@ -5602,9 +5268,7 @@
     "year": 2001,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "4 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "usa variable"
     ],
@@ -5631,9 +5295,7 @@
     "year": 2001,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "usa variable"
@@ -5655,9 +5317,7 @@
     "year": 2001,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "2 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "not_prime_mul_add_mul",
     "imports": [
@@ -5677,9 +5337,7 @@
     "year": 2002,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "9 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -5708,9 +5366,7 @@
     "year": 2002,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "8 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "usa variable"
     ],
@@ -5737,33 +5393,14 @@
     "file": "2002/P3.lean",
     "year": 2002,
     "problem": 3,
-    "category": "C",
+    "category": "X",
     "reasons": [
-      "9 lema(s) auxiliar(es) antes del teorema"
+      "el evaluador rechazaria los lemas: en los lemas auxiliares solo se admiten theorem/lemma (linea 4: 'include')"
     ],
     "flags": [
       "usa variable"
     ],
-    "main_theorem": "imo2002_p3",
-    "imports": [
-      "Mathlib.Analysis.Polynomial.Basic",
-      "Mathlib.RingTheory.Polynomial.Content",
-      "Mathlib.Tactic"
-    ],
-    "epilogue": "end IMO2002P3",
-    "target_decl": "IMO2002P3.candidate",
-    "topic": "algebra",
-    "helper_lemmas": [
-      "natDegree_numerpol",
-      "monic_numerpol",
-      "natDegree_denompol",
-      "monic_denompol",
-      "proof_body",
-      "result",
-      "denominator_pos",
-      "quotient_integer_iff_dvd",
-      "imo2002_p3_divisibility"
-    ]
+    "main_theorem": "imo2002_p3"
   },
   {
     "id": "imo_2002_p4",
@@ -5771,9 +5408,7 @@
     "year": 2002,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "2 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -5795,9 +5430,7 @@
     "year": 2002,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo2002_p5",
     "imports": [
@@ -5817,9 +5450,7 @@
     "year": 2002,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "4 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -5843,9 +5474,7 @@
     "year": 2003,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "5 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo2003_p1",
     "imports": [
@@ -5872,9 +5501,7 @@
     "year": 2003,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo2003_p2",
     "imports": [
@@ -5922,9 +5549,7 @@
     "year": 2003,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "9 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo2003_p5",
     "imports": [
@@ -5952,9 +5577,7 @@
     "year": 2003,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "2 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo2003_p6",
     "imports": [
@@ -5974,9 +5597,7 @@
     "year": 2004,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo2004_p1",
     "imports": [
@@ -5995,9 +5616,7 @@
     "year": 2004,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "2 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo2004_p2",
     "imports": [
@@ -6017,9 +5636,7 @@
     "year": 2004,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "2 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -6041,9 +5658,7 @@
     "year": 2004,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo2004_p5",
     "imports": [
@@ -6062,9 +5677,7 @@
     "year": 2004,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "2 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "declaraciones despues del teorema: ['div_pow_of_le', 'div_pow_of_ge', 'parity_shift']"
@@ -6087,9 +5700,7 @@
     "year": 2005,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -6110,9 +5721,7 @@
     "year": 2005,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo2005_p2",
     "imports": [
@@ -6138,9 +5747,7 @@
     "year": 2005,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "3 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo2005_p3",
     "imports": [
@@ -6178,9 +5785,7 @@
     "year": 2006,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "2 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "usa variable"
     ],
@@ -6202,9 +5807,7 @@
     "year": 2006,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "3 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -6227,9 +5830,7 @@
     "year": 2006,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "3 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -6252,9 +5853,7 @@
     "year": 2006,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo2006_p4",
     "imports": [
@@ -6273,9 +5872,7 @@
     "year": 2006,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "10 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo2006_p5_ncard",
     "imports": [
@@ -6303,9 +5900,7 @@
     "year": 2007,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "9 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "usa variable"
     ],
@@ -6334,9 +5929,7 @@
     "year": 2007,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "6 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "usa variable"
@@ -6363,9 +5956,7 @@
     "year": 2007,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "7 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "usa variable"
     ],
@@ -6411,9 +6002,7 @@
     "year": 2007,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "4 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo2007_p5",
     "imports": [
@@ -6435,9 +6024,7 @@
     "year": 2007,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "coversS_three_mul",
     "imports": [
@@ -6456,9 +6043,7 @@
     "year": 2008,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo2008_p1",
     "imports": [
@@ -6477,9 +6062,7 @@
     "year": 2008,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "3 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "equalitySet_infinite",
     "imports": [
@@ -6500,9 +6083,7 @@
     "year": 2008,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -6523,9 +6104,7 @@
     "year": 2008,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "3 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo2008_p4",
     "imports": [
@@ -6546,9 +6125,7 @@
     "year": 2008,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "20 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -6588,9 +6165,7 @@
     "year": 2009,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "4 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -6614,9 +6189,7 @@
     "year": 2009,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "2 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -6638,9 +6211,7 @@
     "year": 2009,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "5 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -6665,9 +6236,7 @@
     "year": 2009,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "3 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -6690,9 +6259,7 @@
     "year": 2009,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "7 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo2009_p5",
     "imports": [
@@ -6717,9 +6284,7 @@
     "year": 2009,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "7 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -6763,9 +6328,7 @@
     "year": 2010,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "6 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "usa variable"
@@ -6792,9 +6355,7 @@
     "year": 2010,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "2 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "adjacent_ne",
     "imports": [
@@ -6814,9 +6375,7 @@
     "year": 2010,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "3 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "declaraciones despues del teorema: ['equal_chords_of_arc_midpoint']"
@@ -6840,9 +6399,7 @@
     "year": 2010,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "12 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo2010_p5",
     "imports": [
@@ -6872,9 +6429,7 @@
     "year": 2010,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "6 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo2010_p6",
     "imports": [
@@ -6898,9 +6453,7 @@
     "year": 2011,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "20 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "answer_families_attain_maximum",
     "imports": [
@@ -6938,9 +6491,7 @@
     "year": 2011,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "5 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -6982,9 +6533,7 @@
     "year": 2011,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "9 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo2011_p4",
     "imports": [
@@ -7011,9 +6560,7 @@
     "year": 2011,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "1 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo2011_p5",
     "imports": [
@@ -7032,9 +6579,7 @@
     "year": 2011,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "4 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -7058,9 +6603,7 @@
     "year": 2012,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "7 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -7087,9 +6630,7 @@
     "year": 2012,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "6 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo2012_p2",
     "imports": [
@@ -7113,9 +6654,7 @@
     "year": 2012,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "19 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -7154,9 +6693,7 @@
     "year": 2012,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "14 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -7190,9 +6727,7 @@
     "year": 2012,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "7 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -7219,9 +6754,7 @@
     "year": 2013,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "6 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo2013_p1_explicit",
     "imports": [
@@ -7245,9 +6778,7 @@
     "year": 2013,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "12 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -7279,9 +6810,7 @@
     "year": 2013,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "10 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -7291,7 +6820,7 @@
     ],
     "epilogue": "end IMO2013P3",
     "target_decl": "IMO2013P3.candidate",
-    "topic": "algebra",
+    "topic": "geometry",
     "helper_lemmas": [
       "isCircumcenter_of_equal_sqDist",
       "circumcenter_sqDist_AC",
@@ -7311,9 +6840,7 @@
     "year": 2013,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "11 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -7344,9 +6871,7 @@
     "year": 2014,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "12 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo2014_p1",
     "imports": [
@@ -7376,9 +6901,7 @@
     "year": 2014,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "12 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -7410,9 +6933,7 @@
     "year": 2014,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "5 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "declaraciones despues del teorema: ['angle_sum_rearrangement', 'angle_double_relation', 'final_right_angle']"
@@ -7438,9 +6959,7 @@
     "year": 2014,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "8 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -7468,9 +6987,7 @@
     "year": 2014,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "12 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "declaraciones despues del teorema: ['light_coin_fits_some_box']"
@@ -7503,9 +7020,7 @@
     "year": 2014,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "9 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -7534,9 +7049,7 @@
     "year": 2015,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "9 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "usa variable",
@@ -7567,9 +7080,7 @@
     "year": 2015,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "32 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -7621,9 +7132,7 @@
     "year": 2015,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "6 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "declaraciones despues del teorema: ['tangent_dot_product', 'equidistant_difference']"
@@ -7650,9 +7159,7 @@
     "year": 2015,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "9 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -7681,9 +7188,7 @@
     "year": 2015,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "17 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo2015_p5",
     "imports": [
@@ -7718,9 +7223,7 @@
     "year": 2015,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "6 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "declaraciones despues del teorema: ['midpoint_identity', 'final_square_identity']"
@@ -7747,9 +7250,7 @@
     "year": 2016,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "13 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -7782,9 +7283,7 @@
     "year": 2016,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "9 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "declaraciones despues del teorema: ['three_dvd_of_nine_dvd', 'eq_nine_mul_of_nine_dvd']"
@@ -7814,9 +7313,7 @@
     "year": 2016,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "9 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "declaraciones despues del teorema: ['three_dvd_of_nine_dvd', 'eq_nine_mul_of_nine_dvd']"
@@ -7846,9 +7343,7 @@
     "year": 2016,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "16 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "declaraciones despues del teorema: ['gap_one', 'gap_two', 'gap_three']"
@@ -7885,9 +7380,7 @@
     "year": 2016,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "14 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "declaraciones despues del teorema: ['even_iff_pred_odd', 'odd_n_of_alternating_arc']"
@@ -7922,9 +7415,7 @@
     "year": 2017,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "23 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -7967,9 +7458,7 @@
     "year": 2017,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "16 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "usa variable"
     ],
@@ -8005,9 +7494,7 @@
     "year": 2017,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "16 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -8043,9 +7530,7 @@
     "year": 2017,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "10 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -8086,9 +7571,7 @@
     "year": 2017,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "14 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "exists_homogeneous_value",
     "imports": [
@@ -8120,9 +7603,7 @@
     "year": 2018,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "3 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -8145,9 +7626,7 @@
     "year": 2018,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "15 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo2018_p2",
     "imports": [
@@ -8180,9 +7659,7 @@
     "year": 2018,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "24 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "declaraciones despues del teorema: ['numerical_core']"
@@ -8241,9 +7718,7 @@
     "year": 2018,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "11 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -8274,9 +7749,7 @@
     "year": 2018,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "9 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -8305,9 +7778,7 @@
     "year": 2019,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "12 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo2019_p1",
     "imports": [
@@ -8337,9 +7808,7 @@
     "year": 2019,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "8 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "usa variable"
@@ -8368,9 +7837,7 @@
     "year": 2019,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "12 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -8402,9 +7869,7 @@
     "year": 2019,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "28 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo2019_p4_equation_of_bound",
     "imports": [
@@ -8450,9 +7915,7 @@
     "year": 2019,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "13 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -8485,9 +7948,7 @@
     "year": 2019,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "13 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "usa variable"
@@ -8521,9 +7982,7 @@
     "year": 2020,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "10 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "usa variable"
@@ -8554,9 +8013,7 @@
     "year": 2020,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "16 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo2020_p2_polynomial",
     "imports": [
@@ -8590,9 +8047,7 @@
     "year": 2020,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "14 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "usa variable"
@@ -8627,9 +8082,7 @@
     "year": 2020,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "6 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "usa variable",
@@ -8657,9 +8110,7 @@
     "year": 2021,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "2 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "declaraciones despues del teorema: ['source_square_identity_ab', 'source_square_identity_ac', 'source_square_identity_bc']"
@@ -8682,9 +8133,7 @@
     "year": 2021,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "12 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "declaraciones despues del teorema: ['two_abs_mul_le_sq_add_sq', 'neg_two_mul_le_sq_add_sq', 'two_mul_le_sq_add_sq']"
     ],
@@ -8716,9 +8165,7 @@
     "year": 2021,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "8 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "usa variable"
@@ -8747,9 +8194,7 @@
     "year": 2021,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "10 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "usa variable"
@@ -8780,9 +8225,7 @@
     "year": 2021,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "15 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -8817,9 +8260,7 @@
     "year": 2022,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "12 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "usa variable"
@@ -8852,9 +8293,7 @@
     "year": 2022,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "7 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo2022_p2_expanded",
     "imports": [
@@ -8879,9 +8318,7 @@
     "year": 2022,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "10 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "usa variable"
@@ -8892,7 +8329,7 @@
     ],
     "epilogue": "end IMO2022P4",
     "target_decl": "IMO2022P4.candidate",
-    "topic": "algebra",
+    "topic": "geometry",
     "helper_lemmas": [
       "angle_chain₃",
       "angle_chain₄",
@@ -8912,9 +8349,7 @@
     "year": 2022,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "6 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "usa variable",
       "declaraciones despues del teorema: ['edge_count_decomposition', 'edges_plus_singleton', 'minimum_eq_target']"
@@ -8941,9 +8376,7 @@
     "year": 2023,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "15 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "declaraciones despues del teorema: ['prime_power_local_condition']"
@@ -8979,9 +8412,7 @@
     "year": 2023,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "11 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "usa variable"
@@ -9013,9 +8444,7 @@
     "year": 2023,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "11 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -9046,9 +8475,7 @@
     "year": 2023,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "10 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -9078,9 +8505,7 @@
     "year": 2024,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "3 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -9103,9 +8528,7 @@
     "year": 2024,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "10 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -9135,9 +8558,7 @@
     "year": 2024,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "11 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "usa variable"
@@ -9169,9 +8590,7 @@
     "year": 2024,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "5 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "usa variable",
       "declaraciones despues del teorema: ['answer_is_three', 'minimum_positive_attempts_unique', 'positive_answer_is_three']"
@@ -9197,9 +8616,7 @@
     "year": 2025,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "11 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "usa variable"
@@ -9231,9 +8648,7 @@
     "year": 2025,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "15 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "usa variable",
@@ -9270,9 +8685,7 @@
     "year": 2025,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "18 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "usa variable",
       "declaraciones despues del teorema: ['alice_iff_above', 'bazza_iff_below']"
@@ -9311,9 +8724,7 @@
     "year": 2026,
     "problem": 1,
     "category": "C",
-    "reasons": [
-      "9 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like"
     ],
@@ -9342,9 +8753,7 @@
     "year": 2026,
     "problem": 2,
     "category": "C",
-    "reasons": [
-      "11 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "usa variable"
@@ -9376,9 +8785,7 @@
     "year": 2026,
     "problem": 3,
     "category": "C",
-    "reasons": [
-      "11 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "usa variable"
     ],
@@ -9409,9 +8816,7 @@
     "year": 2026,
     "problem": 4,
     "category": "C",
-    "reasons": [
-      "14 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "usa variable",
       "declaraciones despues del teorema: ['candidate_range', 'degrees_classification_step', 'descent_reaches_win']"
@@ -9446,9 +8851,7 @@
     "year": 2026,
     "problem": 5,
     "category": "C",
-    "reasons": [
-      "12 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [],
     "main_theorem": "imo2026_p5_core",
     "imports": [
@@ -9478,9 +8881,7 @@
     "year": 2026,
     "problem": 6,
     "category": "C",
-    "reasons": [
-      "9 lema(s) auxiliar(es) antes del teorema"
-    ],
+    "reasons": [],
     "flags": [
       "core_like",
       "declaraciones despues del teorema: ['two_periods', 'iterate_period', 'add_period_strict_mono']"

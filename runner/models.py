@@ -10,6 +10,7 @@ La llamada a la API ocurre FUERA del entorno de verificacion.
 from __future__ import annotations
 
 import os
+import re
 import time
 from dataclasses import dataclass, field
 
@@ -23,16 +24,41 @@ SYSTEM_PROMPT = (
 )
 
 
+AUX_MARKER = "-- LEMAS"
+PROOF_MARKER = "-- PRUEBA"
+
+
+def split_response(text: str):
+    """Separa (lemas, prueba) de una respuesta en modo archivo completo."""
+    t = text.strip()
+    if t.startswith("```"):
+        t = re.sub(r"^```[a-zA-Z0-9]*\n?", "", t)
+        t = re.sub(r"\n?```\s*$", "", t)
+    if PROOF_MARKER in t:
+        before, after = t.split(PROOF_MARKER, 1)
+        aux = before.replace(AUX_MARKER, "", 1).strip()
+        return aux, after.strip()
+    return "", t
+
+
 def build_prompt(problem, error_feedback: str = "") -> str:
     parts = [
         "Imports permitidos:",
         "\n".join(f"import {m}" for m in problem.imports),
+        "",
+        "Contexto (definiciones previas):",
+        getattr(problem, "context", "") or "(ninguno)",
         "",
         "Enunciado formal (no lo modifiques):",
         problem.statement,
         "",
         "Devuelve solo el cuerpo de la prueba.",
     ]
+    if getattr(problem, "mode", "proof") == "aux":
+        parts[-1] = (
+            "Puedes declarar lemas auxiliares (solo `lemma`/`theorem`). Responde con este formato:\n"
+            f"{AUX_MARKER}\n<tus lemas, o nada>\n{PROOF_MARKER}\n<cuerpo de la prueba>"
+        )
     if error_feedback:
         parts += ["", "El intento anterior fallo con este error de Lean:", error_feedback,
                   "", "Corrige la prueba."]

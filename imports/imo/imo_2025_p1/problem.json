@@ -1,0 +1,38 @@
+{
+  "id": "imo_2025_p1",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2025,
+    "problem": 1,
+    "file": "2025/P1.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2025_p1",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "# IMO 2025 Problem 1 — induction/classification core\n\nThe answer is\n\n    k ∈ {0, 1, 3}.\n\nThe geometric/combinatorial proof in the source establishes:\n\n1. Base case n = 3:\n   the possible numbers of sunny lines are exactly 0, 1, 3.\n\n2. Reduction:\n   if n ≥ 4 and a valid configuration exists for `(n,k)`,\n   then deleting one of the three \"long lines\"\n\n       x = 1,\n       y = 1,\n       x + y = n + 1\n\n   gives a valid configuration for `(n-1,k)`.\n\n3. Construction/lifting:\n   every value possible for n-1 is also possible for n,\n   by adding one of those non-sunny long lines.\n\nThis file formalizes the complete induction from those facts.\n\nNo `sorry`, `admit`, or additional axioms are used.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2025_p1/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2025_p1/reference.aux.lean",
+  "target_decl": "IMO2025P1.candidate",
+  "epilogue": "end IMO2025P1",
+  "import_category": "C",
+  "import_flags": [
+    "core_like",
+    "usa variable"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

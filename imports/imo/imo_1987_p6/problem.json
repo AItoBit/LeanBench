@@ -15,8 +15,11 @@
     "Mathlib"
   ],
   "informal_statement": "# IMO 1987, Problem 6\n\nLet `n ≥ 2`. If `k² + k + n` is prime for all `0 ≤ k ≤ √(n/3)`, then `k² + k + n` is prime\nfor all `0 ≤ k ≤ n - 2`.\n\nProof (strong induction on `k`; this is the classical argument, a streamlined form of the\nAoPS solution). Write `f k = k² + k + n`. Take `y ≤ n - 2` with `f x` prime for all `x < y`,\nand suppose `f y` is not prime. Let `p = minFac (f y)`, so `p² ≤ f y`.\n\n* If `p ≤ 2y`, there is `x < y` with `p ∣ f x`, because `f y - f x = (y - x)(y + x + 1)`:\n  take `x = y - p` if `p ≤ y`, and `x = p - y - 1` if `y < p`.\n  Then `p = f x ≥ n` (both prime), so `n² ≤ p² ≤ f y ≤ f (n - 2) < n²`. Contradiction.\n* So `p ≥ 2y + 1`, hence `(2y + 1)² ≤ f y`, i.e. `3y² + 3y + 1 ≤ n`.\n  Then `y ≤ √(n/3)`, so `f y` is prime by hypothesis. Contradiction.",
+  "mode": "aux",
+  "context_file": "context.lean",
   "statement_file": "statement.lean",
   "reference_file": "imports/imo/imo_1987_p6/reference.proof.lean",
+  "reference_aux_file": null,
   "target_decl": "Imo1987P6.candidate",
   "epilogue": "end Imo1987P6",
   "import_category": "A",

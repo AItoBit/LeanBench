@@ -15,8 +15,11 @@
     "Mathlib"
   ],
   "informal_statement": "Formalization of the algebraic conclusion.\nAfter setting up the geometry, the volume of the tetrahedron is bounded by\n`(x / 6) * (1 - x^2 / 4)`, where `x` is the length of edge AB and `0 < x ≤ 1`.\nWe prove that this is at most `1 / 8`, and that this inequality is equivalent\nto `(1 - x) * (3 - x - x^2) ≥ 0` exactly as stated in the solution.",
+  "mode": "aux",
+  "context_file": "context.lean",
   "statement_file": "statement.lean",
   "reference_file": "imports/imo/imo_1967_p2/reference.proof.lean",
+  "reference_aux_file": null,
   "target_decl": "candidate",
   "epilogue": "",
   "import_category": "A",

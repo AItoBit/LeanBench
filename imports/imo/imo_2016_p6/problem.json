@@ -1,0 +1,38 @@
+{
+  "id": "imo_2016_p6",
+  "topic": "algebra",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 2016,
+    "problem": 6,
+    "file": "2016/P6.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_2016_p6",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "`CanPlace` represents the existence of a frog placement\nsatisfying Geoff's condition.\n\nFor even `n`, if any successful placement would force\n`Even (n-1)`, then no successful placement exists.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_2016_p6/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_2016_p6/reference.aux.lean",
+  "target_decl": "IMO2016P6.candidate",
+  "epilogue": "end IMO2016P6",
+  "import_category": "C",
+  "import_flags": [
+    "core_like",
+    "declaraciones despues del teorema: ['even_iff_pred_odd', 'odd_n_of_alternating_arc']"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}

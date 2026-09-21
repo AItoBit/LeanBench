@@ -1,0 +1,37 @@
+{
+  "id": "imo_1966_p3",
+  "topic": "geometry",
+  "topic_is_guess": true,
+  "source": "imo",
+  "source_detail": {
+    "year": 1966,
+    "problem": 3,
+    "file": "1966/P3.lean",
+    "repository": "https://github.com/AItoBit/IMO"
+  },
+  "family_id": "imo_1966_p3",
+  "split": "unassigned",
+  "imports": [
+    "Mathlib"
+  ],
+  "informal_statement": "**IMO 1966, Problem 3.**  Let `A B C D` be the vertices of a regular tetrahedron in\nEuclidean 3-space (all six edges have the same positive length `s`), and let `O` be the\ncenter of its circumscribed sphere (the point equidistant from the four vertices).\nThen for every point `P ≠ O`, the sum of the distances from `O` to the vertices is strictly\nless than the sum of the distances from `P` to the vertices.",
+  "mode": "aux",
+  "context_file": "context.lean",
+  "statement_file": "statement.lean",
+  "reference_file": "imports/imo/imo_1966_p3/reference.proof.lean",
+  "reference_aux_file": "imports/imo/imo_1966_p3/reference.aux.lean",
+  "target_decl": "IMO1966Q3.candidate",
+  "epilogue": "end IMO1966Q3",
+  "import_category": "C",
+  "import_flags": [
+    "declaraciones despues del teorema: ['exists_regular_tetrahedron_with_circumcenter']"
+  ],
+  "formalization_reviewed": false,
+  "reviewer": "",
+  "formalization_author": "AItoBit",
+  "license": "Apache-2.0",
+  "budget": {
+    "attempts": 1,
+    "verification_seconds": 120
+  }
+}
